@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Plantlance</title>
+
+
+    <script src="../plantlance-script/jquery-3.6.0.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/plantlance.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/gnb.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/footer.css">
+
+
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/slick.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/slick-theme.css">
+
+
+
+
+
+    <script>
+        // **  gnb 스크립트 
+
+
+        $(document).ready(function() {
+            /* 메뉴 - 웹 슬라이드 메뉴 활성화 */
+            $("nav > .nav-wrap > a > .menu-icon").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duration", ".1s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", "0s");
+
+                $("#nav-slide").css("width", "100%");
+                $("#nav-slide").css("z-index", "5");
+
+                $("#nav-slide").css("animation-name", "menuShow");
+                $("#nav-slide").css("animation-delay", ".1s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+
+                $("#nav-slide > .nav-slide-wrap").css("transition-duration", ".2s");
+                $("#nav-slide > .nav-slide-wrap").css("transition-delay", ".3s");
+                $("#nav-slide > .nav-slide-wrap").css("opacity", "1");
+
+
+                $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").css("display", "block");
+
+
+                $(".nav-mob").css("animation-name", "menuShow");
+                $(".nav-mob").css("animation-delay", ".1s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+
+                $(".nav-mob").css("width", "100%");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-duration", ".2s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-delay", ".3s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("display", "block");
+
+                $("::-webkit-scrollbar").css("display", "none");
+                $("body").css("-ms-overflow-style", "none");
+            });
+            /* // 메뉴 - 웹 슬라이드 메뉴 활성화 */
+
+
+
+
+            /* 메뉴 - 닫기 - 슬라이드 메뉴 비활성화 */
+            $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $("#nav-slide").css("width", "0");
+                $("#nav-slide").css("animation-name", "menuNone");
+                $("#nav-slide").css("animation-delay", ".4s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+
+                $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").css("display", "none");
+
+                $("#nav-slide > .nav-slide-wrap").css("transition-delay", "0s");
+                $("#nav-slide > .nav-slide-wrap").css("transition-duration", ".1s");
+                $("#nav-slide > .nav-slide-wrap").css("opacity", "0");
+
+
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-sofa").css("height", "0px");
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-table").css("height", "0px");
+
+
+
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $(".nav-mob").css("width", "0");
+                $(".nav-mob").css("animation-name", "menuNone");
+                $(".nav-mob").css("animation-delay", ".4s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-duration", ".2s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-delay", ".3s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("display", "none");
+
+
+
+                $("html::-webkit-scrollbar").css("display", "block");
+                $("html").css("-ms-overflow-style", "auto");
+
+
+            });
+            /* 메뉴 - 닫기 - 슬라이드 메뉴 비활성화 */
+
+
+            /* 메뉴 - 퍼니쳐 - 소파 하위메뉴 비활성화*/
+            $(".title-sofa").click(function() {
+                $(".gnb-sofa").css("height", "auto");
+                $(".gnb-table").css("height", "0px");
+
+                $(".shop-wrap").css("height", "auto");
+            });
+            /* //메뉴 - 퍼니쳐 - 소파 하위메뉴 비활성화*/
+
+
+            /* 메뉴 - 소파 - 테이블 하위 메뉴 활성화 */
+            $(".title-table").click(function() {
+                $(".gnb-sofa").css("height", "0px");
+                $(".gnb-table").css("height", "auto");
+
+                $(".shop-wrap").css("height", "auto");
+            });
+            /* //메뉴 - 소파 - 테이블 하위 메뉴 활성화 */
+
+
+            /* 검색 활성화 */
+
+            $("nav > .nav-wrap > .sub-button-wrap > a > .search-icon").click(function() {
+                $(".search-wrap").css("display", "block");
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > .sub-button-wrap").css("opacity", "0");
+            });
+
+            /* //검색 활성화 */
+
+
+
+            /* 검색 닫기 */
+            $(".search-close-btn").click(function() {
+                $(".search-wrap").css("display", "none");
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > .sub-button-wrap").css("opacity", "1");
+
+            });
+            /* //검색 닫기 */
+        });
+    </script>
+
+
+
+  
+
+</head>
+
+<body>
+
+    <!-- gnb -->
+    <nav>
+
+        <div class="nav-wrap">
+            <a href="#none" class="menu">
+                <img src="../plantlance-image/icon/menu2.png" alt="menu" class="menu-icon">
+            </a>
+            <a href="plantlance.html">
+                <img src="../plantlance-image/logo.png" alt="logo" class="logo">
+            </a>
+            <div class="sub-button-wrap">
+                <a href="#none">
+                    <img src="../plantlance-image/icon/search.png" alt="search" class="search-icon">
+                </a>
+                <a href="shopping.html">
+                    <img src="../plantlance-image/icon/bag.png" alt="bag" class="bag-icon">
+                </a>
+                <a href="login.html" target="_self">
+                    <img src="../plantlance-image/icon/login.png" alt="login" class="login-icon">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="nav-slide">
+
+        <div class="nav-slide-wrap nav-pc-tablet">
+            <div class="nav-slide-side">
+                <div class="side-wrap">
+                    <a href="#none">
+                        <img src="../plantlance-image/icon/close2.png" alt="close" class="close-button">
+                    </a>
+                    
+                    
+                    
+                    <div class="side-menu-wrap">
+                    <div class="side-left">
+
+                        <a href="my-page.html">
+                            <p class="txt-eng-bold my-page">MY PAGE</p>
+                        </a>
+                        <a href="shopping.html">
+                            <p class="txt-eng-bold cart">CART</p>
+                        </a>
+                        <a href="my-page.html">
+                            <p class="txt-eng-bold wish-list">WISH LIST</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-eng-bold delivery">DELIVERY</p>
+                        </a>
+                    </div>
+
+                    <div class="side-right">
+                        <p class="txt-eng tel-txt">Customer center</p>
+                        <a href="tel:1899-3417">
+                            <img src="../plantlance-image/icon/call1.png" alt="call" class="call-img">
+                            <p class="txt-eng tel">1899-3417</p>
+                        </a>
+
+                        <p class="txt-eng ig-txt">Instagram</p>
+                        <a href="https://www.instagram.com/plantlance.kr/">
+                            <p class="txt-eng ig">@plantlance.kr</p>
+                        </a>
+                    </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="nav-main-menu">
+
+
+               
+               
+                <div class="nav-slide-top">
+                    <div class="user-wrap">
+                        <a href="join.html">
+                            <p class="txt-eng join">JOIN</p>
+                        </a>
+                        <a href="login.html">
+                            <p class="txt-eng login">LOGIN</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="nav-main-menu-wrap">
+                
+                 <span class="collection">
+                    <p class="txt-eng-bold title">COLLECTION</p>
+                    <a href="#none">
+                        <p class="txt-eng">2021 REFURB</p>
+                    </a>
+                </span>
+                
+                
+                <span class="about">
+                    <p class="txt-eng-bold title">ABOUT</p>
+                    
+                    <div class="second-menu">
+                    <a href="pltl.html">
+                        <p class="txt-eng">PLTL</p>
+                    </a>
+                    <a href="bespoke.html">
+                        <p class="txt-eng">BESPOKE</p>
+                    </a>
+                    <a href="contact.html">
+                        <p class="txt-eng">CONTACT</p>
+                    </a>
+                    </div>
+
+                </span>
+
+               
+
+                <span class="shop">
+                    <p class="txt-eng-bold title">SHOP</p>
+                    
+                    <div class="shop-wrap">
+                        <a href="list-new.html">
+                            <p class="txt-eng sub-title">NEW OBJECT</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-eng sub-title">FURNITURE</p>
+                        </a>
+                        <div class="furniture">
+                            <a href="#none">
+                                <p class="txt-eng sub-title title-sofa">Sofa</p>
+                            </a>
+                            <div class="gnb-sofa">
+                                <a href="list-sofa.html">
+                                    <p class="txt-kor">전체 소파</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">플렉스 소파 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">클라우드 소파 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">아우어 소파 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">그래 소파</p>
+                                </a>
+                            </div>
+
+                            <a href="#none">
+                                <p class="txt-eng sub-title title-table">Table</p>
+                            </a>
+                            <div class="gnb-table">
+                                <a href="list-table.html">
+                                    <p class="txt-kor">전체 테이블</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">카페 테이블 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">메이트 테이블 시리즈</p>
+                                </a>
+
+
+
+
+
+                            </div>
+                            <a href="list-chair.html">
+                                <p class="txt-eng sub-title">Chair</p>
+                            </a>
+                            <a href="list-stool.html">
+                                <p class="txt-eng sub-title">Stool</p>
+                            </a>
+                            <a href="list-lighting.html">
+                                <p class="txt-eng sub-title">Lighting</p>
+                            </a>
+                            <a href="list-etc.html">
+                                <p class="txt-eng sub-title">Etc</p>
+                            </a>
+                        </div>
+                        <a href="list-planterior.html">
+                            <p class="txt-eng sub-title">PLANTERIOR</p>
+                        </a>
+                        <a href="list-kitchen.html">
+                            <p class="txt-eng sub-title">KITCHEN</p>
+                        </a>
+                        <a href="list-interior.html">
+                            <p class="txt-eng sub-title">INTERIOR</p>
+                        </a>
+                    </div>
+                </span>
+
+
+
+                <span class="community">
+                    <p class="txt-eng-bold title">COMMUNITY</p>
+
+                   
+                   <div class="second-menu">
+                    <a href="notice.html">
+                        <p class="txt-eng">NOTICE</p>
+                    </a>
+                    <a href="qna.html">
+                        <p class="txt-eng">Q &amp; A</p>
+                    </a>
+                    <a href="review-list.html">
+                        <p class="txt-eng">REVIEW</p>
+                    </a>
+                    </div>
+                </span>
+
+                <div class="showroom">
+                    <a href="showroom.html">
+                        <p class="txt-eng-bold title">SHOWROOM</p>
+                    </a>
+                </div>
+                </div>
+                
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- //gnb 웹/태블릿 -->
+
+
+    <!-- 검색 -->
+    <div class="search-wrap">
+        <div class="search-place-wrap">
+            <a href="#none">
+                <p class="txt-eng search-close-btn">Close</p>
+            </a>
+            <div class="search-place">
+                <form>
+                    <input autocomplete="off" type="text" placeholder="검색어를 입력해주세요" class="txt-kor" id="search" onkeyup="printName()" onkeypress="if( event.keyCode == 13){searchData();}">
+
+                    <a href="search-list.html">
+                        <img src="../plantlance-image/icon/search.png" alt="search" class="search-btn">
+                    </a>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="search-bg"></div>
+    </div>
+    <!-- //검색 -->
+
+
+
+
+
+
+
+
+
+    <!-- //gnb -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 메인 홈페이지 -->
+
+    <div id="main-slider">
+        <div class="main-slider-wrap pc-main-slider-wrap">
+            <div class="slide">
+                <a href="list-table.html" class="slide-go-to-product"></a>
+               <img src="../plantlance-image/main/main-banner1.jpg" alt="slide1" class="slide1-img main-img">
+                <div class="text-wrap text-wrap1">
+                    <p class="txt-eng-regular slide-title-eng slide-title-eng1">A WARM SPACE, WITH LOVED ONES</p>
+                    <p class="txt-kor-regular slide-title slide-title-kor1">소중한 이들과 함께 보내는, 따뜻한 공간</p>
+                </div>
+
+            </div>
+
+            <div class="slide">
+                <a href="wily-detail.html" class="slide-go-to-product"></a>
+                <img src="../plantlance-image/main/main-banner2.jpg" alt="slide2" class="slide2-img main-img">
+                <div class="text-wrap text-wrap2">
+                    <p class="txt-eng-semibold slide-title-eng slide-title-eng2">NOT JUST A TABLE</p>
+                    <p class="txt-kor-regular slide-title slide-title-kor2">테이블, 그 이상의 오브제</p>
+                    
+                </div>
+
+            </div>
+
+          
+            
+             <div class="slide">
+                <a href="list-table.html" class="slide-go-to-product"></a>
+                <img src="../plantlance-image/main/main-banner3.jpg" alt="slide1" class="slide1-img main-img">
+                
+                
+                 <div class="text-wrap text-wrap3">
+                    <p class="txt-eng slide-title-eng slide-title-eng3">CLOUD SOFA</p>
+                    <a href="#none">
+                        <p class="txt-kor slide-title slide-title-kor3">자세히 보기</p>
+                    </a>
+                </div>
+                
+                 
+            </div>
+            
+            
+            
+             <div class="slide">
+                <a href="list-table.html" class="slide-go-to-product"></a>
+               <img src="../plantlance-image/main/main-banner4.jpg" alt="slide1" class="slide1-img main-img">
+               
+               
+               <div class="text-wrap text-wrap4">
+                    <p class="txt-eng slide-title-eng slide-title-eng4">OBLONG</p>
+                    <p class="txt-kor-light slide-title slide-title-kor4">: a flat shape with four sides and four angles of<br>90° and opposites of equal length</p>
+                </div>
+            </div>
+            
+            
+            
+            
+   
+
+        </div>
+        <!-- 슬릭 슬라이더 배너 넣을 섹션-->
+    </div>
+
+
+
+
+
+
+    <!-- 체어 & 비스포크 -->
+    <div class="chair">
+        <div class="chair-wrap">
+            <a href="list-chair.html"></a>
+            <div class="chair-button">
+                <p class="txt-eng-bold">chairs</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bespoke">
+        <div class="bespoke-wrap">
+            <a href="bespoke.html"></a>
+            <p class="txt-eng bespoke-title1">WHAT IS YOUR BESPOKE?</p>
+            <p class="txt-eng-bold bespoke-title2">FIND YOUR BESPOKE!</p>
+            <img src="../plantlance-image/icon/bespoke-shape.png">
+        </div>
+    </div>
+    <!-- //체어 & 비스포크 -->
+
+
+
+
+    <!-- 플랜 A-->
+    <div class="plan-a">
+        <a href="plan-a.html"></a>
+        <div class="plan-a-wrap">
+            <p class="txt-kor-bold plan-title">a</p>
+            <p class="txt-kor plan-number">01</p>
+            <p class="txt-kor plan-name">Plan A</p>
+
+
+            <div class="plan-a-on">
+                <div class="plan-a-on-wrap">
+                    <p class="plan-a-on-title txt-eng-bold">
+                        Plan A
+                    </p>
+
+                    <p class="txt-kor">한달에 한 번 진행하는 특별한 이벤트입니다.</p>
+                    <p class="txt-kor">전 제품 중, 한가지 품목의 제품을 선정하여 해당 제품을 소개하고,</p>
+                    <p class="txt-kor">보다 특별한 가격에 안내하고 있습니다.</p>
+
+
+                </div>
+                <div class="plan-a-on-button">
+                    <p class="txt-kor">9월 Plan A 제품 보러가기</p>
+                    <img src="../plantlance-image/icon/right-arrow-in-circle1.png" alt="next-arrow" class="next">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //플랜 A-->
+
+
+    <!-- 테이블-->
+    <div class="table">
+        <div class="table-wrap">
+            <a href="list-table.html"></a>
+            <img src="../plantlance-image/main/wily-table-resize1.png" alt="wily-table" class="table-img">
+            <div class="table-button">
+                <p class="txt-eng-bold">Tables</p>
+            </div>
+        </div>
+    </div>
+    <!-- //테이블-->
+
+
+    <!-- 플랜 B -->
+    <div class="plan-b">
+        <a href="plan-b.html"></a>
+        <div class="plan-b-wrap">
+            <p class="txt-kor-light plan-title">B</p>
+            <p class="txt-kor plan-number">02</p>
+            <p class="txt-kor plan-name">Plan B</p>
+
+
+            <div class="plan-b-on">
+                <div class="plan-b-on-wrap">
+                    <p class="plan-b-on-title txt-eng-bold">
+                        Plan B
+                    </p>
+
+                    <p class="txt-kor">매주 금요일 인스타그램 프로필 링크를 통해 진행하는 이벤트입니다.</p>
+                    <p class="txt-kor">다양한 이유로 리퍼브가 된 상품들 중 엄선된 제품들을</p>
+                    <p class="txt-kor">재가공하여 더욱 새 것과 같은 상품들을 모아 소개합니다.</p>
+
+
+                </div>
+                <div class="plan-b-on-button">
+                    <p class="txt-kor">9월 Plan B 제품 보러가기</p>
+                    <img src="../plantlance-image/icon/right-arrow-in-circle1.png" alt="next-arrow" class="next">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //플랜 B -->
+
+
+    <div class="sofa">
+        <div class="sofa-wrap">
+            <img src="../plantlance-image/main/sofa.png" alt="sofa" class="main-sofa">
+
+            <div class="new-product">
+                <a href="list-new.html"></a>
+                <p class="txt-eng-bold">NEW PRODUCT</p>
+                <img src="../plantlance-image/icon/right-arrow-in-circle1.png" alt="next" class="next-arrow">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- 쇼룸 -->
+    <div id="showroom">
+        <div class="showroom-wrap">
+
+            <div class="showroom-kind">
+                <p class="txt-eng-semibold showroom-title">Showroom</p>
+                <input type="radio" id="seongsu" class="showroom-place" name="show" checked />
+                <input type="radio" id="pangyo" class="showroom-place" name="show" />
+                <input type="radio" id="gimpo" class="showroom-place" name="show" />
+                <input type="radio" id="sejong" class="showroom-place" name="show" />
+                <input type="radio" id="daegu" class="showroom-place" name="show" />
+                <input type="radio" id="busan" class="showroom-place" name="show" />
+
+
+                <!-- 쇼룸 버튼 -->
+                <div class="showroom-button-wrap">
+                    <label for="seongsu" class="txt-kor">
+                        <p class="txt-eng-bold showroom-name showroom-name-eng">Seongsu</p>
+                        <p class="txt-kor showroom-name showroom-name-kor">성수점</p>
+
+                        <div class="showroom-contact-wrap showroom-contact-wrap1">
+                            <img src="../plantlance-image/icon/arrow-left2.png">
+                        </div>
+
+                    </label>
+                    <label for="pangyo" class="txt-kor">
+                        <p class="txt-eng-bold showroom-name showroom-name-eng">Pangyo</p>
+                        <p class="txt-kor showroom-name showroom-name-kor">판교점</p>
+
+                        <div class="showroom-contact-wrap showroom-contact-wrap2">
+                            <img src="../plantlance-image/icon/arrow-left2.png">
+                        </div>
+                    </label>
+                    <label for="gimpo" class="txt-kor">
+                        <p class="txt-eng-bold showroom-name showroom-name-eng">Gimpo</p>
+                        <p class="txt-kor showroom-name showroom-name-kor">김포점</p>
+
+                        <div class="showroom-contact-wrap showroom-contact-wrap3">
+                            <img src="../plantlance-image/icon/arrow-left2.png">
+                        </div>
+                    </label>
+                    <label for="sejong" class="txt-kor">
+                        <p class="txt-eng-bold showroom-name showroom-name-eng">Sejong</p>
+                        <p class="txt-kor showroom-name showroom-name-kor">세종점</p>
+
+                        <div class="showroom-contact-wrap showroom-contact-wrap4">
+                            <img src="../plantlance-image/icon/arrow-left2.png">
+                        </div>
+
+                    </label>
+                    <label for="daegu" class="txt-kor">
+                        <p class="txt-eng-bold showroom-name showroom-name-eng">Daegu</p>
+                        <p class="txt-kor showroom-name showroom-name-kor">대구점</p>
+
+                        <div class="showroom-contact-wrap showroom-contact-wrap5">
+                            <img src="../plantlance-image/icon/arrow-left2.png">
+                        </div>
+                    </label>
+                    <label for="busan" class="txt-kor">
+                        <p class="txt-eng-bold showroom-name showroom-name-eng">Busan</p>
+                        <p class="txt-kor showroom-name showroom-name-kor">부산양산점</p>
+
+                        <div class="showroom-contact-wrap showroom-contact-wrap6">
+                            <img src="../plantlance-image/icon/arrow-left2.png">
+                        </div>
+                    </label>
+                </div>
+                <!-- //쇼룸 버튼 -->
+
+                <!-- 쇼룸 이미지 박스 -->
+                <div class="showroom-info-wrap">
+
+                    <!-- 성수 이미지-->
+                    <div class="seongsu-info showroom-info">
+                        <p class="txt-eng-bold showroom-place">Seoungsu</p>
+                        <p class="txt-kor showroom-place-kor">성수점</p>
+
+                        <div class="showroom-info-small-img-wrap">
+
+                        </div>
+
+
+                        <div class="showroom-notice">
+
+                            <a href="tel:024653135" class="call-btn">
+                                <img src="../plantlance-image/icon/call.png" alt="call" class="call-img">
+                                <p class="txt-eng number">02 465 3135</p>
+                            </a>
+
+                            <p class="txt-kor showroom-instagram-button">
+                                <a href="https://www.instagram.com/plantlance_seongsu/" target="_blank"></a>
+                                Instagram
+                            </p>
+                        </div>
+
+
+                        <div class="address-wrap">
+                            <p class="txt-kor-bold address-title">쇼룸 주소</p>
+                            <div class="address-box">
+                                <p class="txt-kor address">서울 성동구 뚝섬로3나길 13 1층</p>
+                                <p class="txt-kor showroom-place-button">
+                                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1654699101?c=14142680.1420309,4514876.2233910,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank"></a>
+                                    위치보기
+                                </p>
+                            </div>
+                            <div class="place-near">
+                                <div class="place-near1">
+                                    <p class="txt-kor-bold">분당선 서울숲역</p>
+                                    <p class="txt-kor">1번 출구 10분 거리</p>
+                                </div>
+                                <div class="place-near2">
+                                    <p class="txt-kor-bold">2호선 뚝섬역</p>
+                                    <p class="txt-kor">5번 출구 10분 거리</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="time-wrap">
+                            <p class="txt-kor-bold time-title">운영 시간</p>
+
+                            <div class="time">
+                                <div class="time1">
+                                    <p class="txt-kor-bold">Tue - Sat</p>
+                                    <p class="txt-kor">| 10:00 - 19:00<br></p>
+                                </div>
+                                <div class="time2">
+                                    <p class="txt-kor-bold">Sun / Holiday</p>
+                                    <p class="txt-kor">| 13:00 - 19:00</p>
+                                </div>
+                            </div>
+
+                            <p class="txt-kor-bold mon-off">* Mon Off *</p>
+
+                        </div>
+                    </div>
+                    <!-- //성수 이미지-->
+
+
+
+                    <!-- 판교 이미지-->
+                    <div class="pangyo-info showroom-info">
+                        <p class="txt-eng-bold showroom-place">Pangyo</p>
+                        <p class="txt-kor showroom-place-kor">판교점</p>
+                        <div class="showroom-info-small-img-wrap">
+
+                        </div>
+
+
+                        <div class="showroom-notice">
+
+
+
+                            <a href="tel:050714191194" class="call-btn">
+                                <img src="../plantlance-image/icon/call.png" alt="call" class="call-img">
+                                <p class="txt-eng number">0507 1419 1194</p>
+                            </a>
+                            <p class="txt-kor showroom-instagram-button">
+                                <a href="https://www.instagram.com/plantlance_pangyo/" target="_blank"> </a>
+                                Instagram
+                            </p>
+                        </div>
+
+
+                        <div class="address-wrap">
+                            <p class="txt-kor-bold address-title">쇼룸 주소</p>
+                            <div class="address-box">
+                                <p class="txt-kor address">경기 성남시 분당구 운중로113번길 4-11</p>
+                                <p class="txt-kor showroom-place-button">
+                                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1078549873?c=14145621.3476930,4494005.4037641,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank"></a>
+                                    위치보기
+                                </p>
+                            </div>
+                            <div class="place-near">
+                                <div class="place-near1">
+                                    <p class="txt-kor-bold">버스 이용시</p>
+                                    <p class="txt-kor">운정동행복복지센터 정류장 5분 거리</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="time-wrap">
+                            <p class="txt-kor-bold time-title">운영 시간</p>
+
+                            <div class="time">
+                                <div class="time1">
+                                    <p class="txt-kor-bold">Tue - Sun</p>
+                                    <p class="txt-kor">| 10:00 - 19:00<br></p>
+                                </div>
+                            </div>
+
+                            <p class="txt-kor-bold mon-off">* Mon Off *</p>
+
+                        </div>
+
+
+                    </div>
+                    <!-- //판교 이미지-->
+
+
+
+
+
+                    <!-- 김포 이미지-->
+                    <div class="gimpo-info showroom-info">
+                        <p class="txt-eng-bold showroom-place">Gimpo</p>
+                        <p class="txt-kor showroom-place-kor">김포점</p>
+                        <div class="showroom-info-small-img-wrap"></div>
+
+
+                        <div class="showroom-notice">
+                            <a href="tel:050713265446" class="call-btn">
+                                <img src="../plantlance-image/icon/call.png" alt="call" class="call-img">
+                                <p class="txt-eng number">0507 1326 5446</p>
+                            </a>
+
+
+
+                            <p class="txt-kor showroom-instagram-button">
+                                <a href="https://www.instagram.com/lavenihome/" target="_blank"></a>
+                                Instagram
+                            </p>
+                        </div>
+
+
+                        <div class="address-wrap">
+                            <p class="txt-kor-bold address-title">쇼룸 주소</p>
+                            <div class="address-box">
+                                <p class="txt-kor address">경기 김포시 김포한강2로23번길 10 1차 212호</p>
+                                <p class="txt-kor showroom-place-button">
+                                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1345995664?c=14101285.5107056,4529037.2860202,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank"></a>
+                                    위치보기
+                                </p>
+                            </div>
+                            <div class="place-near">
+                                <div class="place-near1">
+                                    <p class="txt-kor">쌍용예가아파트 맞은편</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="time-wrap">
+                            <p class="txt-kor-bold time-title">운영 시간</p>
+
+                            <div class="time">
+                                <div class="time1">
+                                    <p class="txt-kor-bold">Tue - Sat</p>
+                                    <p class="txt-kor">| 10:00 - 19:00<br></p>
+                                </div>
+                                <div class="time2">
+                                    <p class="txt-kor-bold">Sun / Holiday</p>
+                                    <p class="txt-kor">| 13:00 - 19:00</p>
+                                </div>
+                            </div>
+
+                            <p class="txt-kor-bold mon-off">* Mon Off *</p>
+
+                        </div>
+                    </div>
+                    <!-- //김포 이미지-->
+
+
+                    <!-- 세종 이미지-->
+                    <div class="sejong-info showroom-info">
+                        <p class="txt-eng-bold showroom-place">Sejong</p>
+                        <p class="txt-kor showroom-place-kor">세종점</p>
+                        <div class="showroom-info-small-img-wrap"></div>
+
+
+                        <div class="showroom-notice">
+                            <a href="tel:050713662288" class="call-btn">
+                                <img src="../plantlance-image/icon/call.png" alt="call" class="call-img">
+                                <p class="txt-eng number">0507 1366 2288</p>
+                            </a>
+
+                            <p class="txt-kor showroom-instagram-button">
+                                <a href="https://www.instagram.com/plantlance_sejong/" target="_blank"></a>
+                                Instagram
+                            </p>
+                        </div>
+
+
+                        <div class="address-wrap">
+                            <p class="txt-kor-bold address-title">쇼룸 주소</p>
+                            <div class="address-box">
+                                <p class="txt-kor address">충남 공주시 반포면 금벽로 1377-5</p>
+                                <p class="txt-kor showroom-place-button">
+
+                                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1992578940?c=14161489.8186541,4359120.6702126,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank"></a>
+                                    위치보기
+                                </p>
+                            </div>
+                            <div class="place-near">
+                                <div class="place-near1">
+                                    <p class="txt-kor-bold">버스 이용시</p>
+                                    <p class="txt-kor">과학고등학교 정류장에서 도보 10분 거리</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="time-wrap">
+                            <p class="txt-kor-bold time-title">운영 시간</p>
+
+                            <div class="time">
+                                <div class="time1">
+                                    <p class="txt-kor-bold">Tue - Sun</p>
+                                    <p class="txt-kor">| 10:00 - 19:00<br></p>
+                                </div>
+                            </div>
+
+                            <p class="txt-kor-bold mon-off">* Mon Off *</p>
+
+                        </div>
+                    </div>
+                    <!-- //세종 이미지-->
+
+                    <!-- 대구 이미지-->
+                    <div class="daegu-info showroom-info">
+                        <p class="txt-eng-bold showroom-place">Daegu</p>
+                        <p class="txt-kor showroom-place-kor">대구점</p>
+                        <div class="showroom-info-small-img-wrap"></div>
+
+
+                        <div class="showroom-notice">
+
+                            <a href="tel:01075549218" class="call-btn">
+                                <img src="../plantlance-image/icon/call.png" alt="call" class="call-img">
+                                <p class="txt-eng number">010 7554 9218</p>
+                            </a>
+
+                            <p class="txt-kor showroom-instagram-button">
+                                <a href="https://www.instagram.com/plantlance_daegu/" target="_blank"></a>
+                                Instagram
+                            </p>
+                        </div>
+
+
+                        <div class="address-wrap">
+                            <p class="txt-kor-bold address-title">쇼룸 주소</p>
+                            <div class="address-box">
+                                <p class="txt-kor address">대구 달서구 진천로18길 30</p>
+                                <p class="txt-kor showroom-place-button">
+                                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1009888962?c=14306830.4160012,4275446.0272425,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank"></a>
+                                    위치보기
+                                </p>
+                            </div>
+                            <div class="place-near">
+                                <div class="place-near1">
+                                    <p class="txt-kor-bold">1호선 진천역</p>
+                                    <p class="txt-kor">4번 출구 5분 거리</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="time-wrap">
+                            <p class="txt-kor-bold time-title">운영 시간</p>
+
+                            <div class="time">
+                                <div class="time1">
+                                    <p class="txt-kor-bold">Tue - Sun</p>
+                                    <p class="txt-kor">| 10:00 - 19:00<br></p>
+                                </div>
+                            </div>
+
+                            <p class="txt-kor-bold mon-off">* Mon Off *</p>
+
+                        </div>
+                    </div>
+                    <!-- //대구 이미지-->
+
+                    <!-- 부산 이미지-->
+                    <div class="busan-info showroom-info">
+                        <p class="txt-eng-bold showroom-place">Busan</p>
+                        <p class="txt-kor showroom-place-kor">부산양산점</p>
+
+                        <div class="showroom-info-small-img-wrap"></div>
+
+
+
+                        <div class="showroom-notice">
+                            <a href="tel:050714854997" class="call-btn">
+                                <img src="../plantlance-image/icon/call.png" alt="call" class="call-img">
+                                <p class="txt-eng number">0507 1485 4997</p>
+                            </a>
+
+
+                            <p class="txt-kor showroom-instagram-button">
+                                <a href="https://www.instagram.com/plantlance_busan.yangsan/" target="_blank"></a>
+                                Instagram
+                            </p>
+                        </div>
+
+
+                        <div class="address-wrap">
+                            <p class="txt-kor-bold address-title">쇼룸 주소</p>
+                            <div class="address-box">
+                                <p class="txt-kor address">경남 양산시 동면 양산대로 528 1층</p>
+                                <p class="txt-kor showroom-place-button">
+                                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1072123488?c=14363112.3594278,4207377.2321064,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank"></a>
+                                    위치보기
+                                </p>
+                            </div>
+                            <div class="place-near">
+                            </div>
+                        </div>
+
+                        <div class="time-wrap">
+                            <p class="txt-kor-bold time-title">운영 시간</p>
+                            <div class="time">
+                                <div class="time1">
+                                    <p class="txt-kor-bold">Tue - Sun</p>
+                                    <p class="txt-kor">| 10:00 - 19:30<br></p>
+                                </div>
+                            </div>
+
+                            <p class="txt-kor-bold mon-off">* Mon / Holiday Off *</p>
+
+                        </div>
+                    </div>
+                    <!-- //부산 이미지-->
+
+
+                </div>
+                <!-- //쇼룸 이미지 박스 -->
+
+            </div>
+
+
+        </div>
+    </div>
+    <!-- //쇼룸 -->
+
+
+
+
+
+
+    <!-- 메인 모바일 -->
+
+
+
+
+
+    <div id="mobile-whole">
+
+
+        <div class="main-slider-wrap mob-main-slider-wrap">
+            <div class="slide mob-slide">
+                <a href="list-table-mob.html" class="slide-go-to-product"></a>
+                <img src="../plantlance-image/main/mob-slide-1.png" alt="slide1" class="slide1-img main-img">
+                <div class="text-wrap">
+                    <p class="txt-eng-bold slide-title-eng">Not just a table.</p>
+                    <div class="text-kor-wrap">
+                        <p class="slide-title txt-kor">테이블,</p>
+                        <p class="slide-title txt-kor-bold">그 이상의 오브제</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slide mob-slide">
+                <a href="wily-detail.html" class="slide-go-to-product"></a>
+                <img src="../plantlance-image/main/mob-slide-2.png" alt="slide2" class="slide2-img main-img">
+                <div class="text-wrap2">
+                    <p class="slide-title txt-eng-bold">Wily</p>
+                    <p class="slide-title txt-eng-bold">low-table</p>
+                    <div class="view-button">
+                        <a href="#none">
+                            <p class="txt-eng">
+                                view product
+                            </p>
+
+                        </a>
+                        <img src="../plantlance-image/icon/right-arrow.png" alt="next" class="view-next">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="slide mob-slide">
+                <a href="list-table.html" class="slide-go-to-product"></a>
+
+                <img src="../plantlance-image/main/mob-slide-3.png" alt="slide3" class="slide3-img main-img">
+                <div class="text-wrap2">
+
+
+                </div>
+
+            </div>
+            <!-- 슬릭 슬라이더 배너 넣을 섹션-->
+        </div>
+
+
+
+        <div class="mob-bespoke">
+            <a href="mob-bespoke.html"></a>
+            <p class="txt-eng-semibold mob-bespoke-title mob-bespoke-title1">WHAT IS YOUR BESPOKE?</p>
+            <p class="txt-eng-semibold mob-bespoke-title mob-bespoke-title2">FIND YOUR BESPOKE!</p>
+        </div>
+
+        <div class="mob-plan-a">
+            <a href="plan-a.html"></a>
+            <div class="mob-plan-a-wrap">
+                <p class="txt-eng-bold mob-plan-title">Plan A</p>
+
+                <img src="../plantlance-image/icon/right-arrow-in-circle1.png" alt="arrow" class="mob-plan-arrow">
+
+                <p class="txt-kor mob-plan-txt">한 달에 한번<br> 진행하는 특별한 가격의<br> 제품을 만나보세요</p>
+            </div>
+        </div>
+
+        <div class="mob-chair">
+            <a href="list-chair-mob.html"></a>
+            <p class="txt-eng-bold mob-chair-title">Chairs</p>
+            <img src="../plantlance-image/main/chair1.png" alt="chair">
+        </div>
+
+
+        <div class="mob-plan-b">
+            <a href="plan-b.html"></a>
+            <div class="mob-plan-b-wrap">
+                <p class="txt-eng-bold mob-plan-title">Plan B</p>
+
+                <img src="../plantlance-image/icon/right-arrow-in-circle1.png" alt="arrow" class="mob-plan-arrow">
+
+                <p class="txt-kor mob-plan-txt">새 것처럼 재가공된<br>리퍼브 제품들을<br>인스타그램에서 확인하세요</p>
+            </div>
+        </div>
+
+        <div class="mob-table">
+            <a href="list-table-mob.html"></a>
+            <p class="txt-eng-bold mob-table-title">Tables</p>
+            <img src="../plantlance-image/main/wily-table-resize1.png" alt="wily-table">
+        </div>
+
+        <div class="mob-sofa">
+            <img src="../plantlance-image/main/sofa.png" alt="our-sofa" class="mob-sofa-main">
+
+            <div class="mob-sofa-bg">
+
+            </div>
+
+            <div class="mob-sofa-button-wrap">
+                <a href="list-new-mob.html"></a>
+                <p class="txt-eng-semibold mob-sofa-title">New Product</p>
+            </div>
+        </div>
+
+
+        <!-- 쇼룸 모바일 -->
+        <div class="mob-showroom">
+            <p class="mob-showroom-title txt-eng-bold">Showroom</p>
+            <input type="radio" id="mob-seongsu" name="mob-showroom" checked>
+            <input type="radio" id="mob-pangyo" name="mob-showroom">
+            <input type="radio" id="mob-gimpo" name="mob-showroom">
+            <input type="radio" id="mob-sejong" name="mob-showroom">
+            <input type="radio" id="mob-daegu" name="mob-showroom">
+            <input type="radio" id="mob-busan" name="mob-showroom">
+
+            <div class="mob-showroom-button-wrap">
+                <label for="mob-seongsu">
+                    <p class="txt-kor">성수</p>
+                </label>
+
+                <label for="mob-pangyo">
+                    <p class="txt-kor">판교</p>
+                </label>
+
+                <label for="mob-gimpo">
+                    <p class="txt-kor">김포</p>
+                </label>
+
+                <label for="mob-sejong">
+                    <p class="txt-kor">세종</p>
+                </label>
+
+                <label for="mob-daegu">
+                    <p class="txt-kor">대구</p>
+                </label>
+
+                <label for="mob-busan">
+                    <p class="txt-kor">부산</p>
+                </label>
+            </div>
+
+
+            <div class="mob-showroom-info-wrap">
+                <div class="mob-showroom-seongsu mob-showroom-info-box">
+                    <p class="txt-eng-bold mob-showroom-info-title">Seongsu</p>
+
+                    <a href="tel:024653135">
+                        <img src="../plantlance-image/icon/call5.png" alt="mob-showroom-call" class="mob-showroom-call-button">
+                    </a>
+
+                    <p class="txt-kor mob-showroom-address">서울 성동구 뚝섬로3나길 13, 1층</p>
+                    <p class="txt-kor mob-showroom-near-info">2호선 뚝섬역 5번 출구 10분 거리, 분당선 서울숲역 1번 출구 10분 거리</p>
+
+                    <div class="mob-showroom-time mob-showroom-time1">
+                        <p class="txt-kor">Tue - Sat</p>
+                        <p class="txt-kor">| 10:00 - 19:00</p>
+                        <p class="txt-kor">* Mon Off *</p>
+                    </div>
+                    <div class="mob-showroom-time">
+                        <p class="txt-kor">Sun / Holiday</p>
+                        <p class="txt-kor">| 13:00 - 19:00</p>
+                    </div>
+
+                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1654699101?c=14142680.1420309,4514876.2233910,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank">
+                        <p class="txt-kor mob-showroom-show-place">위치보기</p>
+                    </a>
+
+                    <a href="https://www.instagram.com/plantlance_seongsu/" target="_blank">
+                        <p class="txt-kor mob-showroom-instagram">Instagram</p>
+                    </a>
+
+                </div>
+
+
+                <div class="mob-showroom-pangyo mob-showroom-info-box">
+                    <p class="txt-eng-bold mob-showroom-info-title">Pangyo</p>
+
+
+                    <a href="tel:050714191194">
+                        <img src="../plantlance-image/icon/call5.png" alt="mob-showroom-call" class="mob-showroom-call-button">
+                    </a>
+
+                    <p class="txt-kor mob-showroom-address">경기 성남시 분당구 운중로113번길 4-11</p>
+                    <p class="txt-kor mob-showroom-near-info">운정동행복복지센터 정류장 5분 거리</p>
+
+                    <div class="mob-showroom-time mob-showroom-time1">
+                        <p class="txt-kor">Tue - Sun</p>
+                        <p class="txt-kor">| 10:00 - 19:00</p>
+                        <p class="txt-kor">* Mon Off *</p>
+                    </div>
+
+                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1078549873?c=14145621.3476930,4494005.4037641,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank">
+                        <p class="txt-kor mob-showroom-show-place">위치보기</p>
+                    </a>
+
+                    <a href="https://www.instagram.com/plantlance_pangyo/" target="_blank">
+                        <p class="txt-kor mob-showroom-instagram">Instagram</p>
+                    </a>
+                </div>
+
+
+                <div class="mob-showroom-gimpo mob-showroom-info-box">
+                    <p class="txt-eng-bold mob-showroom-info-title">Gimpo</p>
+
+                    <a href="tel:050713265446">
+                        <img src="../plantlance-image/icon/call5.png" alt="mob-showroom-call" class="mob-showroom-call-button">
+                    </a>
+
+                    <p class="txt-kor mob-showroom-address">경기 김포시 김포한강2로23번길 10 1차 212호</p>
+                    <p class="txt-kor mob-showroom-near-info">쌍용예가아파트 맞은편</p>
+
+                    <div class="mob-showroom-time mob-showroom-time1">
+                        <p class="txt-kor">Tue - Sat</p>
+                        <p class="txt-kor">| 10:00 - 19:00</p>
+                        <p class="txt-kor">* Mon Off *</p>
+                    </div>
+                    <div class="mob-showroom-time">
+                        <p class="txt-kor">Sun / Holiday</p>
+                        <p class="txt-kor">| 13:00 - 19:00</p>
+                    </div>
+
+                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1345995664?c=14101285.5107056,4529037.2860202,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank">
+                        <p class="txt-kor mob-showroom-show-place">위치보기</p>
+                    </a>
+
+                    <a href="https://www.instagram.com/lavenihome/" target="_blank">
+                        <p class="txt-kor mob-showroom-instagram">Instagram</p>
+                    </a>
+                </div>
+
+
+                <div class="mob-showroom-sejong mob-showroom-info-box">
+                    <p class="txt-eng-bold mob-showroom-info-title">Sejong</p>
+
+                    <a href="tel:050713662288">
+                        <img src="../plantlance-image/icon/call5.png" alt="mob-showroom-call" class="mob-showroom-call-button">
+                    </a>
+
+                    <p class="txt-kor mob-showroom-address">충남 공주시 반포면 금벽로 1377-5</p>
+                    <p class="txt-kor mob-showroom-near-info">과학고등학교 정류장에서 도보 10분 거리</p>
+
+                    <div class="mob-showroom-time mob-showroom-time1">
+                        <p class="txt-kor">Tue - Sun</p>
+                        <p class="txt-kor">| 10:00 - 19:00</p>
+                        <p class="txt-kor">* Mon Off *</p>
+                    </div>
+
+                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1992578940?c=14161489.8186541,4359120.6702126,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank">
+                        <p class="txt-kor mob-showroom-show-place">위치보기</p>
+                    </a>
+
+                    <a href="https://www.instagram.com/plantlance_sejong/" target="_blank">
+                        <p class="txt-kor mob-showroom-instagram">Instagram</p>
+                    </a>
+                </div>
+
+
+                <div class="mob-showroom-daegu mob-showroom-info-box">
+                    <p class="txt-eng-bold mob-showroom-info-title">Daegu</p>
+
+                    <a href="tel:01075549218">
+                        <img src="../plantlance-image/icon/call5.png" alt="mob-showroom-call" class="mob-showroom-call-button">
+                    </a>
+
+                    <p class="txt-kor mob-showroom-address">대구 달서구 진천로18길 30</p>
+                    <p class="txt-kor mob-showroom-near-info">1호선 진천역 4번 출구 5분 거리</p>
+
+                    <div class="mob-showroom-time mob-showroom-time1">
+                        <p class="txt-kor">Tue - Sat</p>
+                        <p class="txt-kor">| 10:00 - 19:00</p>
+                        <p class="txt-kor">* Mon Off *</p>
+                    </div>
+                    <div class="mob-showroom-time">
+                        <p class="txt-kor">Sun / Holiday</p>
+                        <p class="txt-kor">| 13:00 - 19:00</p>
+                    </div>
+
+                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1009888962?c=14306830.4160012,4275446.0272425,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank">
+                        <p class="txt-kor mob-showroom-show-place">위치보기</p>
+                    </a>
+
+                    <a href="https://www.instagram.com/plantlance_daegu/" target="_blank">
+                        <p class="txt-kor mob-showroom-instagram">Instagram</p>
+                    </a>
+                </div>
+
+
+                <div class="mob-showroom-busan mob-showroom-info-box">
+                    <p class="txt-eng-bold mob-showroom-info-title">Busan</p>
+
+                    <a href="tel:050714854997">
+                        <img src="../plantlance-image/icon/call5.png" alt="mob-showroom-call" class="mob-showroom-call-button">
+                    </a>
+
+                    <p class="txt-kor mob-showroom-address">경남 양산시 동면 양산대로 528 1층</p>
+                    <p class="txt-kor mob-showroom-near-info"></p>
+
+                    <div class="mob-showroom-time mob-showroom-time1">
+                        <p class="txt-kor">Tue - Sun</p>
+                        <p class="txt-kor">| 10:00 - 19:30</p>
+                        <p class="txt-kor">* Mon / Holiday Off *</p>
+                    </div>
+
+                    <a href="https://map.naver.com/v5/search/%ED%94%8C%EB%9E%9C%ED%8A%B8%EB%9E%80%EC%8A%A4/place/1072123488?c=14363112.3594278,4207377.2321064,16,0,0,0,dh&placePath=%3Fentry%253Dpll" target="_blank">
+                        <p class="txt-kor mob-showroom-show-place">위치보기</p>
+                    </a>
+
+                    <a href="https://www.instagram.com/plantlance_busan.yangsan/" target="_blank">
+                        <p class="txt-kor mob-showroom-instagram">Instagram</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //쇼룸 모바일 -->
+    </div>
+    <!-- //메인 모바일 -->
+
+
+
+
+
+
+
+
+    <!-- 브랜드 스토리 -->
+    <div id="pltl">
+        <div class="pltl-wrap">
+            <img src="../plantlance-image/main/main-brandstory.jpg" alt="pltl-bg" class="pltl-bg">
+            <img src="../plantlance-image/main/main-pltl1-mob2.png" alt="pltl-bg" class="pltl-bg">
+
+            <div class="pltl-text-wrap">
+                <p class="txt-kor-bold">We, plantlance provide</p>
+                <p class="txt-kor-bold">customer oriented customized furniture</p>
+                <p class="txt-kor-bold">with practical and trendy designs</p>
+                <p class="txt-kor-bold">based on modernity and basicity.</p>
+            </div>
+
+            <a href="pltl.html">
+                <p class="txt-kor pltl-button pc-pltl-button">Brand Story</p>
+            </a>
+
+            <a href="mob-pltl.html">
+                <p class="txt-kor pltl-button mob-pltl-button">Brand Story</p>
+            </a>
+        </div>
+    </div>
+    <!-- //브랜드 스토리 -->
+    <!-- 메인 홈페이지 -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="footer-wrap">
+            <a href="plantlance.html">
+                <img src="../plantlance-image/logo.png" alt="pltl-logo" class="footer-logo">
+            </a>
+
+
+
+
+            <div class="footer-info-box">
+
+                <p class="txt-kor-light ceo-info">Company : Plantlance CEO : semin, Jang</p>
+
+                <div class="footer-info">
+                    <p class="txt-kor-light">Address : 서울시 성동구 상원12길 23 오리엔트 빌딩 8층</p>
+                    <p class="txt-kor-light">Address / Daegu-company : 대구광역시 달서구 진천로 18길 30</p>
+
+
+                    <div class="footer-contact">
+                        <p class="txt-kor-light">Business registration no. 427-87-01446</p>
+                        <a href="#none">
+                            <p class="txt-kor-light">Email : info@plantlance.kr</p>
+                        </a>
+                    </div>
+
+
+
+                    <p class="txt-kor-light">Mail-order sales license no. 제 2013 - 대구달서 - 0430 / 3010238호</p>
+
+                    <p class="txt-kor-light copyright">plantlance group &copy;2018 all rights reserved</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-show-contents">
+                <a href="tel:1899-3417">
+                    <p class="txt-kor-bold footer-call">T. 1899 - 3417</p>
+                </a>
+
+                <p class="txt-kor-light">costomer-center</p>
+                <p class="txt-kor">Tue - Sat</p>
+                <p class="txt-kor-light">10:00 - 19:00</p>
+                <p class="txt-kor">Sun / Holiday</p>
+                <p class="txt-kor-light">13:00 - 19:00</p>
+
+                <p class="txt-kor-light">Monday off</p>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- 모바일 푸터 -->
+        <div class="mob-footer-wrap">
+            <a href="#none">
+                <img src="../plantlance-image/logo.png" alt="footer-logo" class="mob-footer-logo">
+            </a>
+
+            <div class="mob-footer-show-content">
+                <a href="tel:1899-3417">
+                    <p class="txt-kor-bold">T. 1899-3417</p>
+                </a>
+
+                <p class="txt-kor-light">costomer center</p>
+
+                <div class="mob-footer-time">
+                    <p class="txt-kor-bold">Tue - Sat</p>
+                    <p class="txt-kor-light">10:00 - 19:00</p>
+                </div>
+
+                <div class="mob-footer-time">
+                    <p class="txt-kor-bold">Sun / Holiday</p>
+                    <p class="txt-kor-light">13:00 - 19:00</p>
+                </div>
+                <p class="txt-kor-light">Monday off</p>
+
+
+
+
+                <p class="txt-kor-light mob-footer-company-show">(주) 플랜트란스 사업자 정보
+                    <img src="../plantlance-image/icon/arrow-down2.png" alt="arrow" class="mob-footer-arrow">
+                </p>
+
+                <p class="txt-kor-light mob-footer-company-hide">(주) 플랜트란스 사업자 정보
+                    <img src="../plantlance-image/icon/arrow-up2.png" alt="arrow" class="mob-footer-arrow">
+                </p>
+
+
+
+
+            </div>
+            <div class="mob-footer-company-info">
+                <p class="txt-kor-light mob-footer-company-title">Company. Plantlance CEO. semin, Jang</p>
+
+
+                <p class="txt-kor-light">Address : 서울시 성동구 상원12길 23 오리엔트 빌딩 8층</p>
+                <p class="txt-kor-light">Address / Daegu-company : 대구광역시 달서구 진천로 18길 30</p>
+
+                <div class="mob-footer-contact">
+                    <p class="txt-kor-light">Business registration no. 427-87-01446</p>
+                    <a href="#none">
+                        <p class="txt-kor-light">Email : info@plantlance.kr</p>
+                    </a>
+                </div>
+
+
+
+                <p class="txt-kor-light">Mail-order sales license no. 제 2013 - 대구달서 - 0430 / 3010238호</p>
+
+                <p class="txt-kor-light copyright">plantlance group &copy;2018 all rights reserved</p>
+            </div>
+        </div>
+
+        <!-- //모바일 푸터 -->
+    </footer>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $(".mob-footer-company-show").click(function() {
+                $(".mob-footer-company-info").css("height", "100px");
+
+                $(".mob-footer-company-show").css("display", "none");
+                $(".mob-footer-company-hide").css("display", "flex");
+            });
+
+            $(".mob-footer-company-hide").click(function() {
+                $(".mob-footer-company-info").css("height", "000px");
+
+                $(".mob-footer-company-hide").css("display", "none");
+                $(".mob-footer-company-show").css("display", "flex");
+            });
+        });
+    </script>
+
+
+    <!-- //푸터 -->
+
+
+
+
+    <script type="text/javascript" src="../plantlance-script/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.main-slider-wrap').slick({
+                dots: true,
+                infinite: true,
+                speed: 1200,
+                slidesToShow: 1,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                pauseOnFocus: false,
+                pauseOnHover: false
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+</body></html>

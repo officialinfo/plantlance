@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+
+@font-face {
+    src: url("../fonts/Pretendard-Thin.otf");
+    font-family: "Pretendard-Thin";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Light.otf");
+    font-family: "Pretendard-Light";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Regular.otf");
+    font-family: "Pretendard-Regular";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Medium.otf");
+    font-family: "Pretendard-Medium";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-SemiBold.otf");
+    font-family: "Pretendard-SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-ExtraBold.otf");
+    font-family: "Pretendard-ExtraBold";
+}
+
+
+
+
+
+
+@font-face {
+    src: url("../fonts/Urbanist-Light.ttf");
+    font-family: "Urbanist-Light";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-Regular.ttf");
+    font-family: "Urbanist-Regular";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-Medium.ttf");
+    font-family: "Urbanist-Medium";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-SemiBold.ttf");
+    font-family: "Urbanist-SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-ExtraBold.ttf");
+    font-family: "Urbanist-ExtraBold";
+}
+
+
+
+
+/*
+body::-webkit-scrollbar{
+    display: none;
+}
+*/
+
+body {
+    width: 100%;
+    height: 100vh;
+    color: #292929;
+    font-size: 14px;
+    overflow-x: hidden;
+
+    /*-ms-overflow-style: none; /* IE and Edge */
+    /*scrollbar-width: none; /* Firefox */
+    /*background-image: url(../plantlance-img/main-bespoke1.jpg);*/
+}
+
+a,
+p,
+li {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+
+
+.txt-eng-light{
+    font-family: "Urbanist-Light";
+}
+.txt-eng {
+    font-family: "Urbanist-Medium";
+}
+.txt-eng-semibold{
+    font-family: "Urbanist-SemiBold";
+}
+.txt-eng-bold {
+    font-family: "Urbanist-ExtraBold";
+}
+
+.txt-kor-light{
+     font-family: "Pretendard-Thin";
+}
+.txt-kor {
+    font-family: "Pretendard-Medium";
+}
+
+.txt-kor-bold {
+    font-family: "Pretendard-SemiBold";
+}
+
+
+
+
+/* login */
+#login{
+    position: relative;
+    float:left;
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    overflow-x: hidden;
+}
+.login-wrap{
+        position: relative;
+    width:300px;
+    height:500px;
+    text-align: center;
+}
+
+
+
+
+
+.user-login{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:70px;
+}
+.user-login input{
+    position: relative;
+    float:left;
+    width:100%;
+    border:none;
+    border-bottom:1px solid #d1d1d1;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="password"]{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+.user-login input:focus{
+    outline: none;
+}
+.user-login input::placeholder{
+    color:#d1d1d1;
+}
+
+
+
+.remember-user-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+}
+.remember-user-wrap .remember-user{
+    position: relative;
+    float:left;
+    width:12px;
+    left:0;
+    border-radius: 0;
+}
+.remember-user-wrap .remember-txt{
+    position: relative;
+    float:left;
+    margin-left:10px;
+    cursor: pointer;
+}
+
+
+.user-login .login-btn{
+    position: relative;
+    float:left;
+    width:100%;
+    background: #292929;
+    color:#fff;
+    padding:18px 0;
+}
+.user-login .non-member-btn{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:10px;
+    border:1px solid #707070;
+    color:#101010;
+    padding:18px 0;
+    box-sizing: border-box;
+}
+
+
+
+.user-help{
+    position: relative;
+    float:left;
+    width:250px;
+    margin-top:40px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between; 
+}
+.user-help p{
+    color:#999;
+}
+.user-help .join{
+    color:#292929;
+}
+
+
+.join-sns{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:40px;
+    display: flex;
+    justify-content: center;
+}
+
+.join-sns img{
+    position: relative;
+    float:left;
+    width:35px;
+    margin: 0 10px;
+}
+/* //login */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1051 @@
+@charset "utf-8";
+
+
+@font-face {
+    src: url("../fonts/Pretendard-Thin.otf");
+    font-family: "Pretendard-Thin";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Light.otf");
+    font-family: "Pretendard-Light";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Regular.otf");
+    font-family: "Pretendard-Regular";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Medium.otf");
+    font-family: "Pretendard-Medium";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-SemiBold.otf");
+    font-family: "Pretendard-SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-ExtraBold.otf");
+    font-family: "Pretendard-ExtraBold";
+}
+
+
+
+
+
+
+@font-face {
+    src: url("../fonts/Urbanist-Light.ttf");
+    font-family: "Urbanist-Light";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-Regular.ttf");
+    font-family: "Urbanist-Regular";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-Medium.ttf");
+    font-family: "Urbanist-Medium";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-SemiBold.ttf");
+    font-family: "Urbanist-SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-ExtraBold.ttf");
+    font-family: "Urbanist-ExtraBold";
+}
+
+
+
+
+
+/*
+body::-webkit-scrollbar{
+    display: none;
+}
+*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: #292929;
+    font-size: 14px;
+    /*-ms-overflow-style: none; /* IE and Edge */
+    /*scrollbar-width: none; /* Firefox */
+    /*background-image: url(../plantlance-img/main-bespoke1.jpg);*/
+}
+
+
+a,
+p,
+li {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+
+
+
+.txt-eng-light{
+    font-family: "Urbanist-Light";
+}
+.txt-eng {
+    font-family: "Urbanist-Medium";
+}
+.txt-eng-semibold{
+    font-family: "Urbanist-SemiBold";
+}
+.txt-eng-bold {
+    font-family: "Urbanist-ExtraBold";
+}
+
+.txt-kor-light{
+     font-family: "Pretendard-Thin";
+}
+.txt-kor {
+    font-family: "Pretendard-Medium";
+}
+
+.txt-kor-bold {
+    font-family: "Pretendard-SemiBold";
+}
+
+
+
+
+
+
+
+/* 모든 input 타입에 대한 모바일 radius 제거*/
+input[type="text"] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    padding-bottom: 4px;
+}
+
+input[type="number"] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    padding-bottom: 4px;
+}
+
+input[type="email"] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    padding-bottom: 4px;
+}
+
+input[type="checkbox"] {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: none;
+}
+
+select {
+    -webkit-border-radius: 0;
+}
+
+/* //모든 input 타입에 대한 모바일 radius 제거*/
+
+
+
+
+
+
+
+/* payment */
+#payment {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 1400px;
+    min-width: 1400px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.payment-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    height: auto;
+
+}
+
+
+
+
+
+/* checkout-info */
+.checkout-info {
+    position: relative;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.checkout-info .checkout-title {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.checkout-info .product-info {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.checkout-info .product-info-title {
+    font-size: 18px;
+}
+
+.checkout-info p {
+    position: relative;
+    float: left;
+    width: auto;
+}
+
+.checkout-info .product-info-ea {
+    margin-left: 10px;
+    color: #0A57BF;
+}
+
+.product-info .product-box {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    border-top: 2px solid #292929;
+}
+
+.product-box .product-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.product-wrap .product {
+    position: relative;
+    float: left;
+    width: 70%;
+}
+
+.product .product-img {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #d8d8d8;
+    margin-right: 20px;
+}
+
+.product .product-option {
+    position: relative;
+    float: left;
+}
+
+.product-option .product-name {
+    position: relative;
+    float: left;
+    width: auto;
+}
+
+.product-option .my-option {
+    position: relative;
+    width: 150px;
+    margin-top: 55px;
+}
+
+.product-option .my-option p {
+    position: relative;
+    float: left;
+    width: auto;
+    color: #999;
+    font-size: 12px;
+    margin: 0 3px;
+}
+
+.product-wrap .ea {
+    position: relative;
+    float: left;
+    width: 15%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+.product-wrap .price {
+    position: relative;
+    float: left;
+    width: 15%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+
+/* customer-info*/
+.customer-info {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.customer-info .customer-title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.customer {
+    position: relative;
+    float: left;
+    width: 100%;
+    border-top: 2px solid #292929;
+}
+
+.customer .customer-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.customer-wrap p {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 30px;
+    text-align: left;
+    padding-left: 10px;
+    top: 50%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.customer-wrap input {
+    position: relative;
+    float: left;
+    border: 1px solid #f0f0f0;
+    background: #fcfcfc;
+    width: 20%;
+    height: 25px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.customer-wrap .selection {
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 32px;
+    border: 1px solid #f0f0f0;
+    background: #fcfcfc;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    outline: none;
+    padding-left: 10px;
+    color: #777;
+
+}
+
+.email-wrap .at {
+    width: auto;
+    margin-right: 10px;
+}
+
+.email-wrap .email-dot {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.email-wrap .selection {
+    width: 80px;
+}
+
+
+.address-wrap .address-button {
+    width: auto;
+    background: #292929;
+    color: #fff;
+    padding: 0 15px 2px 15px;
+    font-size: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+.address-wrap .other-address {
+    width: 50%;
+    margin-left: 160px;
+    margin-top: 10px;
+}
+
+.address-wrap input {
+    background: #f5f5f5;
+}
+
+.message-wrap input {
+    width: 60%;
+    padding: 10px 0;
+    padding-left: 10px;
+
+}
+
+/* //customer-info*/
+
+
+
+
+/* delivery-info */
+.delivery-info .delivery-check {
+    width: 10px;
+    margin-top: 4px;
+}
+
+.delivery-info .message-wrap input {
+    height: 40px;
+}
+
+/* //delivery-info */
+
+
+
+/* order-info */
+.order-info {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.order-info .order-title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-left: 0px;
+    font-size: 18px;
+}
+
+.order-way {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.order-way .type-of-payment[type=radio] {
+    display: none;
+}
+
+#card:checked ~ .order-way-wrap label:nth-child(1),
+#deposit:checked ~ .order-way-wrap label:nth-child(2),
+#live:checked ~ .order-way-wrap label:nth-child(3),
+#phone:checked ~ .order-way-wrap label:nth-child(4),
+#easy:checked ~ .order-way-wrap label:nth-child(5) {
+    color: #fff;
+    background: #333;
+    border: 1px solid #333;
+}
+
+.way-wrap .card-wrap, 
+.way-wrap .deposit-wrap, 
+.way-wrap .live-wrap, 
+.way-wrap .phone-wrap, 
+.way-wrap .easy-wrap
+{
+    display: none;
+}
+
+#card:checked ~ .way-wrap .card-wrap,
+#deposit:checked ~ .way-wrap .deposit-wrap,
+#live:checked ~ .way-wrap .live-wrap,
+#phone:checked ~ .way-wrap .phone-wrap,
+#easy:checked ~ .way-wrap .easy-wrap {
+    display: flex;
+}
+
+
+.order-way-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+
+.order-way-wrap label {
+    cursor: pointer;
+    float: left;
+    width: 45%;
+    text-align: center;
+    padding: 15px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    margin: 0 5px;
+    border: 1px solid #292929;
+    transition-duration: .2s;
+}
+
+.order-way-wrap label:nth-child(1) {
+    margin-left: 0;
+}
+
+.order-way-wrap label:nth-child(5) {
+    margin-right: 0;
+}
+
+
+
+/* way-wrap */
+.way-wrap .way-kind-title {
+    position: relative;
+    float: left;
+    width: 15%;
+    height: 100%;
+}
+
+.way-kind-title p {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.way-kind-info {
+    position: relative;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.way-kind-info select::-ms-expand { 
+	display: none;
+}
+
+.way-kind-info select {
+    position: relative;
+    float: left;
+    width: 150px;
+    margin: 0 30px;
+    border: none;
+    background: url('../plantlance-image/icon/arrow-down2.png') no-repeat 95% 20%;
+    background-size: 10px;
+    border-bottom: 1px solid #eee;
+    padding: 0 0 10px 0;
+    outline: 0 none;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+
+
+.way-kind-info-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+
+}
+
+.way-notice-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.way-notice-wrap p {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    color: #888;
+}
+
+
+
+
+/* card-wrap */
+.card-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+    border-top: 2px solid #f5f5f5;
+    border-bottom: 2px solid #f5f5f5;
+    margin-top: 20px;
+    background: #fcfcfc;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* //card-wrap */
+
+
+
+/* deposit-wrap */
+.deposit-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 150px;
+    border-top: 2px solid #f5f5f5;
+    border-bottom: 2px solid #f5f5f5;
+    margin-top: 20px;
+    background: #fcfcfc;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.deposit-wrap .way-kind-info {
+    position: relative;
+    float: left;
+    width:85%;
+    height: auto;
+}
+
+
+.deposit-wrap .way-kind-info-txt-wrap{
+    position: relative;
+    float:left;
+    width:auto;
+}
+
+
+.deposit-wrap .way-kind-info .title {
+    position: relative;
+    float: left;
+    width: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+.deposit-wrap .way-kind-info input {
+    position: relative;
+    float: left;
+    width: 170px;
+    background: #eee;
+    border: none;
+    margin-left: 10px;
+    padding: 10px 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    outline: none;
+    padding-left: 15px;
+}
+
+
+.deposit-wrap .way-kind-info .deposit-number {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 12px;
+    color: #999;
+}
+
+
+/* //deposit-wrap */
+
+
+
+/* live-wrap */
+.live-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+    border-top: 2px solid #f5f5f5;
+    border-bottom: 2px solid #f5f5f5;
+    margin-top: 20px;
+    background: #fcfcfc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.live-wrap .way-notice-wrap {
+    margin-top: 0;
+}
+
+/* //live-wrap */
+
+
+
+/* phone-wrap */
+.phone-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+    border-top: 2px solid #f5f5f5;
+    border-bottom: 2px solid #f5f5f5;
+    margin-top: 20px;
+    background: #fcfcfc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.phone-wrap .way-notice-wrap {
+    margin-top: 0;
+}
+
+/* //phone-wrap */
+
+
+/* easy-wrap */
+.easy-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 130px;
+    border-top: 2px solid #f5f5f5;
+    border-bottom: 2px solid #f5f5f5;
+    margin-top: 20px;
+    background: #fcfcfc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.easy-wrap .easy-kind-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: -30px;
+}
+.easy-wrap .easy-kind-wrap .easy-kind{
+    position: relative;
+    float:left;
+    width:50%;
+}
+.easy-wrap .easy-kind-wrap .easy-kind input {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+}
+
+.easy-wrap .easy-kind-wrap .easy-kind img {
+    position: relative;
+    float: left;
+    width: 48px;
+}
+
+
+
+.easy-wrap .easy-kind-wrap .easy-kind .kakaopay {
+    margin-top: 3px;
+}
+
+.easy-wrap .easy-kind-wrap .easy-kind .payco {
+    margin-top: 3px;
+}
+
+.easy-wrap .easy-kind-wrap .easy-kind .toss {
+    margin-top: -1px;
+}
+
+.easy-wrap .easy-kind-wrap .easy-kind .smilepay {
+    margin-top: 3px;
+}
+
+.easy-wrap .easy-kind-wrap .easy-kind .samsungpay {
+    margin-top: 6px;
+}
+
+
+.easy-wrap .way-kind-info .way-notice-wrap {
+    position: absolute;
+    float: left;
+    bottom: 10px;
+    left: 20px;
+}
+
+/* //easy-wrap */
+
+
+
+
+/* way-wrap  */
+
+
+
+
+
+/* //order-info */
+
+
+/* //checkout-info */
+
+
+
+
+
+
+
+
+
+/* checkout-price */
+.checkout-price {
+    position: relative;
+    width: 100%;
+    margin-left: 50px;
+}
+
+.checkout-price .checkout-price-title {
+    font-size: 18px;
+}
+
+.checkout-price .checkout-price-title {
+    position: relative;
+    float: left;
+    width: 85%;
+    margin-bottom: 10px;
+    margin-top: 73px;
+}
+
+.checkout-price .checkout-price-box {
+    position: relative;
+    float: left;
+    width: 85%;
+    height: 180px;
+    border: 1px solid #292929;
+    border-top: 2px solid #292929;
+    padding: 20px;
+}
+
+.checkout-price .product-price-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.checkout-price .product-price-wrap p {
+    position: relative;
+    float: left;
+    width: auto;
+    font-size: 12px;
+}
+
+.checkout-price .product-price-wrap .price {
+    float: right;
+}
+
+.checkout-price .delivery {
+    margin-top: 30px;
+    opacity: 1;
+
+}
+
+.checkout-price .delivery2 p {
+    opacity: .5;
+    font-size: 11px;
+}
+
+.checkout-price .delivery2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.checkout-price .last-checkout {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.checkout-price .last-checkout p {
+    font-size: 14px;
+}
+
+.checkout-price .last-checkout .price {
+    color: #3D82B8;
+}
+
+
+
+
+.checkout-price .submit-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-price .submit {
+    position: relative;
+    width: auto;
+    font-size: 12px;
+    color: #777;
+}
+
+.checkout-price .submit-check {
+    position: relative;
+    margin-top: 1px;
+}
+
+.submit-txt {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    height: 80px;
+    background: #f5f5f5;
+    overflow-y: scroll;
+}
+
+.submit-txt-wrap {
+    position: relative;
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    padding-bottom: 20px;
+}
+
+.submit-txt-wrap p {
+    position: relative;
+    float: left;
+    color: #999;
+    line-height: 1.5;
+}
+
+.submit-txt-wrap .title {
+    color: #292929;
+    margin-bottom: 10px;
+}
+
+.submit-wrap2 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.submit-wrap3 {
+    position: relative;
+    float: right;
+    width: 75px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+
+.order-button {
+    position: relative;
+    float: left;
+    width: 100%;
+    background: #292929;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* //checkout-price */
+
+
+
+
+/* //payment */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:5000px) {
+    .payment-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .order-way-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .easy-wrap .easy-kind-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .checkout-price {
+        width: 400px;
+    }
+
+
+
+    .easy-wrap .way-kind-info .way-notice-wrap p{
+        width:90%;
+    }
+    
+    .easy-wrap .easy-kind-wrap .easy-kind{
+        margin:5px 0;
+    }
+    .easy-wrap .easy-kind-wrap .easy-kind .mobile-easy{
+        position: relative;
+        float:right;
+    }
+}

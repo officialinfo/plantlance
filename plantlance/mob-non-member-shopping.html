@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Plantlance</title>
+
+
+    <script src="../plantlance-script/jquery-3.6.0.min.js"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/mob-non-member-shopping.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/mob-gnb.css">
+    
+    
+    
+    
+      <script>
+        // **  gnb 스크립트 
+
+
+        $(document).ready(function() {
+        
+            /* 메뉴 - 모바일 슬라이드 메뉴 활성화 */
+            $("nav > .nav-wrap > a > .menu-icon").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duration", ".1s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", "0s");
+
+                $(".nav-mob").css("width", "100%");
+                $(".nav-mob").css("z-index", "5");
+
+                $("#nav-slide").css("animation-name", "menuShow");
+                $("#nav-slide").css("animation-delay", ".1s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+                $(".nav-mob").css("animation-name", "menuShow");
+                $(".nav-mob").css("animation-delay", ".1s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("display", "block");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("opacity", "1");
+
+
+                $(".nav-mob > .nav-mob-wrap").css("transition-duration", ".2s");
+                $(".nav-mob > .nav-mob-wrap").css("transition-delay", ".3s");
+                $(".nav-mob > .nav-mob-wrap").css("opacity", "1");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "block");
+
+
+                $("html::-webkit-scrollbar").css("display", "none");
+                $("html").css("-ms-overflow-style", "none");
+            });
+            /* // 메뉴 - 모바일 슬라이드 메뉴 활성화 */
+
+
+            /* 메뉴 - 닫기 - 모바일 슬라이드 메뉴 비활성화 */
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-top > a > .close-button").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $(".nav-mob").css("width", "0");
+                $(".nav-mob").css("animation-name", "menuNone");
+                $(".nav-mob").css("animation-delay", ".4s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap").css("transition-duration", ".1s");
+                $(".nav-mob > .nav-mob-wrap").css("transition-delay", "0s");
+                $(".nav-mob > .nav-mob-wrap").css("opacity", "0");
+
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "0");
+
+
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-down").css("display", "block");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-up").css("display", "none");
+
+
+
+
+
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $("#nav-slide").css("width", "0");
+                $("#nav-slide").css("animation-name", "menuNone");
+                $("#nav-slide").css("animation-delay", ".4s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+
+                $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").css("display", "none");
+
+                $("#nav-slide > .nav-slide-wrap").css("transition-delay", "0s");
+                $("#nav-slide > .nav-slide-wrap").css("transition-duration", ".1s");
+                $("#nav-slide > .nav-slide-wrap").css("opacity", "0");
+
+
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-sofa").css("height", "0px");
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-table").css("height", "0px");
+
+
+                $("html::-webkit-scrollbar").css("display", "block");
+                $("html").css("-ms-overflow-style", "auto");
+            });
+            /* 메뉴 - 닫기 - 모바일 슬라이드 메뉴 비활성화 */
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 활성화 */
+
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-down").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "auto");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-down").css("display", "none");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-up").css("display", "block");
+
+
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-down").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-up").css("display", "block");
+            });
+            /* //모바일 메뉴 - 퍼니쳐 활성화 */
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 비활성화 */
+
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-up").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > .furniture").css("height", "0px");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-down").css("display", "block");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-up").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "0");
+
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-down").css("display", "block");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-up").css("display", "none");
+            });
+            /* //모바일 메뉴 - 퍼니쳐 비활성화 */
+
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 - 소파 활성화 */
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > .furniture > a > .title-sofa").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "auto");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "0");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "auto");
+            });
+            /* //모바일 메뉴 - 퍼니쳐 - 소파 활성화 */
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 - 테이블 활성화 */
+
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > a > .title-table").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "auto");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "auto");
+
+
+            });
+            /* //모바일 메뉴 - 퍼니쳐 - 테이블 활성화 */
+
+
+
+
+            /* 검색 활성화 */
+
+            $("nav > .nav-wrap > .sub-button-wrap > a > .search-icon").click(function() {
+                $(".search-wrap").css("display", "block");
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > .sub-button-wrap").css("opacity", "0");
+            });
+
+            /* //검색 활성화 */
+
+
+
+            /* 검색 닫기 */
+            $(".search-close-btn").click(function() {
+                $(".search-wrap").css("display", "none");
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > .sub-button-wrap").css("opacity", "1");
+
+            });
+            /* //검색 닫기 */
+        });
+    </script>
+
+
+
+   
+
+</head>
+
+<body>
+
+    <!-- gnb -->
+    <nav>
+        <div class="nav-wrap">
+            <a href="#none">
+                <img src="../plantlance-image/icon/menu2.png" alt="menu" class="menu-icon">
+            </a>
+            <a href="mob-plantlance.html">
+                <img src="../plantlance-image/logo.png" alt="logo" class="logo">
+            </a>
+            <div class="sub-button-wrap">
+                <a href="#none">
+                    <img src="../plantlance-image/icon/search.png" alt="search" class="search-icon">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- 검색 -->
+    <div class="search-wrap">
+        <div class="search-place-wrap">
+            <a href="#none">
+                <p class="txt-eng search-close-btn">Close</p>
+            </a>
+            <div class="search-place">
+                <form>
+                    <input autocomplete="off" type="text" placeholder="검색어를 입력해주세요" class="txt-kor" id="search" onkeyup="printName()" onkeypress="if( event.keyCode == 13){searchData();}">
+
+                    <a href="mob-search-list.html">
+                        <img src="../plantlance-image/icon/search.png" alt="search" class="search-btn">
+                    </a>
+                </form>
+            </div>
+        </div>
+
+        <!--
+        <div class="search-result">
+            <div class="search-result-wrap">
+                <div id="result" class="txt-kor-bold"></div>
+                <p class="txt-kor result-txt">에 대한 검색 결과입니다.</p>
+            </div>
+        </div>
+        -->
+        <div class="search-bg"></div>
+    </div>
+    <!-- //검색 -->
+
+
+
+
+
+
+
+
+
+    <!-- gnb 모바일 -->
+    <div class="nav-mob">
+        <div class="nav-mob-wrap">
+            <div class="nav-mob-top">
+                <a href="#none">
+                    <img src="../plantlance-image/icon/close2.png" alt="close" class="close-button">
+                </a>
+                <div class="user-wrap">
+                    <a href="mob-shopping-fill.html">
+                        <img src="../plantlance-image/icon/bag.png" alt="bag" class="shopping-button">
+                    </a>
+                    <a href="mob-login.html">
+                        <img src="../plantlance-image/icon/login.png" alt="login" class="login-button">
+                    </a>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <div class="nav-mob-main-menu">
+
+                <div class="mob-about">
+                    <p class="txt-eng-bold title">ABOUT</p>
+
+                    <a href="mob-pltl.html">
+                        <p class="txt-eng">PLTL</p>
+                    </a>
+                    <a href="mob-bespoke.html">
+                        <p class="txt-eng">BESPOKE</p>
+                    </a>
+                    <a href="mob-contact.html">
+                        <p class="txt-eng">CONTACT</p>
+                    </a>
+                </div>
+
+
+
+                <div class="mob-shop">
+                    <p class="txt-eng-bold title">SHOP</p>
+                    <div class="shop-wrap">
+                        <a href="mob-list-new.html">
+                            <p class="txt-eng sub-title">NEW OBJECT</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-eng title-furniture mob-gnb-furniture-down">FURNITURE
+                                <img src="../plantlance-image/icon/arrow-down-white.png" alt="arrow" class="arrow arrow-down">
+                            </p>
+
+                        </a>
+                        <a href="#none">
+                            <p class="txt-eng title-furniture mob-gnb-furniture-up">FURNITURE
+                                <img src="../plantlance-image/icon/arrow-up-white.png" alt="arrow" class="arrow arrow-up">
+                            </p>
+
+                        </a>
+
+                        <div class="furniture">
+                            <a href="#none">
+                                <p class="txt-eng sub-title title-sofa">Sofa</p>
+                            </a>
+                            <div class="gnb-mob-sofa">
+                                <a href="mob-list-sofa.html">
+                                    <p class="txt-kor">전체 소파</p>
+                                </a>
+                                <a href="#none">
+                                    <p class="txt-kor">플랙스 소파</p>
+                                </a>
+                                <a href="#none">
+                                    <p class="txt-kor">클라우드 소파</p>
+                                </a>
+                                <a href="#none">
+                                    <p class="txt-kor">아우어 소파</p>
+                                </a>
+                                <a href="#none">
+                                    <p class="txt-kor">블러크 소파</p>
+                                </a>
+                                <a href="#none">
+                                    <p class="txt-kor">그래 소파</p>
+                                </a>
+                            </div>
+                            <a href="#none">
+                                <p class="txt-eng sub-title title-table">Table</p>
+                            </a>
+                            <div class="gnb-mob-table">
+                                <a href="mob-list-table.html">
+                                    <p class="txt-kor">전체 테이블</p>
+                                </a>
+                                <a href="mob-list-table.html">
+                                    <p class="txt-kor">카페 테이블 시리즈</p>
+                                </a>
+                                <a href="mob-list-table.html">
+                                    <p class="txt-kor">메이트 테이블 시리즈</p>
+                                </a>
+
+                            </div>
+                            <a href="mob-list-chair.html">
+                                <p class="txt-eng sub-title">Chair</p>
+                            </a>
+                            <a href="mob-list-stool.html">
+                                <p class="txt-eng sub-title">Stool</p>
+                            </a>
+                            <a href="mob-list-lighting.html">
+                                <p class="txt-eng sub-title">Lighting</p>
+                            </a>
+                            <a href="mob-list-etc.html">
+                                <p class="txt-eng sub-title">Etc</p>
+                            </a>
+                        </div>
+                        <a href="mob-list-planterior.html">
+                            <p class="txt-eng">PLANTERIOR</p>
+                        </a>
+                        <a href="mob-list-kitchen.html">
+                            <p class="txt-eng">KITCHEN</p>
+                        </a>
+                        <a href="mob-list-interior.html">
+                            <p class="txt-eng">INTERIOR</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mob-collection">
+                    <p class="txt-eng-bold title">COLLECTION</p>
+
+                    <a href="#none">
+                        <p class="txt-eng">2021 REFURB</p>
+                    </a>
+
+                </div>
+
+
+
+                <div class="mob-community">
+                    <p class="txt-eng-bold title">COMMUNITY</p>
+
+                    <a href="mob-notice.html">
+                        <p class="txt-eng">NOTICE</p>
+                    </a>
+                    <a href="mob-qna.html">
+                        <p class="txt-eng">Q &amp; A</p>
+                    </a>
+                    <a href="mob-review-list.html">
+                        <p class="txt-eng">REVIEW</p>
+                    </a>
+
+                </div>
+
+                <div class="mob-gnb-showroom">
+                    <a href="mob-showroom.html">
+                        <p class="txt-eng-bold">SHOWROOM</p>
+                    </a>
+                </div>
+
+
+                <div class="mob-main-bottom">
+
+                    <a href="mob-mypage-home.html">
+                        <p class="txt-eng-bold my-page">MY PAGE</p>
+                    </a>
+                    <a href="mob-shopping.html">
+                        <p class="txt-eng-bold cart">CART</p>
+                    </a>
+                    <a href="mob-mypage-wishlist.html">
+                        <p class="txt-eng-bold wish-list">WISH LIST</p>
+                    </a>
+                    <a href="mob-join.html">
+                        <p class="txt-eng-bold wish-list">JOIN</p>
+                    </a>
+                    <a href="#none">
+                        <p class="txt-eng-bold delivery">DELIVERY</p>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="nav-mob-bottom">
+                <div class="bottom-info">
+                    <div class="info1">
+                        <p class="txt-eng tel-txt">Customer center</p>
+                        <a href="tel:1899-3417">
+                            <img src="../plantlance-image/icon/call1.png" alt="call" class="call-img">
+                            <p class="txt-eng tel">1899-3417</p>
+                        </a>
+                    </div>
+                    <div class="info2">
+                        <p class="txt-eng ig-txt">Instagram</p>
+                        <a href="https://www.instagram.com/plantlance.kr/">
+                            <p class="txt-eng ig">@plantlance.kr</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- //gnb 모바일 -->
+
+    <!-- //gnb -->
+
+
+
+
+
+
+
+    
+    <!-- 수량과 비례한 가격 변동 스크립트 -->
+    <script language="JavaScript">
+        var sell_price;
+        var amount;
+
+        function init() {
+            sell_price = document.form.sell_price.value;
+            amount = document.form.amount.value;
+            document.form.sum.value = sell_price;
+            change();
+        }
+
+        function add() {
+            hm = document.form.amount;
+            sum = document.form.sum;
+            hm.value++;
+
+            sum.value = parseInt(hm.value) * sell_price;
+        }
+
+        function del() {
+            hm = document.form.amount;
+            sum = document.form.sum;
+            if (hm.value > 1) {
+                hm.value--;
+                sum.value = parseInt(hm.value) * sell_price;
+            }
+        }
+
+        function change() {
+            hm = document.form.amount;
+            sum = document.form.sum;
+
+            if (hm.value < 0) {
+                hm.value = 0;
+            }
+            sum.value = parseInt(hm.value) * sell_price;
+        }
+    </script>
+    <!-- //수량과 비례한 가격 변동 스크립트 -->
+    
+    
+    
+
+    <div id="shopping">
+        <div class="shopping-wrap">
+            <p class="txt-eng-bold shopping-title">
+                SHOPPING CART
+            </p>
+
+            <div class="cart">
+                <div class="cart-title-top">
+                    <p class="txt-kor title1">장바구니</p>
+                    <p class="txt-kor title2"> 총 </p>
+                    <p class="txt-kor title2"> (3) </p>
+                    <p class="txt-kor title3"> 개의 상품</p>
+                </div>
+                <div class="cart-choose-cancel">
+                    <a href="#none">
+                        <p class="txt-kor">전체삭제</p>
+                    </a>
+                    <a href="#none">
+                        <p class="txt-kor">선택삭제</p>
+                    </a>
+                </div>
+                <div class="cart-title-wrap">
+                    <p class="txt-kor">상품정보</p>
+                    <p class="txt-kor">옵션</p>
+                    <p class="txt-kor">수량</p>
+                    <p class="txt-kor">가격</p>
+                    <input type="checkbox" class="choose-product">
+                </div>
+
+                <div class="cart-container">
+                   
+                    <div class="product-box">
+                        <div class="product-info">
+                            <div class="product-img">
+
+
+                            </div>
+                            <div class="product-title">
+                                <p class="txt-eng-bold product-eng">WILY TABLE</p>
+                                <p class="txt-eng type">FENIX</p>
+                                <p class="txt-kor product-kor">윌리 테이블 ( FENIX 소재 )</p>
+                            </div>
+                        </div>
+                        <div class="product-option">
+                            <div class="option leg">
+                                <p class="txt-eng type-title">Leg type</p>
+                                <p class="txt-eng my-type">A</p>
+                            </div>
+                            <div class="option edge">
+                                <p class="txt-eng type-title">Edge</p>
+                                <p class="txt-eng my-type">Silver</p>
+                            </div>
+                            <div class="option shape">
+                                <p class="txt-eng type-title">Shape</p>
+                                <p class="txt-eng my-type">
+                                    <img src="../plantlance-image/icon/square-black.png" alt="shape" class="shape-square">
+                                    <img src="../plantlance-image/icon/eclips-black.png" alt="shape" class="shape-eclips">
+                                    <img src="../plantlance-image/icon/round-black.png" alt="shape" class="shape-round">
+                                </p>
+                            </div>
+                            <div class="option color">
+                                <p class="txt-eng type-title">Color</p>
+                                <p class="txt-eng my-type">Shade Blue</p>
+                            </div>
+                            <div class="option size">
+                                <p class="txt-eng type-title">Size</p>
+                                <p class="txt-eng my-type">600 X 600</p>
+                            </div>
+                        </div>
+                        <div class="product-ea">
+                            <form name="form" method="get" class="order-form">
+                                <div class="ea-wrap">
+                                    <input type="button" value=" - " onclick="del();" class="txt-eng del-ea">
+                                    <input type=hidden name="sell_price" value="330000" class="txt-eng">
+                                    <input type="text" name="amount" value="1" size="3" onchange="change();" class="txt-eng-light num-ea">
+                                    <input type="button" value=" + " onclick="add();" class="txt-eng add-ea">
+                                </div>
+                                <!--
+                                <div class="price-wrap">
+                                    <input type="text" name="sum" size="11" id="number" class="price" readonly>원
+                                </div>
+                                -->
+                            </form>
+                        </div>
+                        
+                        <input type="checkbox" class="chose" checked>
+                        <p class="txt-kor price">330,000원</p>
+                        <p class="txt-kor shipping">배송비 40,000원 별도</p>
+                    </div>
+                    
+                    <div class="product-box">
+                        <div class="product-info">
+                            <div class="product-img">
+
+
+                            </div>
+                            <div class="product-title">
+                                <p class="txt-eng-bold product-eng">WILY TABLE</p>
+                                <p class="txt-eng type">FENIX</p>
+                                <p class="txt-kor product-kor">윌리 테이블 ( FENIX 소재 )</p>
+                            </div>
+                        </div>
+                        <div class="product-option">
+                            <div class="option leg">
+                                <p class="txt-eng type-title">Leg type</p>
+                                <p class="txt-eng my-type">B</p>
+                            </div>
+                            <div class="option edge">
+                                <p class="txt-eng type-title">Edge</p>
+                                <p class="txt-eng my-type">Silver</p>
+                            </div>
+                            <div class="option shape">
+                                <p class="txt-eng type-title">Shape</p>
+                                <p class="txt-eng my-type">
+                                    <img src="../plantlance-image/icon/square-black.png" alt="shape" class="shape-square">
+                                    <img src="../plantlance-image/icon/eclips-black.png" alt="shape" class="shape-eclips">
+                                    <img src="../plantlance-image/icon/round-black.png" alt="shape" class="shape-round">
+                                </p>
+                            </div>
+                            <div class="option color">
+                                <p class="txt-eng type-title">Color</p>
+                                <p class="txt-eng my-type">Burgundy</p>
+                            </div>
+                            <div class="option size">
+                                <p class="txt-eng type-title">Size</p>
+                                <p class="txt-eng my-type">600 X 600</p>
+                            </div>
+                        </div>
+                        <div class="product-ea">
+                            <form name="form" method="get" class="order-form">
+                                <div class="ea-wrap">
+                                    <input type="button" value=" - " onclick="del();" class="txt-eng del-ea">
+                                    <input type=hidden name="sell_price" value="330000" class="txt-eng">
+                                    <input type="text" name="amount" value="1" size="3" onchange="change();" class="txt-eng-light num-ea">
+                                    <input type="button" value=" + " onclick="add();" class="txt-eng add-ea">
+                                </div>
+                                
+                            </form>
+                        </div>
+                        
+                        <input type="checkbox" class="chose" checked>
+                        <p class="txt-kor price">330,000원</p>
+                        <p class="txt-kor shipping">배송비 40,000원 별도</p>
+                    </div>
+                    
+                    <div class="product-box">
+                        <div class="product-info">
+                            <div class="product-img">
+
+
+                            </div>
+                            <div class="product-title">
+                                <p class="txt-eng-bold product-eng">WILY TABLE</p>
+                                <p class="txt-eng type">HPL</p>
+                                <p class="txt-kor product-kor">윌리 테이블 ( HPL 소재 )</p>
+                            </div>
+                        </div>
+                        <div class="product-option">
+                            <div class="option leg">
+                                <p class="txt-eng type-title">Leg type</p>
+                                <p class="txt-eng my-type">A</p>
+                            </div>
+                            <div class="option edge">
+                                <p class="txt-eng type-title">Edge</p>
+                                <p class="txt-eng my-type">Silver</p>
+                            </div>
+                            <div class="option shape">
+                                <p class="txt-eng type-title">Shape</p>
+                                <p class="txt-eng my-type">
+                                    <img src="../plantlance-image/icon/square-black.png" alt="shape" class="shape-square">
+                                    <img src="../plantlance-image/icon/eclips-black.png" alt="shape" class="shape-eclips">
+                                    <img src="../plantlance-image/icon/round-black.png" alt="shape" class="shape-round">
+                                </p>
+                            </div>
+                            <div class="option color">
+                                <p class="txt-eng type-title">Color</p>
+                                <p class="txt-eng my-type">Shade Blue</p>
+                            </div>
+                            <div class="option size">
+                                <p class="txt-eng type-title">Size</p>
+                                <p class="txt-eng my-type">600 X 600</p>
+                            </div>
+                        </div>
+                        <div class="product-ea">
+                            <form name="form" method="get" class="order-form">
+                                <div class="ea-wrap">
+                                    <input type="button" value=" - " onclick="del();" class="txt-eng del-ea">
+                                    <input type=hidden name="sell_price" value="330000" class="txt-eng">
+                                    <input type="text" name="amount" value="1" size="3" onchange="change();" class="txt-eng-light num-ea">
+                                    <input type="button" value=" + " onclick="add();" class="txt-eng add-ea">
+                                </div>
+                                
+                            </form>
+                        </div>
+                        
+                        <input type="checkbox" class="chose" checked>
+                        
+                        <p class="txt-kor price">330,000원</p>
+                        <p class="txt-kor shipping">배송비 40,000원 별도</p>
+                    </div>
+                    
+                    
+                    
+                </div>
+
+
+
+                <a href="#none">
+                    <p class="txt-kor change-cart">변경완료</p>
+                </a>
+            </div>
+
+
+            <div class="short-order">
+                <p class="txt-kor">주문 요약</p>
+
+                <div class="short-order-wrap">
+                    <div class="order-txt">
+                        <p class="txt-kor">총 상품 수량</p>
+                        <p class="txt-kor">총 상품 금액</p>
+                        <p class="txt-kor">배송비</p>
+                        <p class="txt-kor discount">할인금액</p>
+                    </div>
+                    <div class="order-price">
+                        <p class="txt-kor">X 2</p>
+                        <p class="txt-kor">660,000 원</p>
+                        <p class="txt-kor">80,000 원</p>
+                        <p class="txt-kor discount">-30,000 원</p>
+                    </div>
+                </div>
+                <p class="txt-kor whole-order whole-order-txt">총 결제 예정 금액</p>
+                <p class="txt-kor whole-order whole-price">710,000 원</p>
+
+                <div class="buy-button">
+                    <a href="payment.html">
+                        <p class="txt-eng">BUY</p>
+                    </a>
+
+                    <img src="../plantlance-image/icon/right-arrow-white.png" alt="next" class="next">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- 비회원으로 주문시 팝업 -->
+    <div id="non-member-notice">
+        <div class="non-member-notice-wrap">
+           <a href="sort-member.html">
+               <img src="../plantlance-image/icon/close-black.png" alt="close" class="non-member-close">
+           </a>
+           
+           <div class="mob-non-member-notice-wrap">
+            <p class="txt-kor-bold non-member-notice-title">비회원 주문 동의</p>
+            <p class="txt-kor non-member-notice-title2">비회원 주문시, 비회원 개인정보 취급에 대한 약관에 동의하신 후 구매를 진행하실 수 있습니다.</p>
+
+            <p class="txt-kor-bold non-member-notice-title3">비회원 개인정보 취급방침</p>
+            <div class="non-member-notice-info">
+                <p class="txt-kor-light">
+                    (주)J&amp;D코퍼레이션은 (이하 '회사'는)<br>
+                    고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.<br><br>
+
+                    회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며,<br>
+                    개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.<br><br><br>
+
+
+                    회사는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.<br><br>
+
+                    본 방침은 : 2018 년 05 월 15 일 부터 시행됩니다.<br><br><br>
+
+
+                    1.수집하는 개인정보 항목<br><br>
+
+                    회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br><br><br>
+
+
+
+                    수집항목 : 이름 , 생년월일 , 로그인ID , 비밀번호 , 비밀번호 질문과 답변 , 자택 전화번호 , 자택 주소 ,<br>
+                    휴대전화번호 , 이메일 , 서비스 이용기록 , 접속 로그 , 쿠키 , 접속 IP 정보 , 결제기록 , 업체명 , 사업자등록번호 ,<br>
+                    업태 , 종목 , 담당자명 , 담당자전화번호 , 담당자휴대폰번호 , 사업장주소<br><br><br><br>
+                    
+
+
+                    개인정보 수집방법 : 홈페이지(회원가입, 상담게시판)<br><br><br><br><br><br>
+
+
+
+
+
+
+
+                    개인정보의 수집 및 이용목적<br><br>
+
+                    회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br><br><br><br>
+
+
+
+                    - 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br><br><br><br>
+
+
+
+                    콘텐츠 제공 , 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송 , 금융거래 본인 인증 및 금융 서비스<br><br><br><br>
+
+
+
+                    - 회원 관리<br><br><br><br>
+
+
+
+                    회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 불량회원의 부정 이용 방지와 비인가 사용 방지 ,<br>
+                    가입 의사 확인 , 연령확인 , 불만처리 등 민원처리 , 고지사항 전달<br><br><br>
+
+
+
+                    - 마케팅 및 광고에 활용<br><br><br>
+
+
+
+                    신규 서비스(제품) 개발 및 특화 , 이벤트 등 광고성 정보 전달 , 접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계<br><br><br><br><br><br>
+
+
+
+
+
+
+
+                    2.개인정보의 보유 및 이용기간<br><br><br>
+
+                    원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.<br>
+                    단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br><br><br><br>
+
+
+
+                    - 보존 항목 : 이름 , 생년월일 , 로그인ID , 비밀번호 , 비밀번호 질문과 답변 , 자택 전화번호 , 자택 주소 ,<br>
+                    휴대전화번호 , 이메일 , 서비스 이용기록 , 접속 로그 , 쿠키 , 접속 IP 정보 , 결제기록 , 업체명 , 사업자등록번호 ,<br>
+                    업태 , 종목 , 담당자명 , 담당자전화번호 , 담당자휴대폰번호 , 사업장주소<br><br><br><br><br>
+
+
+
+                    - 보존 근거 : 회사 내부 방침에 의한 별도 관리<br><br><br><br>
+
+
+
+                    - 보존 기간 : 회원 가입을 탈퇴하거나 회원 등록이 말소된 때<br><br><br><br>
+
+
+
+                    그리고 관계법령의 규정에 의하여 보존할 필요가 있는 경우<br>
+                    회사는 아래와 같이 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다.<br><br><br><br>
+
+
+
+                    - 계약 또는 청약철회 등에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률)<br><br>
+
+                    - 대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률)<br><br>
+
+                    - 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래등에서의 소비자보호에 관한 법률)<br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+                    3.개인정보의 파기절차 및 방법<br><br><br>
+
+                    회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다.
+                    파기절차 및 방법은 다음과 같습니다.<br><br><br><br>
+
+
+
+                    - 파기절차<br><br><br><br>
+
+
+
+                    회원님이 회원가입 등을 위해 입력하신 정보는 목적이 달성된 후 별도의 DB로 옮겨져<br>
+                    (종이의 경우 별도의 서류함) 내부 방침 및 기타관련 법령에 의한 정보보호 사유에 따라<br>
+                    (보유 및 이용기간 참조) 일정 기간 저장된 후 파기되어집니다.<br><br><br><br>
+
+
+
+                    별도 DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 보유되어지는 이외의 다른 목적으로 이용되지 않습니다.<br><br><br><br>
+
+
+
+                    - 파기방법<br><br><br><br>
+
+
+
+                    전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.<br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+                    4.개인정보 제공<br><br><br>
+
+                    회사는 회원에 대하여 보다 더 질 높은 서비스 제공 등을 위해 아래와 같이 귀하의 개인정보를 제공하고 있습니다.<br><br><br><br>
+
+
+
+                    - 제공 대상 : 자사 직원<br><br><br>
+
+                    - 제공하는 개인정보 항목 : 이름,자택 전화번호,자택 주소,휴대전화번호<br><br>
+
+                    - 제공정보의 이용 목적 : 상품배송업무, 상품대응업무<br><br>
+
+                    - 제공 정보의 보유 및 이용 기간 : 즉시파기<br><br><br>
+
+
+
+                    다만, 아래의 경우에는 예외로 합니다.<br><br><br>
+
+
+
+                    - 이용자들이 사전에 동의한 경우<br><br><br>
+
+
+
+                    - 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우<br><br><br><br><br><br>
+
+
+
+
+
+
+
+                    5.수집한 개인정보의 위탁<br><br>
+
+                    회사는 서비스 이행을 위해 아래와 같이 외부 전문업체에 위탁하여 운영하고 있습니다.<br><br><br>
+
+
+
+                    위탁 대상자 : 택배사<br><br>
+
+                    위탁업무 내용 : 상품배송업무<br><br><br>
+
+
+
+                    위탁 대상자 : 이니시스<br><br>
+
+                    위탁업무 내용 : 상품 구매에 필요한 신용카드, 현금결제 등의 결제정보 전송<br><br><br><br><br>
+
+
+
+
+
+
+
+                    6.이용자 및 법정대리인의 권리와 그 행사방법<br><br>
+
+                    이용자 및 법정 대리인은 언제든지 등록되어 있는 자신 혹은 당해 만 14세 미만 아동의 개인정보를 조회하거나<br>
+                    수정할 수 있으며 가입해지를 요청할 수도 있습니다.<br><br><br><br>
+
+
+
+                    이용자 혹은 만 14세 미만 아동의 개인정보 조회 수정을 위해서는<br>
+                    ‘개인정보변경’(또는 ‘회원정보수정’ 등)을 가입해지(동의철회)를 위해서는<br>
+                    “회원탈퇴”를 클릭하여 본인 확인 절차를 거치신 후 직접 열람, 정정 또는 탈퇴가 가능합니다.<br><br>
+
+                    혹은 개인정보관리책임자에게 서면, 전화 또는 이메일로 연락하시면 지체없이 조치하겠습니다.<br><br><br>
+
+
+
+                    귀하가 개인정보의 오류에 대한 정정을 요청하신 경우에는 정정을 완료하기 전까지<br>
+                    당해 개인정보를 이용 또는 제공하지 않습니다.<br>
+                    또한 잘못된 개인정보를 제3자에게 이미 제공한 경우에는 정정 처리결과를<br>
+                    제3자에게 지체없이 통지하여 정정이 이루어지도록 하겠습니다.<br>
+                </p>
+            </div>
+            
+            <div class="non-member-notice-check-wrap">
+             <label for="non-member-check">
+                <p class="txt-kor-bold">개인정보취급방침을 확인했으며, 이에 동의합니다.</p>
+                </label>
+              <input type="checkbox" id="non-member-check">
+               
+            </div>
+            
+            <div class="non-member-notice-next">
+                <p class="txt-kor">다음단계로 이동</p>
+                <a href="#none"></a>
+            </div>
+            </div>
+        </div>
+        <div class="non-member-notice-bg"></div>
+    </div>
+    <!-- //비회원으로 주문시 팝업 -->
+
+   <!--
+    <div id="footer"></div>
+    -->
+    
+    
+    
+    <script>
+    $(document).ready(function () {
+        $(".non-member-notice-next a").click(function(){
+           $("#non-member-notice").css("display","none"); 
+            
+            $("body").css("overflow-y","scroll");
+        });
+    });
+    </script>
+
+</body></html>

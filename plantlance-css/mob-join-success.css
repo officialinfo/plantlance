@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+
+@font-face {
+    src: url("../fonts/Pretendard-Thin.otf");
+    font-family: "Pretendard-Thin";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Light.otf");
+    font-family: "Pretendard-Light";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Regular.otf");
+    font-family: "Pretendard-Regular";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Medium.otf");
+    font-family: "Pretendard-Medium";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-SemiBold.otf");
+    font-family: "Pretendard-SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-ExtraBold.otf");
+    font-family: "Pretendard-ExtraBold";
+}
+
+
+
+
+
+
+@font-face {
+    src: url("../fonts/Urbanist-Light.ttf");
+    font-family: "Urbanist-Light";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-Regular.ttf");
+    font-family: "Urbanist-Regular";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-Medium.ttf");
+    font-family: "Urbanist-Medium";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-SemiBold.ttf");
+    font-family: "Urbanist-SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-ExtraBold.ttf");
+    font-family: "Urbanist-ExtraBold";
+}
+
+
+/*
+body::-webkit-scrollbar{
+    display: none;
+}
+*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: #292929;
+    font-size: 14px;
+    overflow-x: hidden;
+    /*-ms-overflow-style: none; /* IE and Edge */
+    /*scrollbar-width: none; /* Firefox */
+    /*background-image: url(../plantlance-img/main-bespoke1.jpg);*/
+}
+
+
+
+a,
+p,
+li {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+
+
+
+.txt-eng-light{
+    font-family: "Urbanist-Light";
+}
+.txt-eng {
+    font-family: "Urbanist-Medium";
+}
+.txt-eng-semibold{
+    font-family: "Urbanist-SemiBold";
+}
+.txt-eng-bold {
+    font-family: "Urbanist-ExtraBold";
+}
+
+.txt-kor-light{
+     font-family: "Pretendard-Thin";
+}
+.txt-kor {
+    font-family: "Pretendard-Medium";
+}
+
+.txt-kor-bold {
+    font-family: "Pretendard-SemiBold";
+}
+
+
+
+
+
+
+
+/* join-whole */
+
+
+
+
+
+#join-whole {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    left:50%;
+    transform: translate(-50%);
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+
+
+
+/* join-step-wrap */
+.join-step-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    z-index: 3;
+    box-sizing: border-box;
+    margin-top:150px;
+}
+.join-step-txt-wrap {
+    position: relative;
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+
+.join-step-txt-wrap p {
+    color: #2f2f2f;
+}
+
+
+.join-step-line {
+    position: relative;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding:0 10px;
+}
+
+.step {
+    position:relative;
+    border-radius: 100%;
+    font-size: 45px;
+    top: -23px;
+    z-index: 2;
+}
+
+.step1 {
+    left:-15px;
+    opacity: 1;
+}
+
+.step3 {
+    right: -15px;
+    color: #2f2f2f;
+}
+
+
+.step-line{
+    position: absolute;
+    float:left;
+    width:100%;
+    height: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    left:50%;
+    transform: translate(-50%);
+    padding:0 10px;
+}
+
+.join-step-line2 {
+    position: relative;
+    float: left;
+    width: 50%;
+    border-top: 2px solid #2f2f2f;
+}
+
+.join-step-line3 {
+    position: relative;
+    float: right;
+    width: 50%;
+    border-top: 2px solid #2f2f2f;
+}
+
+/* //join-step-wrap */
+
+
+
+
+.join-wrap {
+    position: relative;
+    float: left;
+    width: auto;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%);
+    background: #fff;
+    box-sizing: border-box;
+    margin-top: 140px;
+
+
+}
+.shape{
+    position: relative;
+    float:left;
+    width:50px;
+    height: 50px;
+    background: #e0e0e0;
+    border-radius: 100%;
+    left:50%;
+    transform: translate(-50%);
+}
+.success-img{
+    position: absolute;
+    width:45px;
+    bottom:10px;
+    left:5px;
+}
+
+.success-title{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: center;
+    font-size: 16px;
+    margin-top:20px;
+}
+
+
+.go-to-login{
+    position: relative;
+    float:left;
+    background: #2f2f2f;
+    color:#fff;
+    padding:15px 70px;
+    font-size: 13px;
+    margin-top:100px;
+    left:50%;
+    transform: translate(-50%);
+}
+
+

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>개인정보처리방침</title>
+
+
+    <script src="../plantlance-script/jquery-3.6.0.min.js"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/personal-policy.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/gnb.css">
+
+
+
+
+    <script>
+
+    </script>
+
+
+
+
+
+
+
+    <script>
+        // **  gnb 스크립트 
+
+
+        $(document).ready(function() {
+            /* 메뉴 - 웹 슬라이드 메뉴 활성화 */
+            $("nav > .nav-wrap > a > .menu-icon").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duration", ".1s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", "0s");
+
+                $("#nav-slide").css("width", "100%");
+                $("#nav-slide").css("z-index", "5");
+
+                $("#nav-slide").css("animation-name", "menuShow");
+                $("#nav-slide").css("animation-delay", ".1s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+
+                $("#nav-slide > .nav-slide-wrap").css("transition-duration", ".2s");
+                $("#nav-slide > .nav-slide-wrap").css("transition-delay", ".3s");
+                $("#nav-slide > .nav-slide-wrap").css("opacity", "1");
+
+
+                $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").css("display", "block");
+
+
+                $(".nav-mob").css("animation-name", "menuShow");
+                $(".nav-mob").css("animation-delay", ".1s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+
+                $(".nav-mob").css("width", "100%");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-duration", ".2s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-delay", ".3s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("display", "block");
+
+                $("::-webkit-scrollbar").css("display", "none");
+                $("body").css("-ms-overflow-style", "none");
+            });
+            /* // 메뉴 - 웹 슬라이드 메뉴 활성화 */
+
+
+
+
+            /* 메뉴 - 닫기 - 슬라이드 메뉴 비활성화 */
+            $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $("#nav-slide").css("width", "0");
+                $("#nav-slide").css("animation-name", "menuNone");
+                $("#nav-slide").css("animation-delay", ".4s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+
+                $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").css("display", "none");
+
+                $("#nav-slide > .nav-slide-wrap").css("transition-delay", "0s");
+                $("#nav-slide > .nav-slide-wrap").css("transition-duration", ".1s");
+                $("#nav-slide > .nav-slide-wrap").css("opacity", "0");
+
+
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-sofa").css("height", "0px");
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-table").css("height", "0px");
+
+
+
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $(".nav-mob").css("width", "0");
+                $(".nav-mob").css("animation-name", "menuNone");
+                $(".nav-mob").css("animation-delay", ".4s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-duration", ".2s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-delay", ".3s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("display", "none");
+
+
+
+                $("html::-webkit-scrollbar").css("display", "block");
+                $("html").css("-ms-overflow-style", "auto");
+
+
+            });
+            /* 메뉴 - 닫기 - 슬라이드 메뉴 비활성화 */
+
+
+            /* 메뉴 - 퍼니쳐 - 소파 하위메뉴 비활성화*/
+            $(".title-sofa").click(function() {
+                $(".gnb-sofa").css("height", "auto");
+                $(".gnb-table").css("height", "0px");
+
+                $(".shop-wrap").css("height", "auto");
+            });
+            /* //메뉴 - 퍼니쳐 - 소파 하위메뉴 비활성화*/
+
+
+            /* 메뉴 - 소파 - 테이블 하위 메뉴 활성화 */
+            $(".title-table").click(function() {
+                $(".gnb-sofa").css("height", "0px");
+                $(".gnb-table").css("height", "auto");
+
+                $(".shop-wrap").css("height", "auto");
+            });
+            /* //메뉴 - 소파 - 테이블 하위 메뉴 활성화 */
+
+
+            /* 검색 활성화 */
+
+            $("nav > .nav-wrap > .sub-button-wrap > a > .search-icon").click(function() {
+                $(".search-wrap").css("display", "block");
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > .sub-button-wrap").css("opacity", "0");
+            });
+
+            /* //검색 활성화 */
+
+
+
+            /* 검색 닫기 */
+            $(".search-close-btn").click(function() {
+                $(".search-wrap").css("display", "none");
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > .sub-button-wrap").css("opacity", "1");
+
+            });
+            /* //검색 닫기 */
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+    <!-- gnb -->
+    <nav>
+        <div class="nav-wrap">
+            <a href="#none">
+                <img src="../plantlance-image/icon/menu2.png" alt="menu" class="menu-icon">
+            </a>
+            <a href="plantlance.html">
+                <img src="../plantlance-image/logo.png" alt="logo" class="logo">
+            </a>
+            <div class="sub-button-wrap">
+                <a href="#none">
+                    <img src="../plantlance-image/icon/search.png" alt="search" class="search-icon">
+                </a>
+                <a href="shopping.html">
+                    <img src="../plantlance-image/icon/bag.png" alt="bag" class="bag-icon">
+                </a>
+                <a href="login.html" target="_self">
+                    <img src="../plantlance-image/icon/login.png" alt="login" class="login-icon">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="nav-slide">
+
+        <div class="nav-slide-wrap nav-pc-tablet">
+            <div class="nav-slide-side">
+                <div class="side-wrap">
+                    <a href="#none">
+                        <img src="../plantlance-image/icon/close2.png" alt="close" class="close-button">
+                    </a>
+                    
+                    
+                    
+                    <div class="side-menu-wrap">
+                    <div class="side-left">
+
+                        <a href="my-page.html">
+                            <p class="txt-eng-bold my-page">MY PAGE</p>
+                        </a>
+                        <a href="shopping.html">
+                            <p class="txt-eng-bold cart">CART</p>
+                        </a>
+                        <a href="my-page.html">
+                            <p class="txt-eng-bold wish-list">WISH LIST</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-eng-bold delivery">DELIVERY</p>
+                        </a>
+                    </div>
+
+                    <div class="side-right">
+                        <p class="txt-eng tel-txt">Customer center</p>
+                        <a href="tel:1899-3417">
+                            <img src="../plantlance-image/icon/call1.png" alt="call" class="call-img">
+                            <p class="txt-eng tel">1899-3417</p>
+                        </a>
+
+                        <p class="txt-eng ig-txt">Instagram</p>
+                        <a href="https://www.instagram.com/plantlance.kr/">
+                            <p class="txt-eng ig">@plantlance.kr</p>
+                        </a>
+                    </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="nav-main-menu">
+
+
+               
+               
+                <div class="nav-slide-top">
+                    <div class="user-wrap">
+                        <a href="join.html">
+                            <p class="txt-eng join">JOIN</p>
+                        </a>
+                        <a href="login.html">
+                            <p class="txt-eng login">LOGIN</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="nav-main-menu-wrap">
+                
+                 <span class="collection">
+                    <p class="txt-eng-bold title">COLLECTION</p>
+                    <a href="#none">
+                        <p class="txt-eng">2021 REFURB</p>
+                    </a>
+                </span>
+                
+                
+                <span class="about">
+                    <p class="txt-eng-bold title">ABOUT</p>
+                    
+                    <div class="second-menu">
+                    <a href="pltl.html">
+                        <p class="txt-eng">PLTL</p>
+                    </a>
+                    <a href="bespoke.html">
+                        <p class="txt-eng">BESPOKE</p>
+                    </a>
+                    <a href="contact.html">
+                        <p class="txt-eng">CONTACT</p>
+                    </a>
+                    </div>
+
+                </span>
+
+               
+
+                <span class="shop">
+                    <p class="txt-eng-bold title">SHOP</p>
+                    
+                    <div class="shop-wrap">
+                        <a href="list-new.html">
+                            <p class="txt-eng sub-title">NEW OBJECT</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-eng sub-title">FURNITURE</p>
+                        </a>
+                        <div class="furniture">
+                            <a href="#none">
+                                <p class="txt-eng sub-title title-sofa">Sofa</p>
+                            </a>
+                            <div class="gnb-sofa">
+                                <a href="list-sofa.html">
+                                    <p class="txt-kor">전체 소파</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">플렉스 소파 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">클라우드 소파 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">아우어 소파 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">그래 소파</p>
+                                </a>
+                            </div>
+
+                            <a href="#none">
+                                <p class="txt-eng sub-title title-table">Table</p>
+                            </a>
+                            <div class="gnb-table">
+                                <a href="list-table.html">
+                                    <p class="txt-kor">전체 테이블</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">카페 테이블 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">메이트 테이블 시리즈</p>
+                                </a>
+
+
+
+
+
+                            </div>
+                            <a href="list-chair.html">
+                                <p class="txt-eng sub-title">Chair</p>
+                            </a>
+                            <a href="list-stool.html">
+                                <p class="txt-eng sub-title">Stool</p>
+                            </a>
+                            <a href="list-lighting.html">
+                                <p class="txt-eng sub-title">Lighting</p>
+                            </a>
+                            <a href="list-etc.html">
+                                <p class="txt-eng sub-title">Etc</p>
+                            </a>
+                        </div>
+                        <a href="list-planterior.html">
+                            <p class="txt-eng sub-title">PLANTERIOR</p>
+                        </a>
+                        <a href="list-kitchen.html">
+                            <p class="txt-eng sub-title">KITCHEN</p>
+                        </a>
+                        <a href="list-interior.html">
+                            <p class="txt-eng sub-title">INTERIOR</p>
+                        </a>
+                    </div>
+                </span>
+
+
+
+                <span class="community">
+                    <p class="txt-eng-bold title">COMMUNITY</p>
+
+                   
+                   <div class="second-menu">
+                    <a href="notice.html">
+                        <p class="txt-eng">NOTICE</p>
+                    </a>
+                    <a href="qna.html">
+                        <p class="txt-eng">Q &amp; A</p>
+                    </a>
+                    <a href="review-list.html">
+                        <p class="txt-eng">REVIEW</p>
+                    </a>
+                    </div>
+                </span>
+
+                <div class="showroom">
+                    <a href="showroom.html">
+                        <p class="txt-eng-bold title">SHOWROOM</p>
+                    </a>
+                </div>
+                </div>
+                
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- //gnb 웹/태블릿 -->
+
+
+    <!-- 검색 -->
+    <div class="search-wrap">
+        <div class="search-place-wrap">
+            <a href="#none">
+                <p class="txt-eng search-close-btn">Close</p>
+            </a>
+            <div class="search-place">
+                <form>
+                    <input autocomplete="off" type="text" placeholder="검색어를 입력해주세요" class="txt-kor" id="search" onkeyup="printName()" onkeypress="if( event.keyCode == 13){searchData();}">
+
+                    <a href="search-list.html">
+                        <img src="../plantlance-image/icon/search.png" alt="search" class="search-btn">
+                    </a>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="search-bg"></div>
+    </div>
+    <!-- //검색 -->
+
+
+
+
+
+
+
+
+
+    <!-- //gnb -->
+
+
+
+
+
+
+
+
+
+
+
+    <div id="terms-conditions">
+        <div class="terms-conditions-wrap">
+           <div class="terms-title-wrap">
+               <a href="terms-conditions.html">
+                <span class="terms-title terms-condition-title">이용약관</span>
+                </a>
+                    <span class="terms-title personal-policy">개인정보처리방침</span>
+                
+            </div>
+
+            <div class="terms-content">
+
+                
+                <p class="txt-kor terms-content-txt">
+                    플랜트란스는 대한민국 헌법에 보장된 사생활의 비밀과 통신의 비밀보장을 위해 '정보통신망 이용촉진 등에 관한 법률'상의 개인정보 보호규정 및 정보통신부가 제정한 '개인정보 보호지침'을 준수하고 있습니다.<br>
+                            그러나 일부 부도덕한 사람들의 불법행위로 인해 발생할지도 모를 개인 프라이버시에 대한 위협을 막고, 회원의 개인정보를 적극적으로 보호하기 위해 다음과 같은 개인정보 보호 정책을 적용하고 있습니다.<br>
+                            플랜트란스의 개인정보 보호정책은 모든 페이지에 공개되며 이용자 여러분들의 궁금증에 대해 언제나 환영합니다.
+                </p>
+
+                <p class="txt-kor-bold terms-content-clause">1. 개인정보 수집</p>
+                <p class="txt-kor terms-content-txt">
+                1-1. 개인정보의 수집목적 및 이용<br>
+                            주식회사 플랜트란스는 이용자의 신분확인과 개개인의 특성에 맞춘 보다 다양하고 광범위한 맞춤 서비스를 드리기 위해 개인정보를 수집합니다.<br>
+                            이러한 목적으로 수집된 개인정보는 구매계약에 따른 빠르고 정확한 배송과 전체적인 통계자료 등에 이용되어 회원 개개인의 기호에 맞는 질 높은 서비스를 제공하게 됩니다.<br><br>
+
+                            1-2. 개인정보의 수집범위<br>
+                            주식회사 플랜트란스는 서비스 계약의 성립 및 이행에 필요한 최소한의 개인정보만을 수집하며, 기타 종교, 출신지, 범죄기록, 건강상태, 성생활 등 이용자의 기본적 인권을 현저하게 침해할 우려가 있는 개인정보는 이용자의 동의가 없는 한 수집하지 않습니다.<br><br>
+
+                            1-3. 개인정보 항목 및 수집 방법<br>
+                            일반 이용자의 경우 대부분의 서비스를 개인정보 노출 없이도 사용하실 수 있습니다. 다만, 을(를) 통해 구매를 하시게 될 경우에는 배송과 확인에 필요한 성명, 전화번호, 주소, 우편번호, e-mail 주소를 받게 됩니다.<br>
+                            회원의 경우에는 경품이나 기념품 등의 발송 등을 위한 목적으로 주소, 우편번호, 전화번호 등을 선택적으로 받게 됩니다.<br>
+                            또한 필수사항이 아닌 선택사항에 대해 추가로 입력하시면 그에 따른 추가 서비스를 받으실 수 있습니다. 그외에도 이용자가 이나 협력사가 개최하는 각종 퀴즈, 경품 이벤트나 공 모전 등과 같은<br>
+                            각종 프로모션 행사에 참여할 때, 게시판에 게시물 게재 등과 같이 서비스 이용을 위하여 정보 공개가 필요한 경우에도 개인정보를 받습니다만 이용자의 허락을 받는 과정을 다시 한번 거치게 됩니다.<br>
+                            플랜트란스는 해당 목적 이외의 다른 어떤 목적으로도 회원의 개인정보를 사용하지 않습니다.<br><br>
+
+                            1-4. 이용자의 동의절차와 예외경우<br>
+                            플랜트란스는 이용자의 개인정보를 수집하는 경우 이용자의 서명날인, 전자서명, 전자우편, 동의함에 클릭하는 등의 이용자 동의절차를 거칩니다. 단, 다음의 경우는 예외로 합니다.<br>
+                            ① 정보통신망이용촉진등에관한법률 또는 기타 다른 법령 등에 특별한 규정이 있는 경우<br>
+                            ② 서비스 이용계약의 이행을 위하여 필요한 경우<br>
+                            ③ 서비스 제공에 따른 요금정산을 위하여 필요한 경우<br><br>
+
+                            1-5. 개인정보의 위탁처리<br>
+                            플랜트란스이(가) 개인정보 처리를 외부에 위탁하는 경우, 이용자의 동의를 받습니다.<br>
+                            그럴 때에도 위탁계약 등을 통해 서비스 제공자의 개인정보보호 관련 지시엄수, 개인정보에 관한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담 등을 명확히 규정하고 계약내용을 기록으로 보존합니다.
+                </p>
+                
+                
+                <p class="txt-kor-bold terms-content-clause">2. 개인정보 보호관리</p>
+                <p class="txt-kor terms-content-txt">
+                2-1. 플랜트란스의 개인정보 관리자<br>
+                            이 름: 장세민<br>
+                            전 화: 1899-3417<br> FAX :<br>
+                            e-mail: info@plantlance.kr<br>
+                            플랜트란스는 이용자의 개인정보를 취급을 최소의 인원으로 제한하고 있으며, 절대로 전화나 e-mail로 이용자의 비밀번호를 묻지 않습니다.<br><br>
+
+                            2-2. 개인정보를 제3자에게 제공하는 경우<br>
+                            플랜트란스는 이용자의 개인정보를 허락 없이 이용하거나 제3자에게 제공하지 않습니다.<br>
+                            다만, 다음 의 경우에는 예외로 합니다.<br>
+                            ① 금융실명거래 및 비밀보장에 관한 법률, 신용정보의 이용 및 보호에 관한 법률, 전기통신사업법, 지방세법, 소비자보호법, 한국은행법, 형사소송법 및
+                            기타 관계법령 등에 특별한 규정이 있는 경우 (이 경우에도 이용자에게 개별적으로 통지하여 동의를 받으며,
+                            각 이용자는 고지 또는 명시한 범위를 초과하여 이용하거나 제3자에게 제공하는 것을 거절할 수 있음도 아울러 통지합니다.)<br>
+                            ② 서비스 제공에 따른 요금정산을 위하여 필요한 경우<br>
+                            ③ 통계작성, 학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 식별할 수 없는 형태로 제공하는 경우<br>
+                            ④ 업무상 제휴를 한 제휴 파트너나 부가서비스로 정보를 제공하는 정보자에게 이용자의 동의를 얻을 경우<br>
+                            ⑤ 이용 약관을 위배한 사람이나 의도적이든 그렇지 않든 사람들에게 피해를 줄 수 있는 자를 식별하거나 연락을 취해야 할 경우<br>
+                            ⑥ 기타 서비스의 질적 향상을 위해 이용자의 허락을 받을 경우<br><br>
+
+                            2-3. 개인정보의 보유기간 및 이용기간<br>
+                            플랜트란스이(가) 보유하는 이용자의 개인정보는 이용자가 회원가입을 신청한 때부터 해지처리된 때까지 입니다. 이용기간은 보유기간과 동일하지만, 수집목적이 달성된 때에는 그 전이라도 개인정보를 파기합니다.<br>
+                            이는 플랜트란스로부터 적법하게 제공받은 제3자에 대해서도 마찬가지입니다. 다만, 다음의 경우는 예외로 합니다.<br>
+                            ① 상법 등 법령의 규정에 의하여 보존할 필요성이 있는 경우<br>
+                            ② 보유기간을 이용자에게 미리 알리고 그 보유기간이 지나지 않은 경우<br>
+                            ③ 개별적으로 이용자의 동의를 받은 경우<br><br>
+
+                            2-4. 개인정보 보호대책<br>
+                            플랜트란스의 이용자 정보는 사용자 ID와 시스템적으로 암호화된 비밀번호로 보호됩니다. 때문에 사용자정보는 본인만이 직접 관리할 수 있습니다.<br>
+                            개인정보에 접근할 수 있는 방법은 오직 회원의 ID 및 비밀번호로 인한 로그인(Log in)에 의한 방법이며,
+                            플랜트란스는 e-mail이나 전화 등 어떤 방법을 통해서도 회원의 비밀번호를 묻는 경우는 없으므로 회원 본인이 보안을 위해 비밀번호를 자주 바꾸어주시기 바랍니다.<br>
+                            정보 변경은 반드시 본인 확인 과정을 거쳐 본인만이 직접 정보를 편집할 수 있도록 시스템적으로 처리되어 있습니다 비밀번호는 시스템적으로 암호화되어 보관됩니다.<br>
+                            하지만 인터넷을 통한 데이터 전송은 100% 안전 하지는 않으므로 게시판이나 메일 주고 받기 등을 통해
+                            공개되는 개인 정보에 대해 완벽한 보장을 할 수는 없습니다<br>
+                            때문에 이용하신 후에는 반드시 로그아웃(Log out)을 해 주시고, 컴퓨터를 공유하거나 공공장소에서 컴퓨터를 사용하는 경우에는 이용후 반드시 웹 브라우저의 창을 닫아주는 등 개인정보 유출을 막기 위해 노력을 기울여 주시기 바랍니다.<br><br>
+
+                            2-5. 관리대책<br>
+                            플랜트란스는 이용자의 개인정보를 보호하기 위하여 관련 직원에게 필요한 교육을 실시하고 있으며, 개인정보를 처리하는 시스템의 사용자를 지정하여 직무상 알게 된 개인정보를 타인에게 누설하거나 제공하지 않습니다.<br>
+                            또한, 본 정책에 명시된 이행사항 및 관련 직원의 준수여부를 감사하기 위하여 적절한 절차를 마련하여 운영하고 있으며 감사결과 운영상의 시정 또는
+                            개선을 요구하는 사항이나 위반내용이 있는 경우 이를 시정 또는 개선하고 기타 필요한 조치를 취하도록 최선을 다하고 있습니다.
+                </p>
+                
+                <p class="txt-kor-bold terms-content-clause">3. 이용자관리</p>
+                <p class="txt-kor terms-content-txt">
+                3-1. 개인정보<br>
+                            동의철회 이용자는 자신의 개인정보수집에 동의한 후, 나중에라도 이용자 ID와 비밀번호를 입력하여 동의를 철회 하실 수 있습니다. 그럴 경우 (주)하나이엔지시스템은(는) 본인여부를 확인한 후 원하는 조치를 해드립니다.<br><br>
+
+                            3-2. 개인정보 열람 및 정정<br>
+                            이용자가 자기 개인정보의 열람, 정정을 원할 때는 의 홈페이지로 접속해 이용자 ID와 비밀 번호를 입력한 후, 자신의 개인정보 열람 및 정정을 요구할 수 있습니다. 이 경우에도 플랜트란스은(는) 정정 조치를 취한 후 이용자에게 통보해 드립니다.<br><br>
+
+                            3-3. 불만처리<br>
+                            플랜트란스의 서비스 이용과 관련해 개인정보 등에 대한 이용자 불만은 언제든 친절히 해결해 드립니다. 불만에 대한 내용은 다음 메일 주소로 보내주시기 바랍니다.<br>
+                            회원 불만 접수 인터넷 메일 주소 :<br><br>
+
+                            3-4. 분쟁조정<br>
+                            플랜트란스의 이용자는 개인정보에 관한 분쟁이 있는 경우 신속하고 효과적인 분쟁해결을 위하여 한국 정보보호센터 내의 개인정보분쟁조정위원회에 그 처리를 의뢰할 수 있습니다.<br><br>
+
+                            - 개인정보침해신고센터 URL: www.cyberprivacy.or.kr PC통신: go eprivacy<br>
+                            - 개인정보침해신고센터 전화: 1899-3417<br>
+
+                            본 개인정보 보호정책은 정부의 관련법률 및 지침의 변경과 의 정책변화에 따라 수시로 변경될 수 있습니다.<br>
+                            변경된 사항은 정기적으로 방문하셔서 내용을 확인해 주십시오. 만약 변경사항에 의문이 있으실 때엔 언제든 개인정보관리자() 에게 문의해 주십시오.<br>
+                </p>
+
+               
+            
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body></html>

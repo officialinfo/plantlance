@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Plantlance</title>
+
+
+    <script src="../plantlance-script/jquery-3.6.0.min.js"></script>
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/mob-payment.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/mob-gnb.css">
+
+
+
+     <script>
+        // **  gnb 스크립트 
+
+
+        $(document).ready(function() {
+        
+            /* 메뉴 - 모바일 슬라이드 메뉴 활성화 */
+            $("nav > .nav-wrap > a > .menu-icon").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duration", ".1s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", "0s");
+
+                $(".nav-mob").css("width", "100%");
+                $(".nav-mob").css("z-index", "5");
+
+                $("#nav-slide").css("animation-name", "menuShow");
+                $("#nav-slide").css("animation-delay", ".1s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+                $(".nav-mob").css("animation-name", "menuShow");
+                $(".nav-mob").css("animation-delay", ".1s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("display", "block");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("opacity", "1");
+
+
+                $(".nav-mob > .nav-mob-wrap").css("transition-duration", ".2s");
+                $(".nav-mob > .nav-mob-wrap").css("transition-delay", ".3s");
+                $(".nav-mob > .nav-mob-wrap").css("opacity", "1");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "block");
+
+
+                $("html::-webkit-scrollbar").css("display", "none");
+                $("html").css("-ms-overflow-style", "none");
+            });
+            /* // 메뉴 - 모바일 슬라이드 메뉴 활성화 */
+
+
+            /* 메뉴 - 닫기 - 모바일 슬라이드 메뉴 비활성화 */
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-top > a > .close-button").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $(".nav-mob").css("width", "0");
+                $(".nav-mob").css("animation-name", "menuNone");
+                $(".nav-mob").css("animation-delay", ".4s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap").css("transition-duration", ".1s");
+                $(".nav-mob > .nav-mob-wrap").css("transition-delay", "0s");
+                $(".nav-mob > .nav-mob-wrap").css("opacity", "0");
+
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "0");
+
+
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-down").css("display", "block");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-up").css("display", "none");
+
+
+
+
+
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $("#nav-slide").css("width", "0");
+                $("#nav-slide").css("animation-name", "menuNone");
+                $("#nav-slide").css("animation-delay", ".4s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+
+                $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").css("display", "none");
+
+                $("#nav-slide > .nav-slide-wrap").css("transition-delay", "0s");
+                $("#nav-slide > .nav-slide-wrap").css("transition-duration", ".1s");
+                $("#nav-slide > .nav-slide-wrap").css("opacity", "0");
+
+
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-sofa").css("height", "0px");
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-table").css("height", "0px");
+
+
+                $("html::-webkit-scrollbar").css("display", "block");
+                $("html").css("-ms-overflow-style", "auto");
+            });
+            /* 메뉴 - 닫기 - 모바일 슬라이드 메뉴 비활성화 */
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 활성화 */
+
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-down").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "auto");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-down").css("display", "none");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-up").css("display", "block");
+
+
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-down").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-up").css("display", "block");
+            });
+            /* //모바일 메뉴 - 퍼니쳐 활성화 */
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 비활성화 */
+
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-up").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > .furniture").css("height", "0px");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-down").css("display", "block");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-up").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "0");
+
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-down").css("display", "block");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-up").css("display", "none");
+            });
+            /* //모바일 메뉴 - 퍼니쳐 비활성화 */
+
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 - 소파 활성화 */
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > .furniture > a > .title-sofa").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "auto");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "0");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "auto");
+            });
+            /* //모바일 메뉴 - 퍼니쳐 - 소파 활성화 */
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 - 테이블 활성화 */
+
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > a > .title-table").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "auto");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "auto");
+
+
+            });
+            /* //모바일 메뉴 - 퍼니쳐 - 테이블 활성화 */
+
+
+
+
+            /* 검색 활성화 */
+
+            $("nav > .nav-wrap > .sub-button-wrap > a > .search-icon").click(function() {
+                $(".search-wrap").css("display", "block");
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > .sub-button-wrap").css("opacity", "0");
+            });
+
+            /* //검색 활성화 */
+
+
+
+            /* 검색 닫기 */
+            $(".search-close-btn").click(function() {
+                $(".search-wrap").css("display", "none");
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > .sub-button-wrap").css("opacity", "1");
+
+            });
+            /* //검색 닫기 */
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+     <!-- gnb -->
+    <nav>
+        <div class="nav-wrap">
+            <a href="#none">
+                <img src="../plantlance-image/icon/menu2.png" alt="menu" class="menu-icon">
+            </a>
+            <a href="mob-plantlance.html">
+                <img src="../plantlance-image/logo.png" alt="logo" class="logo">
+            </a>
+            <div class="sub-button-wrap">
+                <a href="#none">
+                    <img src="../plantlance-image/icon/search.png" alt="search" class="search-icon">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- 검색 -->
+    <div class="search-wrap">
+        <div class="search-place-wrap">
+            <a href="#none">
+                <p class="txt-eng search-close-btn">Close</p>
+            </a>
+            <div class="search-place">
+                <form>
+                    <input autocomplete="off" type="text" placeholder="검색어를 입력해주세요" class="txt-kor" id="search" onkeyup="printName()" onkeypress="if( event.keyCode == 13){searchData();}">
+
+                    <a href="mob-search-list.html">
+                        <img src="../plantlance-image/icon/search.png" alt="search" class="search-btn">
+                    </a>
+                </form>
+            </div>
+        </div>
+
+        <!--
+        <div class="search-result">
+            <div class="search-result-wrap">
+                <div id="result" class="txt-kor-bold"></div>
+                <p class="txt-kor result-txt">에 대한 검색 결과입니다.</p>
+            </div>
+        </div>
+        -->
+        <div class="search-bg"></div>
+    </div>
+    <!-- //검색 -->
+
+
+
+
+
+
+
+
+
+    <!-- gnb 모바일 -->
+    <div class="nav-mob">
+        <div class="nav-mob-wrap">
+            <div class="nav-mob-top">
+                <a href="#none">
+                    <img src="../plantlance-image/icon/close2.png" alt="close" class="close-button">
+                </a>
+                <div class="user-wrap">
+                    <a href="mob-shopping-fill.html">
+                        <img src="../plantlance-image/icon/bag.png" alt="bag" class="shopping-button">
+                    </a>
+                    <a href="mob-login.html">
+                        <img src="../plantlance-image/icon/login.png" alt="login" class="login-button">
+                    </a>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <div class="nav-mob-main-menu">
+
+                <div class="mob-about">
+                    <p class="txt-eng-bold title">ABOUT</p>
+
+                    <a href="mob-pltl.html">
+                        <p class="txt-eng">PLTL</p>
+                    </a>
+                    <a href="mob-bespoke.html">
+                        <p class="txt-eng">BESPOKE</p>
+                    </a>
+                    <a href="mob-contact.html">
+                        <p class="txt-eng">CONTACT</p>
+                    </a>
+                </div>
+
+
+
+                <div class="mob-shop">
+                    <p class="txt-eng-bold title">SHOP</p>
+                    <div class="shop-wrap">
+                        <a href="mob-list-new.html">
+                            <p class="txt-eng sub-title">NEW OBJECT</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-eng title-furniture mob-gnb-furniture-down">FURNITURE
+                                <img src="../plantlance-image/icon/arrow-down-white.png" alt="arrow" class="arrow arrow-down">
+                            </p>
+
+                        </a>
+                        <a href="#none">
+                            <p class="txt-eng title-furniture mob-gnb-furniture-up">FURNITURE
+                                <img src="../plantlance-image/icon/arrow-up-white.png" alt="arrow" class="arrow arrow-up">
+                            </p>
+
+                        </a>
+
+                        <div class="furniture">
+                            <a href="#none">
+                                <p class="txt-eng sub-title title-sofa">Sofa</p>
+                            </a>
+                            <div class="gnb-mob-sofa">
+                                <a href="mob-list-sofa.html">
+                                    <p class="txt-kor">전체 소파</p>
+                                </a>
+                                <a href="#none">
+                                    <p class="txt-kor">플랙스 소파</p>
+                                </a>
+                                <a href="#none">
+                                    <p class="txt-kor">클라우드 소파</p>
+                                </a>
+                                <a href="#none">
+                                    <p class="txt-kor">아우어 소파</p>
+                                </a>
+                                <a href="#none">
+                                    <p class="txt-kor">블러크 소파</p>
+                                </a>
+                                <a href="#none">
+                                    <p class="txt-kor">그래 소파</p>
+                                </a>
+                            </div>
+                            <a href="#none">
+                                <p class="txt-eng sub-title title-table">Table</p>
+                            </a>
+                            <div class="gnb-mob-table">
+                                <a href="mob-list-table.html">
+                                    <p class="txt-kor">전체 테이블</p>
+                                </a>
+                                <a href="mob-list-table.html">
+                                    <p class="txt-kor">카페 테이블 시리즈</p>
+                                </a>
+                                <a href="mob-list-table.html">
+                                    <p class="txt-kor">메이트 테이블 시리즈</p>
+                                </a>
+
+                            </div>
+                            <a href="mob-list-chair.html">
+                                <p class="txt-eng sub-title">Chair</p>
+                            </a>
+                            <a href="mob-list-stool.html">
+                                <p class="txt-eng sub-title">Stool</p>
+                            </a>
+                            <a href="mob-list-lighting.html">
+                                <p class="txt-eng sub-title">Lighting</p>
+                            </a>
+                            <a href="mob-list-etc.html">
+                                <p class="txt-eng sub-title">Etc</p>
+                            </a>
+                        </div>
+                        <a href="mob-list-planterior.html">
+                            <p class="txt-eng">PLANTERIOR</p>
+                        </a>
+                        <a href="mob-list-kitchen.html">
+                            <p class="txt-eng">KITCHEN</p>
+                        </a>
+                        <a href="mob-list-interior.html">
+                            <p class="txt-eng">INTERIOR</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mob-collection">
+                    <p class="txt-eng-bold title">COLLECTION</p>
+
+                    <a href="#none">
+                        <p class="txt-eng">2021 REFURB</p>
+                    </a>
+
+                </div>
+
+
+
+                <div class="mob-community">
+                    <p class="txt-eng-bold title">COMMUNITY</p>
+
+                    <a href="mob-notice.html">
+                        <p class="txt-eng">NOTICE</p>
+                    </a>
+                    <a href="mob-qna.html">
+                        <p class="txt-eng">Q &amp; A</p>
+                    </a>
+                    <a href="mob-review-list.html">
+                        <p class="txt-eng">REVIEW</p>
+                    </a>
+
+                </div>
+
+                <div class="mob-gnb-showroom">
+                    <a href="mob-showroom.html">
+                        <p class="txt-eng-bold">SHOWROOM</p>
+                    </a>
+                </div>
+
+
+                <div class="mob-main-bottom">
+
+                    <a href="mob-mypage-home.html">
+                        <p class="txt-eng-bold my-page">MY PAGE</p>
+                    </a>
+                    <a href="mob-shopping.html">
+                        <p class="txt-eng-bold cart">CART</p>
+                    </a>
+                    <a href="mob-mypage-wishlist.html">
+                        <p class="txt-eng-bold wish-list">WISH LIST</p>
+                    </a>
+                    <a href="mob-join.html">
+                        <p class="txt-eng-bold wish-list">JOIN</p>
+                    </a>
+                    <a href="#none">
+                        <p class="txt-eng-bold delivery">DELIVERY</p>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="nav-mob-bottom">
+                <div class="bottom-info">
+                    <div class="info1">
+                        <p class="txt-eng tel-txt">Customer center</p>
+                        <a href="tel:1899-3417">
+                            <img src="../plantlance-image/icon/call1.png" alt="call" class="call-img">
+                            <p class="txt-eng tel">1899-3417</p>
+                        </a>
+                    </div>
+                    <div class="info2">
+                        <p class="txt-eng ig-txt">Instagram</p>
+                        <a href="https://www.instagram.com/plantlance.kr/">
+                            <p class="txt-eng ig">@plantlance.kr</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- //gnb 모바일 -->
+
+    <!-- //gnb -->
+
+
+
+
+
+
+
+
+
+    <div id="payment">
+        <div class="payment-wrap">
+
+            <!-- 결제 정보란 -->
+            <div class="checkout-info">
+                <p class="txt-eng-bold checkout-title">CHECK OUT</p>
+                <div class="product-info">
+                    <p class="txt-kor product-info-title">주문상품 정보</p>
+                    <p class="txt-kor product-info-ea">2</p>
+                    <div class="product-box">
+                        <div class="product-wrap">
+                            <div class="product">
+                                <div class="product-img"></div>
+                                <div class="product-option">
+                                    <p class="txt-eng-bold product-name">
+                                        WILY TABLE
+                                    </p>
+                                    <div class="my-option">
+                                        <p class="txt-eng">A type</p>
+                                        <p class="txt-eng">/</p>
+                                        <p class="txt-eng">Silver</p>
+                                        <p class="txt-eng">/</p>
+                                        <p class="txt-eng">Round</p>
+                                        <p class="txt-eng">/</p>
+                                        <p class="txt-eng">ShadeBlue</p>
+                                        <p class="txt-eng">/</p>
+                                        <p class="txt-eng">600 X 600</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="txt-eng ea">X 1</p>
+                            <p class="txt-eng price"> 330,000 원</p>
+                        </div>
+                        <div class="product-wrap">
+                            <div class="product">
+                                <div class="product-img"></div>
+                                <div class="product-option">
+                                    <p class="txt-eng-bold product-name">
+                                        WILY TABLE
+                                    </p>
+                                    <div class="my-option">
+                                        <p class="txt-eng">A type</p>
+                                        <p class="txt-eng">/</p>
+                                        <p class="txt-eng">Silver</p>
+                                        <p class="txt-eng">/</p>
+                                        <p class="txt-eng">Round</p>
+                                        <p class="txt-eng">/</p>
+                                        <p class="txt-eng">ShadeBlue</p>
+                                        <p class="txt-eng">/</p>
+                                        <p class="txt-eng">600 X 600</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="txt-eng ea">X 1</p>
+                            <p class="txt-eng price"> 330,000 원</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- 주문자 정보 -->
+                <div class="customer-info">
+                    <p class="txt-kor-bold customer-title">주문자 정보</p>
+
+                    <div class="customer">
+                        <div class="customer-wrap name-wrap">
+                            <p class="txt-kor name">주문자 성함</p>
+                            <input type="text">
+                        </div>
+                        <div class="customer-wrap number-wrap">
+                            <p class="txt-kor name number">휴대폰 번호</p>
+
+                            <input type="number">
+
+                        </div>
+
+                       
+                       
+                        <div class="customer-wrap email-wrap">
+                            <p class="txt-kor name">이메일</p>
+
+                            <div class="email-input-wrap">
+                                <input type="email" class="email-address">
+
+                                <div class="email-select-wrap">
+                                    <input type="email" class="email-dot">
+                                    <select name="number" class="selection">
+                                        <option value="" selected>직접입력</option>
+                                        <option value="naver">naver.com</option>
+                                        <option value="google">google.com</option>
+                                        <option value="hanmail">hanmail.net</option>
+                                        <option value="nate">nate.com</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="customer-wrap address-wrap">
+                            <p class="txt-kor name">배송 주소</p>
+                            
+                            
+                            <div class="address-input-wrap">
+                            <div class="address-find-wrap">
+                                <input id="member_addr" type="text" readonly>
+                            
+                            
+                                <p id="member_post" class="address-button" readonly onclick="findAddr()">
+                                    우편번호 찾기
+                                </p>
+                            </div>
+                            <input type="text" class="other-address" placeholder="나머지 주소">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //주문자 정보 -->
+
+
+                <!-- 배송 정보 -->
+                <div class="customer-info delivery-info">
+                    <p class="txt-kor customer-title">배송정보</p>
+
+                    <div class="customer">
+                        <div class="customer-wrap name-wrap">
+                            <p class="txt-kor name">배송지 선택</p>
+                            
+                            <div class="same-buyer">
+                                <input type="checkbox" class="delivery-check" id="delivery-checkbox">
+                                
+                                <label for="delivery-checkbox">
+                                    <p class="txt-kor">주문자와 동일</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="customer-wrap name-wrap">
+                            <p class="txt-kor name">받으시는 분</p>
+                            <input type="text">
+                        </div>
+                        <div class="customer-wrap number-wrap">
+                            <p class="txt-kor name number">휴대폰 번호</p>
+
+                            <input type="number">
+
+                        </div>
+                        <div class="customer-wrap number-wrap">
+                            <p class="txt-kor name number">전화번호</p>
+
+                            <input type="number">
+
+                        </div>
+                        
+                        
+                        
+                        <div class="customer-wrap email-wrap">
+                            <p class="txt-kor name">이메일</p>
+
+                            <div class="email-input-wrap">
+                                <input type="email" class="email-address">
+
+                                <div class="email-select-wrap">
+                                    <input type="email" class="email-dot">
+                                    <select name="number" class="selection">
+                                        <option value="" selected>직접입력</option>
+                                        <option value="naver">naver.com</option>
+                                        <option value="google">google.com</option>
+                                        <option value="hanmail">hanmail.net</option>
+                                        <option value="nate">nate.com</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="customer-wrap address-wrap">
+                            <p class="txt-kor name">배송 주소</p>
+                            
+                            
+                            <div class="address-input-wrap">
+                            <div class="address-find-wrap">
+                                <input id="member_addr2" type="text" readonly>
+                            
+                            
+                                <p id="member_post2" class="address-button" readonly onclick="findAddr1()">
+                                    우편번호 찾기
+                                </p>
+                            </div>
+                            <input type="text" class="other-address" placeholder="나머지 주소">
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="customer-wrap message-wrap">
+                            <p class="txt-kor name">배송 메세지</p>
+                            <textarea value="delivery-messege" class="txt-kor"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- //배송 정보 -->
+
+
+                <!-- 결제 정보 -->
+                <div class="order-info">
+                    <p class="txt-kor order-title">결제정보</p>
+
+                    <div class="order-way">
+                        <input type="radio" id="card" class="type-of-payment" name="show" checked />
+                        <input type="radio" id="deposit" class="type-of-payment" name="show" />
+                        <input type="radio" id="live" class="type-of-payment" name="show" />
+                        <input type="radio" id="phone" class="type-of-payment" name="show" />
+                        <input type="radio" id="easy" class="type-of-payment" name="show" />
+
+                        <div class="order-way-wrap">
+                            <label for="card" class="txt-kor">신용카드</label>
+                            <label for="deposit" class="txt-kor">무통장입금</label>
+                            <label for="live" class="txt-kor">실시간 계좌이체</label>
+                            <label for="phone" class="txt-kor">휴대폰 결제</label>
+                            <label for="easy" class="txt-kor">간편결제</label>
+                        </div>
+
+
+
+
+                        <div class="way-wrap">
+
+                            <!-- 신용카드 -->
+                            <div class="card-wrap">
+                                <div class="way-kind-title">
+                                    <p class="txt-kor">신용카드</p>
+                                </div>
+                                <div class="way-kind-info">
+                                    <select name="card">
+                                        <option value="" selected>카드선택</option>
+                                        <option value="kb">KB국민카드</option>
+                                        <option value="nh">NH농협카드</option>
+                                        <option value="sh">신한카드</option>
+                                        <option value="hn">하나카드</option>
+                                    </select>
+                                    <select name="monthly">
+                                        <option value="" selected>할부선택</option>
+                                        <option value="single">일시불</option>
+                                        <option value="month">1개월</option>
+                                        <option value="month">2개월</option>
+                                        <option value="month">3개월</option>
+                                        <option value="month">4개월</option>
+                                        <option value="month">5개월</option>
+                                        <option value="month">6개월</option>
+                                        <option value="month">7개월</option>
+                                        <option value="month">8개월</option>
+                                        <option value="month">9개월</option>
+                                        <option value="month">10개월</option>
+                                        <option value="month">11개월</option>
+                                        <option value="month">12개월</option>
+                                        <option value="month">13개월</option>
+                                        <option value="month">14개월</option>
+                                        <option value="month">15개월</option>
+                                        <option value="month">16개월</option>
+                                        <option value="month">17개월</option>
+                                        <option value="month">18개월</option>
+                                        <option value="month">19개월</option>
+                                        <option value="month">20개월</option>
+                                        <option value="month">21개월</option>
+                                        <option value="month">22개월</option>
+                                        <option value="month">23개월</option>
+                                        <option value="month">24개월</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <!-- 무통장입금 -->
+                            <div class="deposit-wrap">
+                                <div class="way-kind-title">
+                                    <p class="txt-kor">무통장입금</p>
+                                </div>
+
+                                <div class="way-kind-info">
+                                    <div class="way-kind-info-txt-wrap">
+                                        <div class="way-kind-info-wrap">
+                                          
+                                            <p class="txt-kor title">입금자명</p>
+                                            <input type="text">
+                                            <p class="txt-kor deposit-number"> 농협 | 301-0238-1529-61 (주식회사 플랜트란스)</p>
+                                        </div>
+
+                                        <div class="way-notice-wrap">
+                                            <p class="txt-kor">&bull; 입금액과 결제 금액이 일치해야 정상 입금완료되니 금액을 반드시 확인 바랍니다.</p>
+                                            <p class="txt-kor">&bull; 입금 기한은 주문 완료 후 3일 이내이며, 미입금 시 자동 취소 됩니다.</p>
+                                        </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            
+
+                            <!-- 계좌이체 -->
+                            <div class="live-wrap">
+                                <div class="way-kind-title">
+                                    <p class="txt-kor">계좌이체</p>
+                                </div>
+
+                                <div class="way-kind-info">
+
+                                    <div class="way-notice-wrap">
+                                        <p class="txt-kor">[결제하기] 버튼을 선택하시면 온라인 계좌이체 화면으로 연결되어 결제를 진행할 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 휴대폰결제 -->
+
+                            <div class="phone-wrap">
+                                <div class="way-kind-title">
+                                    <p class="txt-kor">휴대폰 결제</p>
+                                </div>
+
+                                <div class="way-kind-info">
+
+                                    <div class="way-notice-wrap">
+                                        <p class="txt-kor">- 휴대폰 결제는 당월에만 결제수단 취소가 가능합니다.</p>
+                                        <p class="txt-kor">- 휴대폰 결제 한도는 통신사 가입상태 및 소액결제 사용여부와 한도에 따라 다르게 적용됩니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- 간편결제 -->
+                            <div class="easy-wrap">
+                                <div class="way-kind-title">
+                                    <p class="txt-kor">간편결제</p>
+                                </div>
+
+                                <div class="way-kind-info">
+                                    <div class="easy-kind-wrap">
+                                        <div class="easy-kind">
+                                            <input type="radio" name="easy-payment" id="easy-payment-kakao">
+                                            <label for="easy-payment-kakao">
+                                                <img src="../plantlance-image/payment/kakaopay.png" alt="kakaopay" class="kakaopay">
+                                            </label>
+                                        </div>
+
+                                        <div class="easy-kind">
+                                            <div class="mobile-easy">
+                                                <input type="radio" name="easy-payment" id="easy-payment-payco">
+                                                <label for="easy-payment-payco">
+                                                    <img src="../plantlance-image/payment/payco.png" alt="payco" class="payco">
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="easy-kind">
+                                            <input type="radio" name="easy-payment" id="easy-payment-toss">
+
+                                            <label for="easy-payment-toss">
+                                                <img src="../plantlance-image/payment/toss.png" alt="toss" class="toss">
+                                            </label>
+                                        </div>
+
+                                        <div class="easy-kind">
+                                            <div class="mobile-easy">
+                                                <input type="radio" name="easy-payment" id="easy-payment-smilepay">
+
+                                                <label for="easy-payment-smilepay">
+                                                    <img src="../plantlance-image/payment/smile.png" alt="smilepay" class="smilepay">
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="easy-kind">
+                                            <input type="radio" name="easy-payment" id="easy-payment-samsungpay">
+
+                                            <label for="easy-payment-samsungpay">
+                                                <img src="../plantlance-image/payment/samsungpay.png" alt="samsungpay" class="samsungpay">
+                                            </label>
+                                        </div>
+
+                                        <div class="easy-kind">
+                                            <div class="mobile-easy">
+                                                <input type="radio" name="easy-payment" id="easy-payment-chaipay">
+
+                                                <label for="easy-payment-chaipay">
+                                                    <img src="../plantlance-image/payment/chaipay.png" alt="chaipay" class="chaipay">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="way-notice-wrap">
+                                        <p class="txt-kor">- 휴대폰 결제는 당월에만 결제수단 취소가 가능합니다.</p>
+                                        <p class="txt-kor">- 휴대폰 결제 한도는 통신사 가입상태 및 소액결제 사용여부와 한도에 따라 다르게 적용됩니다.</p>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+
+            <!-- //결제 정보 -->
+
+
+            <!-- 결제 금액란 -->
+            <div class="checkout-price">
+                <p class="txt-kor checkout-price-title">주문 정보</p>
+                <div class="checkout-price-box">
+                    <div class="product-price-wrap">
+                        <p class="txt-kor">상품금액</p>
+                        <p class="txt-kor price">660,000 원</p>
+                    </div>
+                    <div class="product-price-wrap">
+                        <p class="txt-kor">할인금액</p>
+                        <p class="txt-kor price">- 0 원</p>
+                    </div>
+                    <div class="product-price-wrap delivery">
+                        <p class="txt-kor">배송비</p>
+                        <p class="txt-kor price">+ 80,000 원</p>
+                    </div>
+                    <div class="product-price-wrap delivery2">
+                        <p class="txt-kor">+ 추가 배송비</p>
+                        <p class="txt-kor price">+ 0 원</p>
+                    </div>
+                    <div class="product-price-wrap last-checkout">
+                        <p class="txt-kor">최종 결제금액</p>
+                        <p class="txt-kor price">740,000 원</p>
+                    </div>
+                </div>
+
+                <div class="submit-wrap">
+                    <p class="txt-kor submit">개인정보처리방침 내용을 확인하였으며, 이에 동의합니다.</p>
+                    <input type="checkbox" class="submit-check">
+                </div>
+                <div class="submit-txt">
+                    <div class="submit-txt-wrap">
+                        <p class="txt-kor title">개인정보처리방침</p>
+                        <p class="txt-kor">(주)J&amp;D코퍼레이션은 (이하 '회사'는)
+
+                            고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.
+
+
+
+                            회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+
+
+
+                            회사는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.
+
+
+
+                            본 방침은 : 2018 년 05 월 15 일 부터 시행됩니다.
+
+
+
+
+
+
+
+                            1.수집하는 개인정보 항목
+
+                            회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+
+
+
+                            수집항목 : 이름 , 생년월일 , 로그인ID , 비밀번호 , 비밀번호 질문과 답변 , 자택 전화번호 , 자택 주소 , 휴대전화번호 , 이메일 , 서비스 이용기록 , 접속 로그 , 쿠키 , 접속 IP 정보 , 결제기록 , 업체명 , 사업자등록번호 , 업태 , 종목 , 담당자명 , 담당자전화번호 , 담당자휴대폰번호 , 사업장주소
+
+
+
+                            개인정보 수집방법 : 홈페이지(회원가입, 상담게시판)
+
+
+
+
+
+
+
+                            개인정보의 수집 및 이용목적
+
+                            회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+
+
+
+                            - 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산
+
+
+
+                            콘텐츠 제공 , 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송 , 금융거래 본인 인증 및 금융 서비스
+
+
+
+                            - 회원 관리
+
+
+
+                            회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 불량회원의 부정 이용 방지와 비인가 사용 방지 , 가입 의사 확인 , 연령확인 , 불만처리 등 민원처리 , 고지사항 전달
+
+
+
+                            - 마케팅 및 광고에 활용
+
+
+
+                            신규 서비스(제품) 개발 및 특화 , 이벤트 등 광고성 정보 전달 , 접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
+
+
+
+
+
+
+
+                            2.개인정보의 보유 및 이용기간
+
+                            원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.
+
+
+
+                            - 보존 항목 : 이름 , 생년월일 , 로그인ID , 비밀번호 , 비밀번호 질문과 답변 , 자택 전화번호 , 자택 주소 , 휴대전화번호 , 이메일 , 서비스 이용기록 , 접속 로그 , 쿠키 , 접속 IP 정보 , 결제기록 , 업체명 , 사업자등록번호 , 업태 , 종목 , 담당자명 , 담당자전화번호 , 담당자휴대폰번호 , 사업장주소
+
+
+
+                            - 보존 근거 : 회사 내부 방침에 의한 별도 관리
+
+
+
+                            - 보존 기간 : 회원 가입을 탈퇴하거나 회원 등록이 말소된 때
+
+
+
+                            그리고 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 아래와 같이 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다.
+
+
+
+                            - 계약 또는 청약철회 등에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률)
+
+                            - 대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래등에서의 소비자보호에 관한 법률)
+
+                            - 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래등에서의 소비자보호에 관한 법률)
+
+
+
+
+
+
+
+                            3.개인정보의 파기절차 및 방법
+
+                            회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.
+
+
+
+                            - 파기절차
+
+
+
+                            회원님이 회원가입 등을 위해 입력하신 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 일정 기간 저장된 후 파기되어집니다.
+
+
+
+                            별도 DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 보유되어지는 이외의 다른 목적으로 이용되지 않습니다.
+
+
+
+                            - 파기방법
+
+
+
+                            전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.
+
+
+
+
+
+
+
+                            4.개인정보 제공
+
+                            회사는 회원에 대하여 보다 더 질 높은 서비스 제공 등을 위해 아래와 같이 귀하의 개인정보를 제공하고 있습니다.
+
+
+
+                            - 제공 대상 : 자사 직원
+
+                            - 제공하는 개인정보 항목 : 이름,자택 전화번호,자택 주소,휴대전화번호
+
+                            - 제공정보의 이용 목적 : 상품배송업무, 상품대응업무
+
+                            - 제공 정보의 보유 및 이용 기간 : 즉시파기
+
+
+
+                            다만, 아래의 경우에는 예외로 합니다.
+
+
+
+                            - 이용자들이 사전에 동의한 경우
+
+
+
+                            - 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우
+
+
+
+
+
+
+
+                            5.수집한 개인정보의 위탁
+
+                            회사는 서비스 이행을 위해 아래와 같이 외부 전문업체에 위탁하여 운영하고 있습니다.
+
+
+
+                            위탁 대상자 : 택배사
+
+                            위탁업무 내용 : 상품배송업무
+
+
+
+                            위탁 대상자 : 이니시스
+
+                            위탁업무 내용 : 상품 구매에 필요한 신용카드, 현금결제 등의 결제정보 전송
+
+
+
+
+
+
+
+                            6.이용자 및 법정대리인의 권리와 그 행사방법
+
+                            이용자 및 법정 대리인은 언제든지 등록되어 있는 자신 혹은 당해 만 14세 미만 아동의 개인정보를 조회하거나 수정할 수 있으며 가입해지를 요청할 수도 있습니다.
+
+
+
+                            이용자 혹은 만 14세 미만 아동의 개인정보 조회 수정을 위해서는 ‘개인정보변경’(또는 ‘회원정보수정’ 등)을 가입해지(동의철회)를 위해서는“회원탈퇴”를 클릭하여 본인 확인 절차를 거치신 후 직접 열람, 정정 또는 탈퇴가 가능합니다.
+
+                            혹은 개인정보관리책임자에게 서면, 전화 또는 이메일로 연락하시면 지체없이 조치하겠습니다.
+
+
+
+                            귀하가 개인정보의 오류에 대한 정정을 요청하신 경우에는 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다. 또한 잘못된 개인정보를 제3자에게 이미 제공한 경우에는 정정 처리결과를 제3자에게 지체없이 통지하여 정정이 이루어지도록 하겠습니다. </p>
+                    </div>
+                </div>
+                <div class="submit-wrap submit-wrap2">
+                    <p class="txt-kor submit">주문하실 상품의 정보를 확인하였으며, 이에 동의합니다.</p>
+                    <input type="checkbox" class="submit-check">
+                </div>
+                <div class="submit-wrap3">
+                    <p class="txt-kor submit">전체동의</p>
+                    <input type="checkbox" class="submit-check">
+                </div>
+
+                <a href="success-checkout.html">
+                    <p class="txt-kor order-button">결제하기</p>
+                </a>
+            </div>
+            <!-- //결제 금액란 -->
+
+
+        </div>
+
+        <!-- //결제 정보란-->
+
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+<script>
+    function findAddr() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+
+                console.log(data);
+
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+                // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var roadAddr = data.roadAddress; // 도로명 주소 변수
+                var jibunAddr = data.jibunAddress; // 지번 주소 변수
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('member_post').value = data.zonecode;
+                if (roadAddr !== '') {
+                    document.getElementById("member_addr").value = roadAddr;
+                } else if (jibunAddr !== '') {
+                    document.getElementById("member_addr").value = jibunAddr;
+                }
+            }
+        }).open();
+    }
+</script>
+<script>
+    function findAddr1() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+
+                console.log(data);
+
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+                // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var roadAddr = data.roadAddress; // 도로명 주소 변수
+                var jibunAddr = data.jibunAddress; // 지번 주소 변수
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('member_post2').value = data.zonecode;
+                if (roadAddr !== '') {
+                    document.getElementById("member_addr2").value = roadAddr;
+                } else if (jibunAddr !== '') {
+                    document.getElementById("member_addr2").value = jibunAddr;
+                }
+            }
+        }).open();
+    }
+</script>
+
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script></html>

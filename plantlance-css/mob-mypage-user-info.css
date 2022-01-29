@@ -1,0 +1,546 @@
+@charset "utf-8";
+
+
+@font-face {
+    src: url("../fonts/Pretendard-Thin.otf");
+    font-family: "Pretendard-Thin";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Light.otf");
+    font-family: "Pretendard-Light";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Regular.otf");
+    font-family: "Pretendard-Regular";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Medium.otf");
+    font-family: "Pretendard-Medium";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-SemiBold.otf");
+    font-family: "Pretendard-SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-ExtraBold.otf");
+    font-family: "Pretendard-ExtraBold";
+}
+
+
+
+
+
+
+@font-face {
+    src: url("../fonts/Urbanist-Light.ttf");
+    font-family: "Urbanist-Light";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-Regular.ttf");
+    font-family: "Urbanist-Regular";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-Medium.ttf");
+    font-family: "Urbanist-Medium";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-SemiBold.ttf");
+    font-family: "Urbanist-SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-ExtraBold.ttf");
+    font-family: "Urbanist-ExtraBold";
+}
+
+
+
+/*
+body::-webkit-scrollbar{
+    display: none;
+}
+*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: #292929;
+    font-size: 14px;
+    overflow-x: hidden;
+    /*-ms-overflow-style: none; /* IE and Edge */
+    /*scrollbar-width: none; /* Firefox */
+    /*background-image: url(../plantlance-img/main-bespoke1.jpg);*/
+}
+
+
+a,
+p,
+li {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+
+
+
+.txt-eng-light{
+    font-family: "Urbanist-Light";
+}
+.txt-eng {
+    font-family: "Urbanist-Medium";
+}
+.txt-eng-semibold{
+    font-family: "Urbanist-SemiBold";
+}
+.txt-eng-bold {
+    font-family: "Urbanist-ExtraBold";
+}
+
+.txt-kor-light{
+     font-family: "Pretendard-Thin";
+}
+.txt-kor {
+    font-family: "Pretendard-Medium";
+}
+
+.txt-kor-bold {
+    font-family: "Pretendard-SemiBold";
+}
+
+
+
+#mob-mypage-whole{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding:10px;
+    margin-top:100px;
+    margin-bottom: 100px;
+}
+
+
+.mob-mypage-title{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-left:20px;
+}
+
+
+
+
+/* mob-mypage-button-wrap */
+.mob-mypage-button-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top:10px;
+}
+.mob-mypage-button{
+    position: relative;
+    float:left;
+    width:100%;
+    opacity: .6;
+    box-sizing: border-box;
+    border:1px solid #fcfcfc;
+}
+.mob-mypage-button-wrap1 .mob-mypage-button:nth-child(1){
+    border:1px solid #808080;
+    opacity: 1;
+}
+.mob-mypage-button:nth-child(1){
+    margin-right:10px;
+}
+.mob-mypage-button p{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: center;
+    padding:15px 0;
+    background: #fcfcfc;
+}
+/* //mob-mypage-button-wrap */
+
+
+
+
+/* mob-user-info-box */
+.mob-user-info-box{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:40px;
+}
+
+.mob-user-info-title{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-bottom: 30px;
+    
+}
+
+.mob-user-info-input-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    padding:20px 0;
+    box-sizing: border-box;
+    border-top:1px solid #ebebeb;
+    border-bottom:1px solid #ebebeb;
+}
+.mob-user-info-input{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 70px;
+
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.mob-user-info-input-title{
+    position: relative;
+    width:100px;
+}
+
+.mob-user-info-input-content{
+    position: relative;
+    width:70%;
+}
+
+
+.mob-pw-change{
+    position: relative;
+    float:left;
+    background: #808080;
+    color:#fff;
+    padding: 9px 14px;
+    font-size: 11px;
+}
+
+.mob-text-input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    background: none;
+    border:1px solid #ebebeb;
+    width:50%;
+    height: 35px;
+    box-sizing: border-box;
+    padding-left:10px;
+    font-size: 12px;
+}
+
+.mob-certified{
+    position: relative;
+    float:left;
+    background: #808080;
+    color:#fff;
+    padding: 10px 14px;
+    font-size: 11px;
+    margin-left:10px;
+}
+
+
+.mob-select{
+    position: relative;
+    width:20%;
+    height: 35px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border:1px solid #ebebeb;
+    box-sizing: border-box;
+    margin-left:10px;
+    padding-left:10px;
+    font-size: 11px;
+}
+
+
+.mob-address-wrap{
+    position: relative;
+    float:left;
+    width:70%;
+}
+.mob-address-wrap .mob-address-box{
+    position: relative;
+    float:left;
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mob-address-box .mob-address-input{
+    position: relative;
+    width:70%;
+}
+.mob-address-box .mob-find-address{
+    position: relative;
+    float:left;
+    background: #808080;
+    color:#fff;
+    padding: 10px 14px;
+    font-size: 11px;
+    margin-left:10px;
+}
+
+.mob-address-input2{
+    width:100%;
+    margin-top:10px;
+}
+
+.mob-user-delete{
+    position: relative;
+    float:left;
+    background: #808080;
+    color:#fff;
+    padding: 10px 14px;
+    font-size: 11px;
+}
+
+
+.mob-user-info-save{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: center;
+    margin-top:20px;
+    margin-bottom: 10px;
+    padding:15px;
+    box-sizing: border-box;
+    background: #2f2f2f;
+    color:#fff;
+}
+
+.mob-user-info-cancel{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: center;
+    padding:15px;
+    box-sizing: border-box;
+    border:1px solid #2f2f2f;
+    
+}
+
+
+
+.mob-pw-change-wrap{
+    position: absolute;
+    width:100%;
+    height: 100vh;
+    display: none;
+}
+.mob-pw-change-bg{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 100vh;
+    background: #2f2f2f;
+    opacity: .8;
+    z-index: 6;
+}
+
+.mob-pw-change-box{
+    position: absolute;
+    top:150px;
+    width:300px;
+    height: 400px;
+    background:#fff;
+    z-index: 7;
+    left:50%;
+    transform: translate(-50%);
+    box-sizing: border-box;
+    padding:30px;
+}
+.mob-pw-change-box-title{
+    position: relative;
+    float:left;
+    width:100%;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.mob-pw-change-box input {
+    position: relative;
+    float:left;
+    width:100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+   padding:10px 0;
+    border:1px solid #ebebeb;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding-left:15px;
+}
+.mob-pw-change-box input::placeholder{
+    opacity: .5;
+    font-size: 11px;
+}
+
+
+.mob-pw-change-cancel{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:50%;
+    text-align: center;
+    padding:20px 0;
+    background: #f5f5f5;
+}
+.mob-pw-change-save{
+    position: absolute;
+    bottom:0;
+    right:0;
+    width:50%;
+    text-align: center;
+    padding:20px 0;
+    background: #2f2f2f;
+    color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+.mob-user-delete-wrap{
+    position: absolute;
+    width:100%;
+    height: 100vh;
+    display: none;
+}
+.mob-user-delete-bg{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 100vh;
+    background: #2f2f2f;
+    opacity: .8;
+    z-index: 6;
+}
+
+.mob-user-delete-box{
+    position: absolute;
+    top:150px;
+    width:300px;
+    height: 450px;
+    background:#fff;
+    z-index: 7;
+    left:50%;
+    transform: translate(-50%);
+    box-sizing: border-box;
+    padding:30px;
+}
+.mob-user-delete-box-title{
+    position: relative;
+    float:left;
+    width:100%;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+
+.mob-user-delete-box input[type="text"], .mob-user-delete-box input[type="password"]{
+    position: relative;
+    float:left;
+    width:100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+   padding:10px 0;
+    border:1px solid #ebebeb;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding-left:15px;
+}
+.mob-user-delete-box input::placeholder{
+    opacity: .5;
+    font-size: 11px;
+}
+
+.mob-user-delete-box-txt{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+
+.mob-user-delete-box-submit{
+    position: relative;
+    float:left;
+    width:100%;
+    font-size: 12px;
+}
+
+.mob-user-delete-box-check-wrap{
+    position: relative;
+    float:right;
+    width:auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+
+.mob-user-delete-box-check-wrap p{
+    position: relative;
+    font-size: 12px;
+}
+.mob-user-delete-box-check-wrap input{
+    margin:0;
+    margin-top:1px;
+    margin-left:5px;
+}
+
+
+
+.mob-user-delete-cancel{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:50%;
+    text-align: center;
+    padding:20px 0;
+    background: #f5f5f5;
+}
+.mob-user-delete-save{
+    position: absolute;
+    bottom:0;
+    right:0;
+    width:50%;
+    text-align: center;
+    padding:20px 0;
+    background: #2f2f2f;
+    color:#fff;
+}
+
+/* //mob-user-info-box */
+
+
+
+

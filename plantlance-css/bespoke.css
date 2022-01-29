@@ -1,0 +1,1179 @@
+@charset "utf-8";
+
+
+@font-face {
+    src: url("../fonts/Pretendard-Thin.otf");
+    font-family: "Pretendard-Thin";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Regular.otf");
+    font-family: "Pretendard-Regular";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-Medium.otf");
+    font-family: "Pretendard-Medium";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-SemiBold.otf");
+    font-family: "Pretendard-SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Pretendard-ExtraBold.otf");
+    font-family: "Pretendard-ExtraBold";
+}
+
+
+
+
+@font-face {
+    src: url("../fonts/Urbanist-Light.ttf");
+    font-family: "Urbanist-Light";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-Regular.ttf");
+    font-family: "Urbanist-Regular";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-Medium.ttf");
+    font-family: "Urbanist-Medium";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-SemiBold.ttf");
+    font-family: "Urbanist-SemiBold";
+}
+
+@font-face {
+    src: url("../fonts/Urbanist-ExtraBold.ttf");
+    font-family: "Urbanist-ExtraBold";
+}
+
+
+
+
+
+/*
+body::-webkit-scrollbar{
+    display: none;
+}
+*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: #292929;
+    font-size: 14px;
+    overflow-x: hidden;
+    /*-ms-overflow-style: none; /* IE and Edge */
+    /*scrollbar-width: none; /* Firefox */
+    /*background-image: url(../plantlance-img/main-bespoke1.jpg);*/
+    overflow-y: hidden;
+    animation-name: bodyScroll;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bodyScroll{
+    from{
+        overflow-y: hidden;
+    }
+    to{
+        overflow-y: scroll;
+    }
+}
+
+
+a,
+p,
+li {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+
+
+.txt-eng-light{
+    font-family: "Urbanist-Light";
+}
+.txt-eng {
+    font-family: "Urbanist-Medium";
+}
+.txt-eng-semibold{
+    font-family: "Urbanist-SemiBold";
+}
+.txt-eng-bold {
+    font-family: "Urbanist-ExtraBold";
+}
+
+.txt-kor-light{
+     font-family: "Pretendard-Thin";
+}
+.txt-kor {
+    font-family: "Pretendard-Medium";
+}
+
+.txt-kor-bold {
+    font-family: "Pretendard-SemiBold";
+}
+
+
+
+
+
+#bespoke-whole {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-width: 1400px;
+    box-sizing: border-box;
+    left:50%;
+    transform: translate(-50%);
+}
+
+
+.bespoke-main {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+   
+}
+
+.bespoke-main1{ 
+     animation-name: firstStep;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    animation-duration: .7s;
+}
+
+@keyframes firstStep{
+    from{
+        opacity: 1;
+        visibility: visible;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.bespoke-main .bespoke-main-title {
+    position: relative;
+    float: left;
+    width: 100%;
+    font-size: 100px;
+
+}
+
+.bespoke-main-arrow-img {
+    position: absolute;
+    width: 40px;
+    bottom: 20px;
+    transform: rotate(90deg);
+}
+
+
+
+/* bespoke-main2 */
+.bespoke-main2 {
+    background: #f8f8f8;
+    position: absolute;
+    float:left;
+    animation-name: secondStep;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
+@keyframes secondStep{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+.bespoke-sub-title-wrap {
+    position: absolute;
+    bottom: 150px;
+    animation-name: thirdStep;
+    animation-delay: 2.7s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes thirdStep{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+.bespoke-sub-title-wrap .join {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.bespoke-sub-title-wrap div {
+    position: relative;
+
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.bespoke-sub-title-wrap div .made-in-you {
+    margin-right: 10px;
+}
+
+
+/* //bespoke-main2 */
+
+
+
+
+
+
+
+
+/* bespoke-main3 */
+.bespoke-main3 {
+    background: #f8f8f8;
+}
+
+.main3-left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 250px;
+}
+
+.main3-title {
+    position: relative;
+    float: left;
+    width: 180px;
+    font-size: 48px;
+}
+
+
+.main3-shape {
+    position: relative;
+    float: left;
+    width: auto;
+    height: 440px;
+    border-right: 1px solid #2f2f2f;
+    transform: rotate(45deg);
+}
+
+.main3-title1 {
+    bottom: 100px;
+}
+
+.main3-title2 {
+    top: 100px;
+    transform: rotate(180deg);
+}
+
+
+
+.main3-right{
+    width:660px;
+}
+
+.main3-right-shape {
+    position: relative;
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.main3-right-shape .shape {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 150px;
+
+    border-radius: 100%;
+    opacity: .8;
+}
+
+.main3-right-shape .shape1 {
+    background: #4c77aa;
+}
+
+.main3-right-shape .shape2 {
+    background: #7FA193;
+    margin-left: -25px;
+}
+
+.main3-right-shape .shape3 {
+    background: #FFCF7B;
+    margin-left: -25px;
+}
+
+.main3-right-shape .shape4 {
+    background: #0C0C0C;
+    margin-left: -25px;
+    opacity: .6
+}
+
+.main3-right-shape .shape5 {
+    background: #560707;
+    margin-left: -25px;
+}
+
+
+
+.main3-txt-box{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:80px;
+}
+
+.main3-txt-box p:nth-child(1) {
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.main3-txt-box p:nth-child(2) {
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    font-size: 14px;
+    line-height: 2.5;
+}
+.main3-txt-box p:nth-child(3) {
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    font-size: 14px;
+}
+/* //bespoke-main3 */
+
+
+
+
+
+
+
+
+
+/* bespoke-main4 */
+
+.bespoke-main4-title-wrap{
+    position: relative;
+    width:100%;
+    max-width: 1400px;
+    min-width: 1400px;
+    box-sizing: border-box;
+    padding:0 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 500px;
+}
+
+.bespoke-main4-title{
+    position: relative;
+    float:left;
+    text-align: left;
+}
+
+.bespoke-main4-title p{
+    font-size: 60px;
+    line-height: 1.5;
+}
+.bespoke-main4-title p:nth-child(2){
+    text-decoration: 3px solid line-through;
+    text-decoration-color: rgba(196,0,0,0.8);
+}
+
+
+.bespoke-main4-title2 p{
+    font-size: 18px;
+    text-align: left;
+    line-height: 2;
+}
+
+.bespoke-main4-title2 p:nth-child(2){
+    text-decoration: none;
+    margin-top:30px;
+}
+
+
+
+.go-to-wily-wrap{
+    position: absolute;
+    bottom:280px;
+}
+
+
+.go-to-wily-title{
+    position: relative;
+    float:left;
+    width:100%;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.go-to-wily-button{
+    position: relative;
+    float:left;
+    width:auto;
+    background: #2f2f2f;
+    color:#fff;
+    padding:15px 100px;
+    left:50%;
+    transform: translate(-50%);
+}
+
+
+/* //bespoke-main4 */
+
+
+
+
+
+
+
+
+
+/* bespoke-main5 */
+.bespoke-main5-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+    padding:0 20px;
+}
+
+.bespoke-main5-img-wrap{
+    position: relative;
+    float:left;
+    width:70%;
+    height: 450px;
+    background-image: url(../plantlance-image/main/main-pltl2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.bespoke-main5-info-wrap{
+    position: relative;
+    float:right;
+    width:23%;
+    height: 450px;
+}
+
+.bespoke-main5-info-title{
+    position: relative;
+    float:left;
+    width:100%;
+    min-width: 310px;
+    text-align: left;
+    font-size: 30px;
+    line-height: 1.5;
+    top:-10px;
+}
+
+.bespoke-main5-info-title-kor{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+
+.bespoke-main5-info-txt-box{
+    position: relative;
+    float:left;
+    width:310px;
+    display: inline-block;
+    font-size: 16px;
+    text-align: left;
+    text-align: justify;
+    line-height: 1.5;
+    opacity: .8;
+}
+.bespoke-main5-info-txt-box1{
+    margin-bottom: 30px;
+    margin-top:170px;
+}
+
+
+
+.go-to-product-wily-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* //bespoke-main5 */
+
+
+
+
+
+
+
+
+
+/* bespoke-main6 */
+.bespoke-main6-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+    padding:0 20px;
+}
+.bespoke-main6-title-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.bespoke-main6-title-eng{
+    position: relative;
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.bespoke-main6-title-kor{
+    position: relative;
+    bottom:5px;
+    left:15px;
+}
+
+.bespoke-main6-img-wrap{
+    position: relative;
+    float:left;
+    width:70%;
+    height: 450px;
+    background: #eee;
+    background-image: url(../plantlance-image/bespoke/leg-compair.png);
+    background-position:center 80%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+.bespoke-main6-info-wrap{
+    position: relative;
+    float:right;
+    width:23%;
+    height: 450px;
+}
+
+
+.bespoke-main6-sub-img-wrap{
+    position: relative;
+    float:right;
+    width:100%;
+    margin-bottom: 10px;
+}
+.bespoke-main6-sub-img-wrap:nth-child(2){
+    margin-bottom: 0;
+}
+
+.bespoke-main6-sub-img{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 200px;
+
+}
+
+.bespoke-main6-sub-img1{
+    background-image: url(../plantlance-image/bespoke/leg-standard.png);
+    background-position: center 30%;
+    background-size: cover;
+}
+.bespoke-main6-sub-img2{
+    background-image: url(../plantlance-image/bespoke/leg-low.png);
+    background-position: center 90%;
+    background-size: cover;
+}
+
+.bespoke-main6-sub-title{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    margin:3px 0;
+}
+
+
+
+
+.bespoke-main6-wrap .go-to-product-wily-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.go-to-product-wily{
+    position: relative;
+    width:50%;
+    margin-right:100px;
+    text-align:left;
+}
+.go-to-product-wily:nth-child(2){
+    margin-right: 0;
+}
+.go-to-product-wily div{
+    position: relative;
+    float:left;
+    width:100%;
+    border-bottom: 1px solid #2f2f2f;
+    padding-bottom: 10px;
+    margin-bottom: 45px;
+}
+.go-to-product-wily div .go-to-product-wily-button{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.go-to-product-wily div span{
+    position: relative;
+    font-size: 16px;
+}
+
+.go-to-product-wily div span:nth-child(3){
+    font-size: 11px;
+    opacity: .8;
+    margin-left:5px;
+}
+
+
+.go-to-product-wily-arrow-img{
+    position: absolute;
+    right:0;
+    width:10px;
+}
+/* //bespoke-main6 */
+
+
+
+
+
+
+
+
+
+/* bespoke-main7 */
+.bespoke-main7-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+    padding:0 20px;
+}
+.bespoke-main7-title-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.bespoke-main7-title-eng{
+    position: relative;
+    float:left;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.bespoke-main7-title-kor{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+.bespoke-main7-img-wrap{
+    position: relative;
+    float:left;
+    width:70%;
+    height: 650px;
+    background: #eee;
+    background-image: url(../plantlance-image/bespoke/your-color.png);
+    background-position: center 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.bespoke-main7-info-wrap{
+    position: relative;
+    float:right;
+    width:23%;
+    height: 650px;
+}
+
+
+.bespoke-main7-sub-img-wrap{
+    position: relative;
+    float:right;
+    width:100%;
+    margin-bottom: 120px;
+}
+.bespoke-main7-sub-img-wrap:nth-child(1) p{
+    margin-bottom: 10px;
+}
+.bespoke-main7-sub-img-wrap:nth-child(2){
+    margin-bottom: 0;
+}
+
+.bespoke-main7-sub-img{
+    position: relative;
+    float:left;
+    width:100%;
+    height:250px;
+    background-image: url(../plantlance-image/bespoke/your-color2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bespoke-main7-sub-title{
+    position: relative;
+    float:left;
+    width:100%;
+    min-width: 310px;
+    margin:3px 0;
+    text-align: left;
+    text-align: justify;
+    line-height: 1.82;
+    opacity: .7;
+    font-size: 14px;
+}
+
+
+.bespoke-main7-sub-title-span:nth-child(2){
+    opacity: .7;
+}
+.bespoke-main7-sub-title-span{
+    position: relative;
+    float:left;
+    min-width: 310px;
+    margin:3px 0;
+    text-align: left;
+    text-align: justify;
+    line-height:1.82;
+    font-size:14px;
+    
+}
+
+
+
+
+/* //bespoke-main6 */
+
+
+
+
+
+
+/* bespoke-main8 */
+.bespoke-main8-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+    padding:0 20px;
+}
+.bespoke-main8-title-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.bespoke-main8-title-eng{
+    position: relative;
+    float:left;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.bespoke-main8-title-kor{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+
+
+
+
+.bespoke-main8-info-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    max-width: 1400px;
+    text-align: left;
+    text-align: justify;
+    line-height: 2;
+}
+.bespoke-main8-info-title{
+    position: relative;
+    float:left;
+    width:600px;
+    text-align: left;
+    text-align: justify;
+    line-height: 2;
+}
+
+.bespoke-main8-size-detail-wrap{
+    position: relative;
+    float:right;
+    width:600px;
+}
+
+
+.wily-size-type{
+    position: relative;
+    float:left;
+    width:220px;
+    margin-right: 20px;
+}
+
+.oblong-size-type{
+    position: relative;
+    float:right;
+    width:350px;
+}
+
+
+
+
+
+
+.bespoke-main8-size-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:50px;
+}
+.bespoke-main8-size-title{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-bottom: 20px;
+}
+.bespoke-main8-size-img-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bespoke-main8-size-img{
+    position: relative;
+    float:left;
+    width:430px;
+    height: 430px;
+    background: #eee;
+    margin-bottom: 10px;
+}
+
+.bespoke-main8-size-img1{
+    background-image: url(../plantlance-image/bespoke/750.png);
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bespoke-main8-size-img2{
+    background-image: url(../plantlance-image/bespoke/900.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bespoke-main8-size-img3{
+    background-image: url(../plantlance-image/bespoke/1100.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+/* bespoke-main8 */
+
+
+
+
+
+
+
+
+/* bespoke-main9 */
+.bespoke-main9-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+    padding:0 20px;
+}
+.bespoke-main9-title-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.bespoke-main9-title-eng{
+    position: relative;
+    float:left;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.bespoke-main9-title-kor{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+
+
+
+
+.bespoke-main9-info-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    text-align: justify;
+    line-height: 2;
+}
+.bespoke-main9-info-title{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    text-align: justify;
+    line-height: 2;
+}
+
+
+
+
+
+.bespoke-main9-img{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 600px;
+    background: #eee;
+    margin-top:50px;
+    overflow: hidden;
+    background-image: url(../plantlance-image/bespoke/evolution.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* bespoke-main9 */
+
+
+
+
+
+
+
+/* bespoke-main10 */
+.bespoke-main10-wrap{
+    position: relative;
+    float:left;
+    width:1400px;
+    min-width: 1400px;
+    box-sizing: border-box;
+    padding:0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.bespoke-main10-left{
+    position: relative;
+    float:left;
+    width:350px;
+}
+.bespoke-main10-title-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.bespoke-main10-title-eng{
+    position: relative;
+    float:left;
+    width:100%;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.bespoke-main10-title-kor{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+
+
+
+
+.bespoke-main10-info-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: left;
+    text-align: justify;
+    line-height: 2;
+}
+.bespoke-main10-info-txt{
+    position: relative;
+    text-align: left;
+    text-align: justify;
+    line-height: 2;
+}
+
+
+
+.bespoke-main10-txt:nth-child(3){
+    position: relative;
+    float:left;
+    width:100%;
+    
+    margin-top:30px;
+}
+
+
+
+.bespoke-main10-info-img{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 310px;
+    background: #eee;
+    margin-top:25px;
+    background-image: url(../plantlance-image/bespoke/big-change1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.bespoke-main10-img-wrap{
+    position: relative;
+    width:900px;
+    height: 700px;
+    background: #eee;
+     background-image: url(../plantlance-image/bespoke/big-change2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+
+
+
+
+.table-exchange-button{
+    position: relative;
+    float:left;
+    width:100%;
+    max-width: 1360px;
+    box-sizing: border-box;
+    padding:20px 0;
+    background: #2f2f2f;
+    color:#fff;
+    text-align: center;
+    left:50%;
+    transform: translate(-50%);
+    margin-top:50px;
+}
+
+
+
+.table-exchange-arrow-img{
+    position: absolute;
+    float:right;
+    width:10px;
+    top:18px;
+    right:50px;
+}
+/* bespoke-main10 */
+
+
+
+
+
+

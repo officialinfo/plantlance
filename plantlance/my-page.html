@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Plantlance</title>
+
+
+    <script src="../plantlance-script/jquery-3.6.0.min.js"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/my-page.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/gnb.css">
+    <link rel="stylesheet" type="text/css" href="../plantlance-css/footer.css">
+
+
+    <script>
+        //마이페이지 스크립트
+
+        $(document).ready(function() {
+            $(".change-pw-button").click(function() {
+                $(".after-push-change").css("display", "block");
+            });
+
+            $(".user-pw-change-bottom-button-wrap .prev-button").click(function() {
+                $(".after-push-change").css("display", "none");
+            });
+
+
+
+            $(".user-delete-button").click(function() {
+                $(".after-push-delete").css("display", "block");
+            });
+
+            $(".user-delete-bottom-button-wrap .prev-button").click(function() {
+                $(".after-push-delete").css("display", "none");
+            });
+
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    <script>
+        // **  gnb 스크립트 
+
+
+        $(document).ready(function() {
+            /* 메뉴 - 웹 슬라이드 메뉴 활성화 */
+            $("nav > .nav-wrap > a > .menu-icon").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duration", ".1s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", "0s");
+
+                $("#nav-slide").css("width", "100%");
+                $("#nav-slide").css("z-index", "5");
+
+                $("#nav-slide").css("animation-name", "menuShow");
+                $("#nav-slide").css("animation-delay", ".1s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+
+                $("#nav-slide > .nav-slide-wrap").css("transition-duration", ".2s");
+                $("#nav-slide > .nav-slide-wrap").css("transition-delay", ".3s");
+                $("#nav-slide > .nav-slide-wrap").css("opacity", "1");
+
+
+                $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").css("display", "block");
+
+
+                $(".nav-mob").css("animation-name", "menuShow");
+                $(".nav-mob").css("animation-delay", ".1s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+
+                $(".nav-mob").css("width", "100%");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-duration", ".2s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-delay", ".3s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("display", "block");
+
+                $("::-webkit-scrollbar").css("display", "none");
+                $("body").css("-ms-overflow-style", "none");
+            });
+            /* // 메뉴 - 웹 슬라이드 메뉴 활성화 */
+
+
+
+
+            /* 메뉴 - 닫기 - 슬라이드 메뉴 비활성화 */
+            $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $("#nav-slide").css("width", "0");
+                $("#nav-slide").css("animation-name", "menuNone");
+                $("#nav-slide").css("animation-delay", ".4s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+
+                $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").css("display", "none");
+
+                $("#nav-slide > .nav-slide-wrap").css("transition-delay", "0s");
+                $("#nav-slide > .nav-slide-wrap").css("transition-duration", ".1s");
+                $("#nav-slide > .nav-slide-wrap").css("opacity", "0");
+
+
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-sofa").css("height", "0px");
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-table").css("height", "0px");
+
+
+
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $(".nav-mob").css("width", "0");
+                $(".nav-mob").css("animation-name", "menuNone");
+                $(".nav-mob").css("animation-delay", ".4s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-duration", ".2s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("transition-delay", ".3s");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("display", "none");
+
+
+
+                $("html::-webkit-scrollbar").css("display", "block");
+                $("html").css("-ms-overflow-style", "auto");
+
+
+            });
+            /* 메뉴 - 닫기 - 슬라이드 메뉴 비활성화 */
+
+
+            /* 메뉴 - 퍼니쳐 - 소파 하위메뉴 비활성화*/
+            $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > a > .title-sofa").click(function() {
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-sofa").css("height", "auto");
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-table").css("height", "0px");
+
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap").css("height", "auto");
+            });
+            /* //메뉴 - 퍼니쳐 - 소파 하위메뉴 비활성화*/
+
+
+            /* 메뉴 - 소파 - 테이블 하위 메뉴 활성화 */
+            $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > a > .title-table").click(function() {
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-sofa").css("height", "0px");
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-table").css("height", "auto");
+
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap").css("height", "auto");
+            });
+            /* //메뉴 - 소파 - 테이블 하위 메뉴 활성화 */
+
+
+
+
+
+
+
+            /* 메뉴 - 모바일 슬라이드 메뉴 활성화 */
+            $("nav > .nav-wrap > a > .menu-icon").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duration", ".1s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", "0s");
+
+                $(".nav-mob").css("width", "100%");
+                $(".nav-mob").css("z-index", "5");
+
+                $("#nav-slide").css("animation-name", "menuShow");
+                $("#nav-slide").css("animation-delay", ".1s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+                $(".nav-mob").css("animation-name", "menuShow");
+                $(".nav-mob").css("animation-delay", ".1s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("display", "block");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-bottom").css("opacity", "1");
+
+
+                $(".nav-mob > .nav-mob-wrap").css("transition-duration", ".2s");
+                $(".nav-mob > .nav-mob-wrap").css("transition-delay", ".3s");
+                $(".nav-mob > .nav-mob-wrap").css("opacity", "1");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "block");
+
+
+                $("html::-webkit-scrollbar").css("display", "none");
+                $("html").css("-ms-overflow-style", "none");
+            });
+            /* // 메뉴 - 모바일 슬라이드 메뉴 활성화 */
+
+
+            /* 메뉴 - 닫기 - 모바일 슬라이드 메뉴 비활성화 */
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-top > a > .close-button").click(function() {
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $(".nav-mob").css("width", "0");
+                $(".nav-mob").css("animation-name", "menuNone");
+                $(".nav-mob").css("animation-delay", ".4s");
+                $(".nav-mob").css("animation-fill-mode", "forwards");
+
+                $(".nav-mob > .nav-mob-top > a > .close-button").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap").css("transition-duration", ".1s");
+                $(".nav-mob > .nav-mob-wrap").css("transition-delay", "0s");
+                $(".nav-mob > .nav-mob-wrap").css("opacity", "0");
+
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "0");
+
+
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-down").css("display", "block");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-up").css("display", "none");
+
+
+
+
+
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-delay", ".4s");
+                $("nav > .nav-wrap > a > .menu-icon").css("transition-duturation", ".2s");
+
+                $("#nav-slide").css("width", "0");
+                $("#nav-slide").css("animation-name", "menuNone");
+                $("#nav-slide").css("animation-delay", ".4s");
+                $("#nav-slide").css("animation-fill-mode", "forwards");
+
+                $("#nav-slide > .nav-slide-wrap > .nav-slide-side > .side-wrap > a > .close-button").css("display", "none");
+
+                $("#nav-slide > .nav-slide-wrap").css("transition-delay", "0s");
+                $("#nav-slide > .nav-slide-wrap").css("transition-duration", ".1s");
+                $("#nav-slide > .nav-slide-wrap").css("opacity", "0");
+
+
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-sofa").css("height", "0px");
+                $("#nav-slide > .nav-slide-wrap > .nav-main-menu > .shop > .shop-wrap > .furniture > .gnb-table").css("height", "0px");
+
+
+                $("html::-webkit-scrollbar").css("display", "block");
+                $("html").css("-ms-overflow-style", "auto");
+            });
+            /* 메뉴 - 닫기 - 모바일 슬라이드 메뉴 비활성화 */
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 활성화 */
+
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-down").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "auto");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-down").css("display", "none");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-up").css("display", "block");
+                
+                
+                
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-down").css("display","none");
+                
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-up").css("display","block");
+            });
+            /* //모바일 메뉴 - 퍼니쳐 활성화 */
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 비활성화 */
+
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-up").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > .furniture").css("height", "0px");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-down").css("display", "block");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .title-furniture > .arrow-up").css("display", "none");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "0");
+                
+                
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-down").css("display","block");
+                
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > a > .mob-gnb-furniture-up").css("display","none");
+            });
+            /* //모바일 메뉴 - 퍼니쳐 비활성화 */
+
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 - 소파 활성화 */
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap > .furniture > a > .title-sofa").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "auto");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "0");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "auto");
+            });
+            /* //모바일 메뉴 - 퍼니쳐 - 소파 활성화 */
+
+
+
+            /* 모바일 메뉴 - 퍼니쳐 - 테이블 활성화 */
+
+            $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > a > .title-table").click(function() {
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-sofa").css("height", "0");
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture > .gnb-mob-table").css("height", "auto");
+
+                $(".nav-mob > .nav-mob-wrap > .nav-mob-main-menu > .mob-shop > .shop-wrap >  .furniture").css("height", "auto");
+
+
+            });
+            /* //모바일 메뉴 - 퍼니쳐 - 테이블 활성화 */
+
+
+
+
+            /* 검색 활성화 */
+
+            $("nav > .nav-wrap > .sub-button-wrap > a > .search-icon").click(function() {
+                $(".search-wrap").css("display", "block");
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "0");
+                $("nav > .nav-wrap > .sub-button-wrap").css("opacity", "0");
+            });
+
+            /* //검색 활성화 */
+
+
+
+            /* 검색 닫기 */
+            $(".search-close-btn").click(function() {
+                $(".search-wrap").css("display", "none");
+
+
+                $("nav > .nav-wrap > a > .menu-icon").css("opacity", "1");
+                $("nav > .nav-wrap > .sub-button-wrap").css("opacity", "1");
+
+            });
+            /* //검색 닫기 */
+        });
+    </script>
+
+
+
+
+
+
+
+</head>
+
+
+
+<body>
+  <!-- gnb -->
+    <nav>
+        <div class="nav-wrap">
+            <a href="#none">
+                <img src="../plantlance-image/icon/menu2.png" alt="menu" class="menu-icon">
+            </a>
+            <a href="plantlance.html">
+                <img src="../plantlance-image/logo.png" alt="logo" class="logo">
+            </a>
+            <div class="sub-button-wrap">
+                <a href="#none">
+                    <img src="../plantlance-image/icon/search.png" alt="search" class="search-icon">
+                </a>
+                <a href="shopping.html">
+                    <img src="../plantlance-image/icon/bag.png" alt="bag" class="bag-icon">
+                </a>
+                <a href="login.html" target="_self">
+                    <img src="../plantlance-image/icon/login.png" alt="login" class="login-icon">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="nav-slide">
+
+        <div class="nav-slide-wrap nav-pc-tablet">
+            <div class="nav-slide-side">
+                <div class="side-wrap">
+                    <a href="#none">
+                        <img src="../plantlance-image/icon/close2.png" alt="close" class="close-button">
+                    </a>
+                    
+                    
+                    
+                    <div class="side-menu-wrap">
+                    <div class="side-left">
+
+                        <a href="my-page.html">
+                            <p class="txt-eng-bold my-page">MY PAGE</p>
+                        </a>
+                        <a href="shopping.html">
+                            <p class="txt-eng-bold cart">CART</p>
+                        </a>
+                        <a href="my-page.html">
+                            <p class="txt-eng-bold wish-list">WISH LIST</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-eng-bold delivery">DELIVERY</p>
+                        </a>
+                    </div>
+
+                    <div class="side-right">
+                        <p class="txt-eng tel-txt">Customer center</p>
+                        <a href="tel:1899-3417">
+                            <img src="../plantlance-image/icon/call1.png" alt="call" class="call-img">
+                            <p class="txt-eng tel">1899-3417</p>
+                        </a>
+
+                        <p class="txt-eng ig-txt">Instagram</p>
+                        <a href="https://www.instagram.com/plantlance.kr/">
+                            <p class="txt-eng ig">@plantlance.kr</p>
+                        </a>
+                    </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="nav-main-menu">
+
+
+               
+               
+                <div class="nav-slide-top">
+                    <div class="user-wrap">
+                        <a href="join.html">
+                            <p class="txt-eng join">JOIN</p>
+                        </a>
+                        <a href="login.html">
+                            <p class="txt-eng login">LOGIN</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="nav-main-menu-wrap">
+                
+                 <span class="collection">
+                    <p class="txt-eng-bold title">COLLECTION</p>
+                    <a href="#none">
+                        <p class="txt-eng">2021 REFURB</p>
+                    </a>
+                </span>
+                
+                
+                <span class="about">
+                    <p class="txt-eng-bold title">ABOUT</p>
+                    
+                    <div class="second-menu">
+                    <a href="pltl.html">
+                        <p class="txt-eng">PLTL</p>
+                    </a>
+                    <a href="bespoke.html">
+                        <p class="txt-eng">BESPOKE</p>
+                    </a>
+                    <a href="contact.html">
+                        <p class="txt-eng">CONTACT</p>
+                    </a>
+                    </div>
+
+                </span>
+
+               
+
+                <span class="shop">
+                    <p class="txt-eng-bold title">SHOP</p>
+                    
+                    <div class="shop-wrap">
+                        <a href="list-new.html">
+                            <p class="txt-eng sub-title">NEW OBJECT</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-eng sub-title">FURNITURE</p>
+                        </a>
+                        <div class="furniture">
+                            <a href="#none">
+                                <p class="txt-eng sub-title title-sofa">Sofa</p>
+                            </a>
+                            <div class="gnb-sofa">
+                                <a href="list-sofa.html">
+                                    <p class="txt-kor">전체 소파</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">플렉스 소파 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">클라우드 소파 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">아우어 소파 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">그래 소파</p>
+                                </a>
+                            </div>
+
+                            <a href="#none">
+                                <p class="txt-eng sub-title title-table">Table</p>
+                            </a>
+                            <div class="gnb-table">
+                                <a href="list-table.html">
+                                    <p class="txt-kor">전체 테이블</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">카페 테이블 시리즈</p>
+                                </a>
+
+                                <a href="#none">
+                                    <p class="txt-kor">메이트 테이블 시리즈</p>
+                                </a>
+
+
+
+
+
+                            </div>
+                            <a href="list-chair.html">
+                                <p class="txt-eng sub-title">Chair</p>
+                            </a>
+                            <a href="list-stool.html">
+                                <p class="txt-eng sub-title">Stool</p>
+                            </a>
+                            <a href="list-lighting.html">
+                                <p class="txt-eng sub-title">Lighting</p>
+                            </a>
+                            <a href="list-etc.html">
+                                <p class="txt-eng sub-title">Etc</p>
+                            </a>
+                        </div>
+                        <a href="list-planterior.html">
+                            <p class="txt-eng sub-title">PLANTERIOR</p>
+                        </a>
+                        <a href="list-kitchen.html">
+                            <p class="txt-eng sub-title">KITCHEN</p>
+                        </a>
+                        <a href="list-interior.html">
+                            <p class="txt-eng sub-title">INTERIOR</p>
+                        </a>
+                    </div>
+                </span>
+
+
+
+                <span class="community">
+                    <p class="txt-eng-bold title">COMMUNITY</p>
+
+                   
+                   <div class="second-menu">
+                    <a href="notice.html">
+                        <p class="txt-eng">NOTICE</p>
+                    </a>
+                    <a href="qna.html">
+                        <p class="txt-eng">Q &amp; A</p>
+                    </a>
+                    <a href="review-list.html">
+                        <p class="txt-eng">REVIEW</p>
+                    </a>
+                    </div>
+                </span>
+
+                <div class="showroom">
+                    <a href="showroom.html">
+                        <p class="txt-eng-bold title">SHOWROOM</p>
+                    </a>
+                </div>
+                </div>
+                
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- //gnb 웹/태블릿 -->
+
+
+    <!-- 검색 -->
+    <div class="search-wrap">
+        <div class="search-place-wrap">
+            <a href="#none">
+                <p class="txt-eng search-close-btn">Close</p>
+            </a>
+            <div class="search-place">
+                <form>
+                    <input autocomplete="off" type="text" placeholder="검색어를 입력해주세요" class="txt-kor" id="search" onkeyup="printName()" onkeypress="if( event.keyCode == 13){searchData();}">
+
+                    <a href="search-list.html">
+                        <img src="../plantlance-image/icon/search.png" alt="search" class="search-btn">
+                    </a>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="search-bg"></div>
+    </div>
+    <!-- //검색 -->
+
+
+
+
+
+
+
+
+
+    <!-- //gnb -->
+    
+    
+    
+    
+    
+    
+
+
+
+    <div id="my-page-whole">
+        <input type="radio" name="my-page" id="user-info">
+        <input type="radio" name="my-page" id="order-list">
+        <input type="radio" name="my-page" id="wish-list">
+        <input type="radio" name="my-page" id="posting-management">
+
+        <p class="txt-eng-bold  my-page-title">MY PAGE</p>
+        <p class="txt-kor-bold  mypage-button-title mypage-edit-title">회원정보 </p>
+        <p class="txt-kor-bold  mypage-button-title mypage-history-title">주문내역</p>
+        <p class="txt-kor-bold  mypage-button-title mypage-wishlist-title">관심상품</p>
+        <p class="txt-kor-bold  mypage-button-title mypage-posting-title">게시물 관리</p>
+
+
+        <div class="my-page-category">
+            <label for="user-info">
+                <p class="txt-kor">회원정보</p>
+            </label>
+
+            <label for="order-list">
+                <p class="txt-kor">주문내역 조회</p>
+            </label>
+
+            <label for="wish-list">
+                <p class="txt-kor">위시리스트</p>
+            </label>
+
+            <label for="posting-management">
+                <p class="txt-kor">게시물 관리</p>
+            </label>
+        </div>
+
+        <div class="my-page-first">
+            <p class="txt-kor hello-to-user">ABC1234님 안녕하세요</p>
+
+
+            <p class="txt-eng-bold my-shopping-title ">My shopping</p>
+            <a href="#none">
+                <img src="../plantlance-image/icon/arrow-right2.png" alt="arrow" class="arrow-next">
+                <p class="txt-kor show-past-breakdown">
+                    주문내역 보기
+                </p>
+
+            </a>
+            <div class="my-shopping-first">
+                <div class="shopping-step shopping-step1">
+                    <p class="txt-kor">입금대기</p>
+                    <p class="txt-eng">0</p>
+                </div>
+
+                <div class="shopping-step shopping-step2">
+                    <p class="txt-kor">주문완료</p>
+                    <p class="txt-eng">2</p>
+                </div>
+
+                <div class="shopping-step shopping-step3">
+                    <p class="txt-kor">상품준비</p>
+                    <p class="txt-eng">2</p>
+                </div>
+
+                <div class="shopping-step shopping-step4">
+                    <p class="txt-kor">배송중</p>
+                    <p class="txt-eng">0</p>
+                </div>
+
+                <div class="shopping-step shopping-step5">
+                    <p class="txt-kor">배송완료</p>
+                    <p class="txt-eng">0</p>
+                </div>
+            </div>
+
+            <a href="#none">
+                <p class="txt-kor delivery-check-button">
+                    배송조회
+                </p>
+            </a>
+
+            <div class="my-post-first">
+                <p class="txt-eng-bold my-post-title">My post</p>
+                <a href="#none">
+                    <img src="../plantlance-image/icon/arrow-right2.png" alt="arrow" class="arrow-next">
+                    <p class="txt-kor post-management-button">
+                        게시물 관리
+                    </p>
+                </a>
+
+                <div class="post-top">
+                    <p class="txt-kor post-number">번호</p>
+                    <p class="txt-kor post-kind">분류</p>
+                    <p class="txt-kor post-title">제목</p>
+                    <p class="txt-kor post-date">작성일자</p>
+                </div>
+
+                <div class="post-list">
+                    <div class="post-number-list">
+
+                        <p class="txt-eng">1</p>
+                        <p class="txt-eng">2</p>
+                        <p class="txt-eng">3</p>
+                    </div>
+                    <div class="post-kind-list">
+                        <p class="txt-eng">Q&amp;A</p>
+                        <p class="txt-eng">Review</p>
+                        <p class="txt-eng">Review</p>
+                    </div>
+                    <div class="post-title-list">
+                        <a href="#none">
+                            <p class="txt-kor">배송관련 문의 드립니다</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-kor">배송관련 문의 드립니다</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-kor">나만의 테이블, 윌리 테이블</p>
+                        </a>
+                    </div>
+
+                    <div class="post-date-list">
+                        <div class="date-show-post">
+                            <p class="txt-eng date">2021.10.01</p>
+
+                            <a href="#none">
+                                <p class="txt-kor show-post-button">게시물 보기</p>
+                            </a>
+                        </div>
+                        <div class="date-show-post">
+                            <p class="txt-eng date">2021.10.01</p>
+
+                            <a href="#none">
+                                <p class="txt-kor show-post-button">게시물 보기</p>
+                            </a>
+                        </div>
+                        <div class="date-show-post">
+                            <p class="txt-eng date">2021.10.01</p>
+
+                            <a href="#none">
+                                <p class="txt-kor show-post-button">게시물 보기</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="my-wishlist-first">
+                <p class="txt-eng-bold my-wishlist-title">Wish list</p>
+                <a href="#none">
+                    <img src="../plantlance-image/icon/arrow-right2.png" alt="arrow" class="arrow-next">
+                    <p class="txt-kor wishlist-management-button">
+                        관심 상품 보기
+                    </p>
+                </a>
+
+                <div class="wishlist-top">
+                    <p class="txt-kor wishlist-number">번호</p>
+                    <p class="txt-kor wishlist-kind">상품이미지</p>
+                    <p class="txt-kor wishlist-title">상품명</p>
+                    <p class="txt-kor wishlist-price">판매가</p>
+                </div>
+
+                <div class="wishlist-list">
+                    <div class="wishlist-number-list">
+
+                        <p class="txt-eng">1</p>
+                        <p class="txt-eng">2</p>
+                        <p class="txt-eng">3</p>
+                        <p class="txt-eng">4</p>
+                    </div>
+                    <div class="wishlist-kind-list">
+                        <div class="wishlist-img">
+
+                        </div>
+                        <div class="wishlist-img">
+
+                        </div>
+                        <div class="wishlist-img">
+
+                        </div>
+                        <div class="wishlist-img">
+
+                        </div>
+                    </div>
+                    <div class="wishlist-title-list">
+                        <a href="#none">
+                            <p class="txt-kor">WILY TABLE (FENIX)</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-kor">WILY TABLE (HPL)</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-kor">OBLONG TABLE (HPL)</p>
+                        </a>
+                        <a href="#none">
+                            <p class="txt-kor">OBLONG TABLE (FENIX)</p>
+                        </a>
+                    </div>
+
+                    <div class="wishlist-price-list">
+                        <div class="price-show-wishlist">
+                            <p class="txt-eng price">330,000 원</p>
+
+                            <a href="#none">
+                                <p class="txt-kor show-wishlist-button">상품 상세</p>
+                            </a>
+                        </div>
+                        <div class="price-show-wishlist">
+                            <p class="txt-eng price">330,000 원</p>
+
+                            <a href="#none">
+                                <p class="txt-kor show-wishlist-button">상품 상세</p>
+                            </a>
+                        </div>
+                        <div class="price-show-wishlist">
+                            <p class="txt-eng price">330,000 원</p>
+
+                            <a href="#none">
+                                <p class="txt-kor show-wishlist-button">상품 상세</p>
+                            </a>
+                        </div>
+                        <div class="price-show-wishlist">
+                            <p class="txt-eng price">330,000 원</p>
+
+                            <a href="#none">
+                                <p class="txt-kor show-wishlist-button">상품 상세</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="mypage-button-wrap">
+
+            <!-- 회원정보 -->
+            <div class="edit-user-info">
+                <div class="user-info-box user-id">
+                    <p class="txt-kor user-info-title">아이디</p>
+
+                    <p class="txt-eng show-user-id">
+                        ABCD1234
+                    </p>
+                </div>
+                <div class="user-info-box user-pw">
+                    <p class="txt-kor user-info-title">비밀번호</p>
+
+                    <a href="#none">
+                        <p class="txt-kor change-pw-button">비밀번호 변경</p>
+                    </a>
+                </div>
+                <div class="user-info-box user-name">
+                    <p class="txt-kor user-info-title">이름</p>
+
+                    <input type="text" class="txt-kor" placeholder="홍길동">
+                </div>
+                <div class="user-info-box user-call">
+                    <p class="txt-kor user-info-title">전화번호</p>
+
+                    <input type="text" class="txt-kor" placeholder="02-0000-0000">
+                </div>
+                <div class="user-info-box user-phone">
+                    <p class="txt-kor user-info-title">휴대폰번호</p>
+
+                    <input type="text" class="txt-kor" placeholder="010-1234-1234">
+
+                    <a href="#none">
+                        <p class="txt-kor user-certified-button">인증하기</p>
+                    </a>
+                </div>
+                <div class="user-info-box user-email">
+                    <p class="txt-kor user-info-title">이메일</p>
+
+                    <input type="text" class="txt-kor" placeholder="Abc123">
+                    <input type="text" class="txt-kor email-input" placeholder="naver.com">
+
+                    <select>
+                        <option value="" checked>직접입력</option>
+                        <option value="naver" checked>naver.com</option>
+                        <option value="google" checked>google.com</option>
+                        <option value="hanmail" checked>hanmail.net</option>
+                        <option value="nate" checked>nate.com</option>
+                    </select>
+                </div>
+                <div class="user-info-box user-address">
+                    <p class="txt-kor user-info-title">배송 주소</p>
+
+
+                    <input type="text" class="txt-kor">
+
+                    <a href="#none">
+                        <p class="address-button">
+                            우편번호 찾기
+                        </p>
+                    </a>
+                    <input type="text" class="txt-kor" placeholder="">
+                </div>
+                <div class="user-info-box user-delete">
+                    <p class="txt-kor user-info-title">계정관리</p>
+
+                    <a href="#none">
+                        <p class="txt-kor user-delete-button">회원탈퇴</p>
+                    </a>
+                </div>
+
+
+
+                <div class="edit-user-bottom-button-wrap">
+                    <a href="#none">
+                        <p class="txt-kor user-cancel">취소하기</p>
+                    </a>
+
+                    <a href="#none">
+                        <p class="txt-kor user-save">저장하기 </p>
+                    </a>
+                </div>
+
+
+
+            </div>
+            <!-- //회원정보 -->
+
+
+
+
+
+
+
+            <!-- 주문내역 조회 -->
+            <div class="order-history-info">
+                <p class="txt-eng-bold my-shopping-title">My shopping</p>
+
+
+                <a href="#none">
+                </a>
+
+                <div class="my-shopping-first">
+                    <div class="shopping-step shopping-step1">
+                        <p class="txt-kor">입금대기</p>
+                        <p class="txt-eng">0</p>
+                    </div>
+
+                    <div class="shopping-step shopping-step2">
+                        <p class="txt-kor">주문완료</p>
+                        <p class="txt-eng">2</p>
+                    </div>
+
+                    <div class="shopping-step shopping-step3">
+                        <p class="txt-kor">상품준비</p>
+                        <p class="txt-eng">2</p>
+                    </div>
+
+                    <div class="shopping-step shopping-step4">
+                        <p class="txt-kor">배송중</p>
+                        <p class="txt-eng">0</p>
+                    </div>
+
+                    <div class="shopping-step shopping-step5">
+                        <p class="txt-kor">배송완료</p>
+                        <p class="txt-eng">0</p>
+                    </div>
+                </div>
+
+                <a href="#none">
+                    <p class="txt-kor delivery-check-button">
+                        배송조회
+                    </p>
+                </a>
+
+
+                <input type="radio" name="history" id="history-order" checked>
+                <input type="radio" name="history" id="history-cancel">
+
+                <label for="history-order" class="history-button history-button1">
+                    <p class="txt-kor">주문내역</p>
+                </label>
+
+                <label for="history-cancel" class="history-button history-button2">
+                    <p class="txt-kor">취소내역</p>
+                </label>
+
+
+
+
+                <div class="my-wishlist-first history-order-box">
+
+
+                    <div class="wishlist-top">
+                        <p class="txt-kor wishlist-number">번호</p>
+                        <p class="txt-kor wishlist-date">주문일자</p>
+                        <p class="txt-kor wishlist-kind">상품이미지</p>
+                        <p class="txt-kor wishlist-title">상품명</p>
+                        <p class="txt-kor wishlist-etc">기타</p>
+                        <p class="txt-kor wishlist-condition">주문처리</p>
+                        <p class="txt-kor wishlist-price">판매가</p>
+                        <p class="txt-kor wishlist-ea">수량</p>
+                    </div>
+
+                    <div class="wishlist-list">
+                        <div class="wishlist-number-list">
+
+                            <p class="txt-eng">1</p>
+                            <p class="txt-eng">2</p>
+                            <p class="txt-eng">3</p>
+                            <p class="txt-eng">4</p>
+                        </div>
+
+                        <div class="wishlist-date-list">
+
+                            <p class="txt-eng">2021.10.01</p>
+                            <p class="txt-eng">2021.10.01</p>
+                            <p class="txt-eng">2021.10.01</p>
+                            <p class="txt-eng">2021.10.01</p>
+                        </div>
+
+
+                        <div class="wishlist-kind-list">
+                            <div class="wishlist-img">
+
+                            </div>
+                            <div class="wishlist-img">
+
+                            </div>
+                            <div class="wishlist-img">
+
+                            </div>
+                            <div class="wishlist-img">
+
+                            </div>
+                        </div>
+                        <div class="wishlist-title-list">
+                            <a href="#none">
+                                <p class="txt-kor">WILY TABLE (FENIX)</p>
+                            </a>
+                            <a href="#none">
+                                <p class="txt-kor">WILY TABLE (HPL)</p>
+                            </a>
+                            <a href="#none">
+                                <p class="txt-kor">OBLONG TABLE (HPL)</p>
+                            </a>
+                            <a href="#none">
+                                <p class="txt-kor">OBLONG TABLE (FENIX)</p>
+                            </a>
+                        </div>
+
+
+
+                        <div class="history-etc-wrap">
+                            <p class="txt-eng history-etc">-</p>
+                            <p class="txt-eng history-etc">-</p>
+                            <p class="txt-eng history-etc">-</p>
+                            <p class="txt-eng history-etc">주문취소</p>
+                        </div>
+
+                        <div class="history-delivery-condition-wrap">
+                            <p class="txt-eng delivery-condition">배송중</p>
+                            <p class="txt-eng delivery-condition">입금대기</p>
+                            <p class="txt-eng delivery-condition">입금대기</p>
+                            <p class="txt-eng delivery-condition">입금확인</p>
+                        </div>
+
+                        <div class="history-price-wrap">
+                            <p class="txt-kor price">330,000 원</p>
+                            <p class="txt-kor price">330,000 원</p>
+                            <p class="txt-kor price">330,000 원</p>
+                            <p class="txt-kor price">330,000 원</p>
+                        </div>
+
+
+
+                        <div class="history-ea-wrap">
+                            <p class="txt-eng ea">1</p>
+                            <p class="txt-eng ea">1</p>
+                            <p class="txt-eng ea">1</p>
+                            <p class="txt-eng ea">1</p>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="my-wishlist-first history-cancel-box">
+
+
+                    <div class="wishlist-top">
+                        <p class="txt-kor wishlist-number">번호</p>
+                        <p class="txt-kor wishlist-date">주문일자</p>
+                        <p class="txt-kor wishlist-kind">상품이미지</p>
+                        <p class="txt-kor wishlist-title">상품명</p>
+                        <p class="txt-kor wishlist-etc">기타</p>
+                        <p class="txt-kor wishlist-condition">주문처리</p>
+                        <p class="txt-kor wishlist-price">판매가</p>
+                        <p class="txt-kor wishlist-ea">수량</p>
+                    </div>
+
+                    <div class="wishlist-list">
+                        <div class="wishlist-number-list">
+
+                            <p class="txt-eng">1</p>
+                            <p class="txt-eng">2</p>
+
+                        </div>
+
+                        <div class="wishlist-date-list">
+
+                            <p class="txt-eng">2021.09.01</p>
+                            <p class="txt-eng">2021.09.01</p>
+
+                        </div>
+
+
+                        <div class="wishlist-kind-list">
+                            <div class="wishlist-img">
+
+                            </div>
+                            <div class="wishlist-img">
+
+                            </div>
+                        </div>
+                        <div class="wishlist-title-list">
+                            <a href="#none">
+                                <p class="txt-kor">MATE STOOL (FENIX)</p>
+                            </a>
+                            <a href="#none">
+                                <p class="txt-kor">WILY TABLE (HPL)</p>
+                            </a>
+
+                        </div>
+
+
+
+                        <div class="history-etc-wrap">
+                            <p class="txt-eng history-etc">주문취소</p>
+                            <p class="txt-eng history-etc">주문취소</p>
+                        </div>
+
+                        <div class="history-delivery-condition-wrap">
+                            <p class="txt-eng delivery-condition">주문취소</p>
+                            <p class="txt-eng delivery-condition">주문취소</p>
+                        </div>
+
+                        <div class="history-price-wrap">
+                            <p class="txt-kor price">330,000 원</p>
+                            <p class="txt-kor price">330,000 원</p>
+
+                        </div>
+
+
+
+                        <div class="history-ea-wrap">
+                            <p class="txt-eng ea">1</p>
+                            <p class="txt-eng ea">1</p>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- //주문내역 조회 -->
+
+
+
+
+
+
+
+
+
+
+            <!-- 위시리스트 -->
+            <div class="wish-list-info">
+                <p class="txt-eng-bold my-wishlist-title">Wishlist</p>
+                <div class="my-wishlist-first history-order-box">
+
+
+                    <div class="wishlist-top">
+                        <p class="txt-kor wishlist-number">번호</p>
+                        <p class="txt-kor wishlist-kind">상품이미지</p>
+                        <p class="txt-kor wishlist-title">상품명</p>
+                        <p class="txt-kor wishlist-price">판매가</p>
+                    </div>
+
+                    <div class="wishlist-list">
+                        <div class="wishlist-number-list">
+
+                            <p class="txt-eng">1</p>
+                            <p class="txt-eng">2</p>
+                            <p class="txt-eng">3</p>
+                            <p class="txt-eng">4</p>
+                        </div>
+
+
+
+                        <div class="wishlist-kind-list">
+                            <div class="wishlist-img">
+
+                            </div>
+                            <div class="wishlist-img">
+
+                            </div>
+                            <div class="wishlist-img">
+
+                            </div>
+                            <div class="wishlist-img">
+
+                            </div>
+                        </div>
+                        <div class="wishlist-title-list">
+                            <a href="#none">
+                                <p class="txt-kor">WILY TABLE (FENIX)</p>
+                            </a>
+                            <a href="#none">
+                                <p class="txt-kor">WILY TABLE (HPL)</p>
+                            </a>
+                            <a href="#none">
+                                <p class="txt-kor">OBLONG TABLE (HPL)</p>
+                            </a>
+                            <a href="#none">
+                                <p class="txt-kor">OBLONG TABLE (FENIX)</p>
+                            </a>
+                        </div>
+
+                        <div class="wishlist-check-wrap">
+                            <input type="checkbox" name="wish">
+                            <input type="checkbox" name="wish">
+                            <input type="checkbox" name="wish">
+                            <input type="checkbox" name="wish">
+                        </div>
+
+                        <div class="history-price-wrap">
+                            <p class="txt-kor price">330,000 원</p>
+                            <p class="txt-kor price">330,000 원</p>
+                            <p class="txt-kor price">330,000 원</p>
+                            <p class="txt-kor price">330,000 원</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="shopping-fill.html">
+                    <p class="txt-kor add-button">장바구니</p>
+                </a>
+
+                <a href="#none">
+                    <p class="txt-kor check-delete-button">선택삭제</p>
+                </a>
+
+                <div class="right-button-wrap">
+                    <a href="#none">
+                        <p class="txt-kor all-delete-button">전체삭제</p>
+                    </a>
+                    <a href="shopping-fill.html">
+                        <p class="txt-kor all-buy-button">전체주문</p>
+                    </a>
+
+                </div>
+            </div>
+            <!-- //위시리스트 -->
+
+
+
+
+
+
+
+
+
+            <!-- 게시물 관리 -->
+            <div class="posting-management-info">
+
+
+                <input type="radio" id="qna" name="posting" checked>
+                <input type="radio" id="review" name="posting">
+
+                <label for="qna">
+                    <p class="txt-eng qna-button">Q&amp;A</p>
+                </label>
+
+                <label for="review">
+                    <p class="txt-eng review-button">Review</p>
+                </label>
+
+
+
+
+
+                <div class="posting posting-qna">
+                    <div class="posting-top">
+                        <p class="txt-kor">번호</p>
+                        <p class="txt-kor">제목</p>
+                        <p class="txt-kor">작성일자</p>
+                    </div>
+
+                    <div class="my-posting">
+                        <p class="txt-kor posting-number">1</p>
+                        <p class="txt-kor posting-title">배송관련 문의드립니다</p>
+
+                        <input type="checkbox">
+
+                        <a href="#none">
+                            <p class="txt-kor more-post">게시물 보기</p>
+                        </a>
+
+
+                        <p class="txt-eng posting-date">2021.10.01</p>
+                    </div>
+
+                    <div class="my-posting">
+                        <p class="txt-kor posting-number">1</p>
+                        <p class="txt-kor posting-title">배송관련 문의드립니다</p>
+
+                        <input type="checkbox">
+
+                        <a href="#none">
+                            <p class="txt-kor more-post">게시물 보기</p>
+                        </a>
+
+
+                        <p class="txt-eng posting-date">2021.10.01</p>
+                    </div>
+
+                    <div class="my-posting">
+                        <p class="txt-kor posting-number">1</p>
+                        <p class="txt-kor posting-title">배송관련 문의드립니다</p>
+
+                        <input type="checkbox">
+
+                        <a href="#none">
+                            <p class="txt-kor more-post">게시물 보기</p>
+                        </a>
+
+
+                        <p class="txt-eng posting-date">2021.10.01</p>
+                    </div>
+
+
+
+                    <!-- 게시물이 없다면 이렇게 표시 -->
+                    <div class="no-posting">
+                        <p class="txt-kor">게시물이 없습니다.</p>
+                    </div>
+                    <!-- //게시물이 없다면 이렇게 표시 -->
+                </div>
+
+
+
+
+
+                <!-- 리뷰 -->
+                <div class="posting posting-review">
+                    <div class="posting-top">
+                        <p class="txt-kor">번호</p>
+                        <p class="txt-kor">상품정보</p>
+                        <p class="txt-kor content-title">게시물 내용</p>
+                        <p class="txt-kor">작성일자</p>
+                    </div>
+
+                    <div class="my-posting">
+                        <p class="txt-kor posting-number">1</p>
+                        <p class="txt-kor posting-title">WILY TABLE (FENIX)</p>
+
+                        <div class="posting-content">
+                            <div class="my-review-img-wrap">
+
+                            </div>
+                            <p class="txt-kor">이런걸 외않사템 이라고 하나요?</p>
+                        </div>
+
+                        <input type="checkbox">
+
+                        <a href="#none">
+                            <p class="txt-kor more-post">게시물 보기</p>
+                        </a>
+
+
+                        <p class="txt-eng posting-date">2021.10.01</p>
+                    </div>
+
+                    <div class="my-posting">
+                        <p class="txt-kor posting-number">1</p>
+                        <p class="txt-kor posting-title">WILY TABLE (FENIX)</p>
+                        <div class="posting-content">
+                            <div class="my-review-img-wrap">
+
+                            </div>
+                            <p class="txt-kor">이런걸 외않사템 이라고 하나요?</p>
+                        </div>
+                        <input type="checkbox">
+
+                        <a href="#none">
+                            <p class="txt-kor more-post">게시물 보기</p>
+                        </a>
+
+
+                        <p class="txt-eng posting-date">2021.10.01</p>
+                    </div>
+
+                    <div class="my-posting">
+                        <p class="txt-kor posting-number">1</p>
+                        <p class="txt-kor posting-title">WILY TABLE (FENIX)</p>
+                        <div class="posting-content">
+                            <div class="my-review-img-wrap">
+
+                            </div>
+                            <p class="txt-kor">이런걸 외않사템 이라고 하나요?</p>
+                        </div>
+                        <input type="checkbox">
+
+                        <a href="#none">
+                            <p class="txt-kor more-post">게시물 보기</p>
+                        </a>
+
+
+                        <p class="txt-eng posting-date">2021.10.01</p>
+                    </div>
+
+
+                    <!-- 게시물이 없다면 이렇게 표시 -->
+                    <div class="no-posting">
+                        <p class="txt-kor">게시물이 없습니다.</p>
+                    </div>
+                    <!-- //게시물이 없다면 이렇게 표시 -->
+                </div>
+                <!-- //리뷰 -->
+
+
+
+                <div class="posting-right-button">
+                    <a href="#none">
+                        <p class="txt-kor posting-choice-delete">선택삭제</p>
+                    </a>
+
+                    <a href="#none">
+                        <p class="txt-kor posting-all-delete">전체삭제</p>
+                    </a>
+                </div>
+
+
+
+
+            </div>
+            <!-- //게시물 관리 -->
+
+
+
+
+
+
+
+        </div>
+
+
+
+        <!-- 비밀번호 변경 -->
+        <div class="after-push-change">
+            <div class="after-push-change-bg">
+
+            </div>
+
+            <div class="user-pw-change-box">
+
+
+                <p class="txt-kor-bold change-pw-title">비밀번호 변경</p>
+
+                <div class="change-pw-input-wrap">
+                    <p class="txt-kor change-pw-txt">현재 비밀번호</p>
+                    <input type="password" placeholder="현재 비밀번호를 입력하세요." class="txt-kor">
+                </div>
+                <div class="change-pw-input-wrap">
+                    <p class="txt-kor change-pw-txt">변경 후 비밀번호</p>
+                    <input type="password" placeholder="새로운 비밀번호를 입력하세요." class="txt-kor">
+                </div>
+                <div class="change-pw-input-wrap">
+                    <p class="txt-kor change-pw-txt">비밀번호 확인</p>
+                    <input type="password" placeholder="새로운 비밀번호를 다시 입력하세요. " class="txt-kor">
+                </div>
+
+
+                <div class="user-pw-change-bottom-button-wrap">
+                    <a href="#none">
+                        <p class="txt-kor prev-button">돌아가기</p>
+                    </a>
+
+                    <a href="#none">
+                        <p class="txt-kor save-button">저장하기</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- //비밀번호 변경 -->
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <!-- 회원 탈퇴 -->
+    <div class="after-push-delete">
+        <div class="after-push-delete-bg">
+
+        </div>
+
+        <div class="user-delete-box">
+            <p class="txt-kor-bold user-delete-title">회원탈퇴</p>
+
+
+            <div class="user-delete-input-wrap">
+                <p class="txt-kor user-delete-txt">탈퇴하시려는 이유가 무엇인가요?</p>
+                <input type="text" placeholder="회원 탈퇴사유를 작성해주세요." class="txt-kor">
+            </div>
+
+            <div class="user-delete-input-wrap">
+                <p class="txt-kor user-delete-txt">비밀번호 확인</p>
+                <input type="password" placeholder="비밀번호 입력" class="txt-kor">
+            </div>
+
+            <p class="txt-kor user-delete-notice"> * 회원 탈퇴를 결정하시면 이전의 정보를 되돌릴 수 없게 됩니다. 정말 탈퇴하시겠습니까 ?</p>
+
+            <div class="user-delete-submit-wrap">
+                <label for="delete-submit">
+                    <p class="txt-kor">예</p>
+                </label>
+                <input type="checkbox" id="delete-submit">
+
+            </div>
+
+
+            <div class="user-delete-bottom-button-wrap">
+                <a href="#none">
+                    <p class="txt-kor prev-button">돌아가기</p>
+                </a>
+                <a href="plantlance.html">
+                    <p class="txt-kor delete-button">탈퇴하기</p>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- //회원 탈퇴 -->
+
+   
+    
+    
+    
+    
+    
+    
+      <footer>
+        <div class="footer-wrap">
+            <a href="plantlance.html">
+                <img src="../plantlance-image/logo.png" alt="pltl-logo" class="footer-logo">
+            </a>
+
+
+
+
+            <div class="footer-info-box">
+
+                <p class="txt-kor-light ceo-info">Company : Plantlance CEO : semin, Jang</p>
+
+                <div class="footer-info">
+                    <p class="txt-kor-light">Address : 서울시 성동구 상원12길 23 오리엔트 빌딩 8층</p>
+                    <p class="txt-kor-light">Address / Daegu-company : 대구광역시 달서구 진천로 18길 30</p>
+
+
+                    <div class="footer-contact">
+                        <p class="txt-kor-light">Business registration no. 427-87-01446</p>
+                        <a href="#none">
+                            <p class="txt-kor-light">Email : info@plantlance.kr</p>
+                        </a>
+                    </div>
+
+
+
+                    <p class="txt-kor-light">Mail-order sales license no. 제 2013 - 대구달서 - 0430 / 3010238호</p>
+
+                    <p class="txt-kor-light copyright">plantlance group &copy;2018 all rights reserved</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-show-contents">
+                <a href="tel:1899-3417">
+                    <p class="txt-kor-bold footer-call">T. 1899 - 3417</p>
+                </a>
+
+                <p class="txt-kor-light">costomer-center</p>
+                <p class="txt-kor">Tue - Sat</p>
+                <p class="txt-kor-light">10:00 - 19:00</p>
+                <p class="txt-kor">Sun / Holiday</p>
+                <p class="txt-kor-light">13:00 - 19:00</p>
+
+                <p class="txt-kor-light">Monday off</p>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- 모바일 푸터 -->
+        <div class="mob-footer-wrap">
+            <a href="#none">
+                <img src="../plantlance-image/logo.png" alt="footer-logo" class="mob-footer-logo">
+            </a>
+
+            <div class="mob-footer-show-content">
+                <a href="tel:1899-3417">
+                    <p class="txt-kor-bold">T. 1899-3417</p>
+                </a>
+
+                <p class="txt-kor-light">costomer center</p>
+
+                <div class="mob-footer-time">
+                    <p class="txt-kor-bold">Tue - Sat</p>
+                    <p class="txt-kor-light">10:00 - 19:00</p>
+                </div>
+
+                <div class="mob-footer-time">
+                    <p class="txt-kor-bold">Sun / Holiday</p>
+                    <p class="txt-kor-light">13:00 - 19:00</p>
+                </div>
+                <p class="txt-kor-light">Monday off</p>
+
+
+
+
+                <p class="txt-kor-light mob-footer-company-show">(주) 플랜트란스 사업자 정보
+                    <img src="../plantlance-image/icon/arrow-down2.png" alt="arrow" class="mob-footer-arrow">
+                </p>
+
+                <p class="txt-kor-light mob-footer-company-hide">(주) 플랜트란스 사업자 정보
+                    <img src="../plantlance-image/icon/arrow-up2.png" alt="arrow" class="mob-footer-arrow">
+                </p>
+
+
+
+
+            </div>
+            <div class="mob-footer-company-info">
+                <p class="txt-kor-light mob-footer-company-title">Company. Plantlance CEO. semin, Jang</p>
+
+
+                <p class="txt-kor-light">Address : 서울시 성동구 상원12길 23 오리엔트 빌딩 8층</p>
+                <p class="txt-kor-light">Address / Daegu-company : 대구광역시 달서구 진천로 18길 30</p>
+
+                <div class="mob-footer-contact">
+                    <p class="txt-kor-light">Business registration no. 427-87-01446</p>
+                    <a href="#none">
+                        <p class="txt-kor-light">Email : info@plantlance.kr</p>
+                    </a>
+                </div>
+
+
+
+                <p class="txt-kor-light">Mail-order sales license no. 제 2013 - 대구달서 - 0430 / 3010238호</p>
+
+                <p class="txt-kor-light copyright">plantlance group &copy;2018 all rights reserved</p>
+            </div>
+        </div>
+
+        <!-- //모바일 푸터 -->
+    </footer>
+    
+    
+    
+    
+    <script>
+        $(document).ready(function() {
+            $(".mob-footer-company-show").click(function(){
+                $(".mob-footer-company-info").css("height","100px");
+                
+                $(".mob-footer-company-show").css("display","none");
+                $(".mob-footer-company-hide").css("display","flex");
+            });
+            
+            $(".mob-footer-company-hide").click(function(){
+                $(".mob-footer-company-info").css("height","000px");
+                
+                $(".mob-footer-company-hide").css("display","none");
+                $(".mob-footer-company-show").css("display","flex");
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+</body></html>
