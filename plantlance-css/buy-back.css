@@ -177,7 +177,13 @@ li {
 .buyback-title2 {
     float: left;
 }
-
+.buyback-title2 img{
+    position: absolute;
+    width:100%;
+    left:0;
+    top:50%;
+    transform: translate(0,-50%);
+}
 .buyback-title3 {
     float: left;
     margin-left: 60px;
@@ -273,11 +279,15 @@ li {
 
 .buyback-accept-btn {
     position: absolute;
-    bottom: 65px;
-    right: 100px;
+    float:right;
+    width:100%;
+    height:50%;
+    bottom:0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-right:100px;
 }
 
 .buyback-accept-title {
@@ -463,41 +473,46 @@ li {
     margin-bottom: 105px;
 }
 
-details {
-    position: relative;
-    float: left;
-    width: 100%;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 85px;
-}
-
-summary {
-    cursor: pointer; 
-}
-
-summary > p {
-    position: relative;
-    float:left;
-    margin-top:30px;
-}
 
 
 
-details summary::-webkit-details-marker{
+.buyback-qna-list-wrap input[type="radio"] {
     display: none;
 }
 
 
-details summary::-webkit-details-marker {
-    background: url(../plantlance-image/icon/arrow-down.png) center center no-repeat/cover;
-    
+.qna-question {
+    position: relative;
+    float: left;
+    width: 100%;
+    cursor: pointer;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 80px;
 }
 
-details[open] summary::-webkit-details-marker {
-    background: url(../plantlance-image/icon/arrow-up.png) center center no-repeat/cover;
+.qna-question img {
+    position: relative;
+    float: right;
+    width: 17px;
+}
+
+.qna-answer {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 0;
+    top: 20px;
+    line-height: 1.5;
+    overflow: hidden;
 }
 
 
+.buyback-qna1:checked .qna-question1 .qna-answer,
+.buyback-qna2:checked .qna-question2 .qna-answer,
+.buyback-qna3:checked .qna-question3 .qna-answer,
+.buyback-qna4:checked .qna-question4 .qna-answer{
+    height:50px;
+}
 
 /*.buyback-qna-wrap 끝*/
