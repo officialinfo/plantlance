@@ -854,11 +854,13 @@ li {
     box-sizing: border-box;
     padding-left:50px;
 }
+
 .refurb-explain-wrap{
     position: absolute;
     width:100%;
-    bottom:80px;;
+    bottom:80px;
 }
+
 .refurb-explain p{
     position: relative;
     float:left;
