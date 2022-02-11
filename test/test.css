@@ -134,7 +134,10 @@ a,p,li{
     background-size: cover;
     */
     z-index: 1;
-    margin-top:-370px;
+    margin-top:-470px;
+    min-width:2400px;
+    left:50%;
+    transform: translate(-50%);
 }
 
 .bespoke-bg{
