@@ -137,7 +137,8 @@ a,p,li{
     margin-top:-470px;
     min-width:2400px;
     left:50%;
-    transform: translate(-50%);
+    top:50%;
+    transform: translate(-50%,-50%);
 }
 
 .bespoke-bg{
