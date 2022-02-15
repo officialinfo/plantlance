@@ -18,13 +18,103 @@
 </head>
 
 <body>
+    <!-- //#button-wrap 시작-->
+    <div id="button-wrap">
+        <a href="#promotion1">
+            <p class="button button1">
+                Block sofa
+            </p>
+        </a>
+        <a href="#promotion2">
+            <p class="button button2">
+                Wily table
+            </p>
+        </a>
+    </div>
+    <!-- //#button-wrap 끝-->
+
+
+
+    <!-- //#promotion1 시작-->
+    <div id="promotion1">
+        <p class="month-title">02월</p>
+
+        <div class="promotion-info-wrap">
+            <p class="promotion-info-title">Plan A</p>
+            <p class="promotion-info-txt">한달에 한번,<br>하나의 제품을 선정해<br>보다 특별한 가격에<br>안내해 드립니다.</p>
+        </div>
+
+        <div class="promotion-short-view">
+            <div class="short-txt-wrap">
+                <p class="short-title">Block sofa</p>
+                <p class="short-txt">modular bespoke sofa</p>
+
+                <a href="#none">
+                    <p class="detail-btn">자세한 상품 정보</p>
+                </a>
+            </div>
+            <img src="plantlance-image/main/main-product-item4.jpg" alt="block" class="block-img">
+        </div>
+
+
+    </div>
+
+    <!-- //#promotion1 끝-->
+
+    
+    
+    <!-- //#promotion-img-box 시작-->
+    <div class="promotion-img-wrap" id="promotion-img-box">
+        <img src="plantlance-image/main/block1.jpg" alt="block1" class="block1-img">
+        <img src="plantlance-image/main/block2.jpg" alt="block1" class="block2-img">
+        <img src="plantlance-image/main/block-motion.gif" alt="block1" class="block2-img">
+    </div>
+    <!-- //#promotion-img-box 끝-->
+
+    
+    
+    <!-- //#promotion2 시작-->
+    <div id="promotion2">
+        <div class="promotion-short-view">
+            <div class="short-txt-wrap">
+                <p class="short-title">Wily table</p>
+                <p class="short-txt">bespoke table</p>
+
+                <a href="#none">
+                    <p class="detail-btn">자세한 상품 정보</p>
+                </a>
+            </div>
+            <img src="plantlance-image/main/wily-half.png" alt="wily" class="wily-img">
+        </div>
+    
+    </div>
+    <!-- //#promotion2 끝-->
+    
+    <!-- //#promotion-img-box 시작-->
+    <div class="promotion-img-wrap" id="promotion-img-box">
+        <img src="plantlance-image/main/wily-plana.jpg" alt="wily-plana" class="wily-plana1">
+        <img src="plantlance-image/main/wily-plana2.jpg" alt="wily-plana" class="wily-plana2">
+    </div>
+    <!-- //#promotion-img-box 끝-->
 
 
 
 
-
-
-
+    <!--
+    <script>
+        $(document).ready(function() {
+            $(".button1").click(function(){
+                var position = $(".promotion-info-wrap").offset();
+                $("body").stop().animate({scrollTop:position.top},500);
+            });
+            
+            $(".button2").click(function(){
+                var position = $(".promotion-img-wrap").offset();
+                $("body").stop().animate({scrollTop:position.top},500);
+            });
+        });
+    </script>
+    -->
 
 
 </body></html>

@@ -62,6 +62,10 @@ body::-webkit-scrollbar{
 
 body {
     position: relative;
+    min-width:1400px;
+    left:50%;
+    transform: translate(-50%);
+    transition-duration: 1s;
     /*-ms-overflow-style: none; /* IE and Edge */
     /*scrollbar-width: none; /* Firefox */
     /*background-image: url(../plantlance-img/main-bespoke1.jpg);*/
@@ -77,9 +81,180 @@ li {
 
 
 
+/* //#button-wrap 시작 */
+#button-wrap{
+    position: fixed;
+    top:0;
+    width:1400px;
+    left:50%;
+    transform: translate(-50%);
+    margin-top:130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    border:1px solid #e0e0e0;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+
+
+#button-wrap a{
+    width:50%;
+    height:70px;
+    font-size:18px;
+    font-family: "Pretendard-Medium";
+}
+.button{
+    width:100%;
+    height:100%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button1{
+    background: #2f2f2f;
+    color:#fff;
+}
+/* //#button-wrap 끝 */
 
 
 
+
+/* //#promotion1 시작 */
+#promotion1{
+    position: relative;
+    float:left;
+    width:1400px;
+    height:auto;
+    left:50%;
+    transform: translate(-50%);
+    margin-top:330px;
+}
+.month-title{
+    position: relative;
+    float:left;
+    width:auto;
+    font-family: "Pretendard-Thin";
+    font-size: 150px;
+}
+
+.promotion-info-wrap{
+    position: relative;
+    float:right;
+    width:220px;
+    height:auto;
+    margin-top:20px;
+}
+.promotion-info-title{
+    position: relative;
+    float:left;
+    width:100%;
+    font-family: "Pretendard-Medium";
+    font-size:40px;
+    margin-bottom: 40px;
+}
+
+.promotion-info-txt{
+    position: relative;
+    float:left;
+    width:100%;
+    font-family: "Pretendard-Regular";
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+.promotion-short-view{
+    position: relative;
+    float:left;
+    width:100%;
+    height:210px;
+    margin-top:240px;
+    overflow-y: hidden;
+}
+
+.short-txt-wrap{
+    position: relative;
+    float:left;
+    width:300px;
+    height:auto;
+}
+.short-title{
+    position: relative;
+    float:left;
+    width:100%;
+    font-family: "pretendard-Regular";
+    font-size:40px;
+    margin-bottom:10px;
+}
+.short-txt{
+    position: relative;
+    float:left;
+    width:100%;
+    font-family: "pretendard-Regular";
+    font-size:20px;
+    margin-bottom:50px;
+}
+.detail-btn{
+    position: relative;
+    float:left;
+    width:100%;
+    height:70px;
+    background: #2f2f2f;
+    border-radius: 40px;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.block-img{
+    position: relative;
+    float:right;
+    width:900px;
+    margin-top:40px;
+}
+/* //#promotion1 끝 */
+
+
+
+
+/* //#promotion-img-box 시작 */
+#promotion-img-box{
+    position: relative;
+    float:left;
+    width:100%;
+    height:auto;
+    margin-top:140px;
+}
+
+#promotion-img-box img{
+    position: relative;
+    float:left;
+    width:100%;
+}
+/* //#promotion-img-box 끝 */
+
+
+
+
+
+/* //#promotion2 시작 */
+#promotion2{
+    position: relative;
+    float:left;
+    width:1400px;
+    left:50%;
+    transform: translate(-50%);
+}
+.wily-img{
+    position: relative;
+    float:right;
+    width:900px;
+}
+/* //#promotion2 끝 */
 
 
 
