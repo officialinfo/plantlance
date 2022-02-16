@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Plantlance</title>
+    <title>Plan A</title>
 
 
     <script src="plantlance-script/jquery-3.6.0.min.js"></script>
@@ -14,88 +14,119 @@
 
     <link rel="stylesheet" type="text/css" href="plantlance-css/reset.css">
     <link rel="stylesheet" type="text/css" href="promotion.css">
+    
+    
+    <script>
+        document.oncontextmenu = function(){return false;}
+    </script>
 
 </head>
 
-<body>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false">
+
+
+    <input type="radio" id="promotion-btn1" name="promotion" checked>
+    <input type="radio" id="promotion-btn2" name="promotion">
+
     <!-- //#button-wrap 시작-->
     <div id="button-wrap">
-        <a href="#">
-            <p class="button button1">
+        <label for="promotion-btn1" class="button1" onclick="window.scrollTo(0,0);">
+
+            <p class="button-txt button1-txt">
                 Block sofa
             </p>
-        </a>
-        <a href="#promotion2">
-            <p class="button button2">
+
+        </label>
+
+        <label for="promotion-btn2" class="button2" onclick="window.scrollTo(0,0);">
+
+            <p class="button-txt button2-txt">
                 Wily table
             </p>
-        </a>
+
+        </label>
     </div>
+
     <!-- //#button-wrap 끝-->
 
 
 
     <!-- //#promotion1 시작-->
     <div id="promotion1">
-        <p class="month-title">02월</p>
+        <div class="promotion1-wrap">
+            <p class="month-title">02월</p>
 
-        <div class="promotion-info-wrap">
-            <p class="promotion-info-title">Plan A</p>
-            <p class="promotion-info-txt">한달에 한번,<br>하나의 제품을 선정해<br>보다 특별한 가격에<br>안내해 드립니다.</p>
-        </div>
-
-        <div class="promotion-short-view">
-            <div class="short-txt-wrap">
-                <p class="short-title">Block sofa</p>
-                <p class="short-txt">modular bespoke sofa</p>
-
-                <a href="#none">
-                    <p class="detail-btn">자세한 상품 정보</p>
-                </a>
+            <div class="promotion-info-wrap">
+                <p class="promotion-info-title">Plan A</p>
+                <p class="promotion-info-txt">한달에 한번,<br>하나의 제품을 선정해<br>보다 특별한 가격에<br>안내해 드립니다.</p>
             </div>
-            <img src="plantlance-image/main/main-product-item4.jpg" alt="block" class="block-img">
+
+            <div class="promotion-short-view">
+                <div class="short-txt-wrap">
+                    <p class="short-title">Block sofa</p>
+                    <p class="short-txt">modular bespoke sofa</p>
+
+                    <a href="#none">
+                        <p class="detail-btn">자세한 상품 정보</p>
+                    </a>
+                </div>
+                <img src="plantlance-image/main/main-product-item4.jpg" alt="block" class="block-img">
+            </div>
         </div>
 
+
+        <!-- //#promotion-img-box 시작-->
+        <div class="promotion-img-wrap" id="promotion-img-box">
+            <img src="plantlance-image/main/block1.jpg" alt="block1" class="block1-img">
+            <img src="plantlance-image/main/block2.jpg" alt="block1" class="block2-img">
+            <img src="plantlance-image/main/block-motion.gif" alt="block1" class="block2-img">
+        </div>
+        <!-- //#promotion-img-box 끝-->
 
     </div>
+
 
     <!-- //#promotion1 끝-->
 
-    
-    
-    <!-- //#promotion-img-box 시작-->
-    <div class="promotion-img-wrap" id="promotion-img-box">
-        <img src="plantlance-image/main/block1.jpg" alt="block1" class="block1-img">
-        <img src="plantlance-image/main/block2.jpg" alt="block1" class="block2-img">
-        <img src="plantlance-image/main/block-motion.gif" alt="block1" class="block2-img">
-    </div>
-    <!-- //#promotion-img-box 끝-->
 
-    
-    
+
+
+
+
+
     <!-- //#promotion2 시작-->
     <div id="promotion2">
-        <div class="promotion-short-view">
-            <div class="short-txt-wrap">
-                <p class="short-title">Wily table</p>
-                <p class="short-txt">bespoke table</p>
+        <div class="promotion2-wrap">
+            <p class="month-title">02월</p>
 
-                <a href="#none">
-                    <p class="detail-btn">자세한 상품 정보</p>
-                </a>
+            <div class="promotion-info-wrap">
+                <p class="promotion-info-title">Plan A</p>
+                <p class="promotion-info-txt">한달에 한번,<br>하나의 제품을 선정해<br>보다 특별한 가격에<br>안내해 드립니다.</p>
             </div>
-            <img src="plantlance-image/main/wily-half.png" alt="wily" class="wily-img">
+            <div class="promotion-short-view">
+                <div class="short-txt-wrap">
+                    <p class="short-title">Wily table</p>
+                    <p class="short-txt">bespoke table</p>
+
+                    <a href="#none">
+                        <p class="detail-btn">자세한 상품 정보</p>
+                    </a>
+                </div>
+                <img src="plantlance-image/main/wily-half.png" alt="wily" class="wily-img">
+            </div>
         </div>
-    
+
+        <!-- //#promotion-img-box 시작-->
+        <div class="promotion-img-wrap" id="promotion-img-box">
+            <img src="plantlance-image/main/wily-plana.jpg" alt="wily-plana" class="wily-plana1">
+            <img src="plantlance-image/main/wily-plana2.jpg" alt="wily-plana" class="wily-plana2">
+        </div>
+        <!-- //#promotion-img-box 끝-->
+
     </div>
     <!-- //#promotion2 끝-->
-    
-    <!-- //#promotion-img-box 시작-->
-    <div class="promotion-img-wrap" id="promotion-img-box">
-        <img src="plantlance-image/main/wily-plana.jpg" alt="wily-plana" class="wily-plana1">
-        <img src="plantlance-image/main/wily-plana2.jpg" alt="wily-plana" class="wily-plana2">
-    </div>
-    <!-- //#promotion-img-box 끝-->
+
+
 
 
 
@@ -115,8 +146,42 @@
         });
     </script>
     -->
+
+    <!--
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= Math.ceil($('.target').offset().top)) {
+                    
+                } else {
+
+                }
+            });
+        });
+    </script>
+-->
+
+    <script>
+        var lastScrollTop = 0,
+            delta = 15;
+
+        $(window).scroll(function() {
+            var scrollTop = $(this).scrollTop() /* 스크롤바 수직 위치를 가져옵니다, 괄호 안에 값(value)이 있을 경우 스크롤바의 수직 위치를 정합니다. */
+            // Math.abs: 주어진 숫자의 절대값을 반환(return)합니다.
+            if (Math.abs(lastScrollTop - scrollTop) <= delta) // 스크롤 값을 받아서 ~
+                return; // ~ 리턴
+
+            if ((scrollTop > lastScrollTop) && (lastScrollTop > 0)) {
+                /* 화면에 나오지 않을 때, top값은 요소가 보이지 않을 정도로 사용해야함 */
+                $("#button-wrap").css("top", "-145px");
+            } else {
+                $("#button-wrap").css("top", "0px");
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
     
-    <script></script>
+  
 
 
 </body></html>

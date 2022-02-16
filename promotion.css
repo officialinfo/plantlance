@@ -78,6 +78,9 @@ li {
 }
 
 
+input{
+    display: none;
+}
 
 /* //#button-wrap 시작 */
 #button-wrap{
@@ -86,39 +89,59 @@ li {
     width:1400px;
     left:50%;
     transform: translate(-50%);
-    margin-top:130px;
+    margin-top:50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    border:1px solid #e0e0e0;
     border-radius: 40px;
     box-sizing: border-box;
     background: #fff;
+    transition:all .3s;
+}
+.button1{
+    position: absolute;
+    width:52%;
+    height:45px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition-duration: .2s;
+    box-sizing: border-box;
+    border:1px solid #e0e0e0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right:none;
+    background: #fff;
+}
+.button2{
+    position: absolute;
+    right:0;
+    width:52%;
+    height:45px;
+    cursor: pointer;
+    border-radius: 40px;
+    box-sizing: border-box;
+    transition-duration: .2s;
+    border:1px solid #e0e0e0;
+    border-left:none;
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0; 
+    background: #fff;
 }
 
-
-#button-wrap a{
-    width:50%;
-    height:70px;
-    font-size:18px;
-    font-family: "Pretendard-Medium";
-}
-.button{
+.button-txt{
     width:100%;
     height:100%;
     border-radius: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:18px;
+    font-family: "Pretendard-Medium";
 }
-.button1{
-    background: #2f2f2f;
-    color:#fff;
-    border:1px solid #2f2f2f;
-    margin-top:-1px;
-    margin-left:-1px;
-}
+
+
+
 
 /* //#button-wrap 끝 */
 
@@ -129,11 +152,17 @@ li {
 #promotion1{
     position: relative;
     float:left;
-    width:1400px;
+    width:100%;
     height:auto;
+    margin-top:250px;
+    display: none;
+}
+.promotion1-wrap{
+    position: relative;
+    float:left;
+    width:1400px;
     left:50%;
     transform: translate(-50%);
-    margin-top:330px;
 }
 .month-title{
     position: relative;
@@ -248,10 +277,17 @@ li {
 #promotion2{
     position: relative;
     float:left;
+    width:100%;
+    height:auto;
+    margin-top:250px;
+    display: none;
+}
+.promotion2-wrap{
+    position: relative;
+    float:left;
     width:1400px;
     left:50%;
     transform: translate(-50%);
-    padding-top:200px;
 }
 .wily-img{
     position: relative;
@@ -263,3 +299,25 @@ li {
 
 
 
+#promotion-btn1:checked ~ #button-wrap .button1,
+#promotion-btn2:checked ~ #button-wrap .button2{
+    background: #2f2f2f;
+    border-radius: 40px;
+    border:0;
+    z-index: 2;
+}
+
+
+
+#promotion-btn1:checked ~ #button-wrap .button1 .button1-txt,
+#promotion-btn2:checked ~ #button-wrap .button2 .button2-txt{
+    color:#fff;
+}
+
+
+
+
+#promotion-btn1:checked ~ #promotion1,
+#promotion-btn2:checked ~ #promotion2{
+    display: block;
+}
