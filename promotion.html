@@ -77,9 +77,11 @@
 
         <!-- //#promotion-img-box 시작-->
         <div class="promotion-img-wrap" id="promotion-img-box">
-            <img src="plantlance-image/main/block1.jpg" alt="block1" class="block1-img">
+            <!--<img src="plantlance-image/main/block1.jpg" alt="block1" class="block1-img">
             <img src="plantlance-image/main/block2.jpg" alt="block1" class="block2-img">
-            <img src="plantlance-image/main/block-motion.gif" alt="block1" class="block2-img">
+            <img src="plantlance-image/main/block-motion.gif" alt="block1" class="block2-img">-->
+            
+            <img src="plantlance-image/main/block-plana2.png" alt="block" class="block-plana2">
         </div>
         <!-- //#promotion-img-box 끝-->
 
@@ -174,8 +176,10 @@
             if ((scrollTop > lastScrollTop) && (lastScrollTop > 0)) {
                 /* 화면에 나오지 않을 때, top값은 요소가 보이지 않을 정도로 사용해야함 */
                 $("#button-wrap").css("top", "-145px");
+                /* 해당 클래스 */
             } else {
                 $("#button-wrap").css("top", "0px");
+                /* 해당 클래스 */
             }
             lastScrollTop = scrollTop;
         });
