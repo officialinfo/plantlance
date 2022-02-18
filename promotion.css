@@ -176,7 +176,7 @@ input{
 .promotion-info-wrap{
     position: relative;
     float:right;
-    width:220px;
+    width:260px;
     height:auto;
     margin-top:20px;
 }
@@ -184,7 +184,7 @@ input{
     position: relative;
     float:left;
     width:100%;
-    font-family: "Pretendard-Medium";
+    font-family: "Pretendard-SemiBold";
     font-size:40px;
     margin-bottom: 40px;
 }
@@ -193,8 +193,8 @@ input{
     position: relative;
     float:left;
     width:100%;
-    font-family: "Pretendard-Regular";
-    font-size: 26px;
+    font-family: "Pretendard-Medium";
+    font-size: 18px;
     line-height: 1.5;
 }
 
@@ -204,7 +204,6 @@ input{
     width:100%;
     height:210px;
     margin-top:240px;
-    overflow-y: hidden;
 }
 
 .short-txt-wrap{
@@ -263,11 +262,223 @@ input{
     margin-top:140px;
 }
 
-#promotion-img-box img{
+
+.option-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    box-sizing: border-box;
+    padding-top:25px;
+}
+.option-title{
+    position: relative;
+    float:left;
+    width:1400px;
+    left:50%;
+    transform: translate(-50%);
+    font-size:18px;
+    font-family: "Pretendard-SemiBold";
+    padding-bottom:25px;
+}
+
+.circle-down{
+    position: relative;
+    width:20px;
+    top:3px;
+    left:20px;
+}
+
+.option-kind-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    box-sizing: border-box;
+    padding:30px 0;
+    border-top:1px solid #2f2f2f;
+}
+.option-kind{
+    position: relative;
+    float:left;
+    width:1400px;
+    left:50%;
+    transform: translate(-50%);
+}
+.option-txt{
+    position: relative;
+    float:left;
+    width:auto;
+    margin-right:55px;
+    font-family: "Pretendard-Medium";
+}
+
+
+
+/* //block-img */
+.block1-img{
     position: relative;
     float:left;
     width:100%;
 }
+.img-align-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    height:950px;
+    box-sizing: border-box;
+    display: flex;
+}
+.img-align-left{
+    position: relative;
+    float:left;
+    width:70%;
+    height: auto;
+    background-image: url(plantlance-image/plan-a/block2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-align-right{
+    position: relative;
+    float:left;
+    width:30%;
+    height: auto;
+    background-image: url(plantlance-image/plan-a/block3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left:15px;
+}
+
+.bespoke-intro-wrap{
+    position: relative;
+    float:left;
+    width:1400px;
+    height:800px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.intro-left{
+    position: relative;
+    width:1030px;
+    height:400px;
+}
+.intro-left img{
+    position: absolute;
+    width:60%;
+    left:0;
+    bottom:0px;
+}
+.intro-title{
+    position: relative;
+    float:left;
+    width:100%;
+    font-family: "Pretendard-SemiBold";
+    font-size: 36px;
+    line-height: 1.5;
+}
+.intro-right{
+    position: relative;
+    width:370px;
+    height:400px;
+    font-family: "Pretendard-Medium";
+    font-size: 20px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.block4-img{
+    position: relative;
+    float:left;
+    width:100%;
+}
+.block5-img{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+
+.img-align3{
+    background-image: url(plantlance-image/plan-a/block6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.img-align4{
+    position: relative;
+    float:left;
+    width:30%;
+    height: auto;
+    background-image: url(plantlance-image/plan-a/block7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left:15px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.block8-img{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+.bespoke-intro2{
+    position: relative;
+    float:left;
+    width:1400px;
+    height:auto;
+    left:50%;
+    transform: translate(-50%);
+    margin-top:130px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:250px;
+}
+.intro2-left{
+    position: relative;
+    width:680px;
+}
+
+.intro2-title{
+    position: relative;
+    float:left;
+    width:1000px;
+    font-family: "Pretendard-SemiBold";
+    font-size: 36px;
+    line-height: 1.5;
+}
+.intro2-txt{
+    position: relative;
+    float:left;
+    width:680px;
+    font-size: 22px;
+    line-height: 2;
+    font-family: "Pretendard-SemiBold";
+    text-align: justify;
+    margin-top:100px;
+}
+
+.intro2-right{
+    position: relative;
+    width:500px;
+}
+.block10-img{
+    position: relative;
+    float:left;
+    width:500px;
+}
+/* //block-img */
+
+
 /* //#promotion-img-box 끝 */
 
 
@@ -293,7 +504,151 @@ input{
 .wily-img{
     position: relative;
     float:right;
-    width:900px;
+    width:600px;
+    bottom:70px;
+}
+
+.wily1-img{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+.bespoke-intro3{
+    position:relative;
+    float:left;
+    width:1400px;
+    left:50%;
+    transform: translate(-50%);
+    margin-top:170px;
+    margin-bottom:170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.intro3-left{
+    position: relative;
+    width:auto;
+    font-family: "Pretendard-SemiBold";
+    font-size: 36px;
+}
+
+.intro3-right{
+    position: relative;
+    width:560px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 2;
+    font-family: "Pretendard-SemiBold";
+}
+
+
+.wily2-img{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+.wily-align-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    height:1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top:100px;
+}
+
+.wily-align-left{
+    position: relative;
+    width:50%;
+    background-image: url(plantlance-image/plan-a/wily3.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-right:20px;
+}
+
+.wily-align-right{
+    position: relative;
+    width:50%;
+    background-image: url(plantlance-image/plan-a/wily4.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.wily5-img{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:20px;
+}
+
+.wily6-img{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:20px;
+}
+
+.wily7-img{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+.wily8-img{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
+
+.bespoke-intro4{
+    position:relative;
+    float:left;
+    width:1400px;
+    left:50%;
+    transform: translate(-50%);
+    margin-top:170px;
+    margin-bottom:170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.intro4-left{
+    position: relative;
+    width:680px;
+    font-family: "Pretendard-SemiBold";
+    font-size: 36px;
+}
+
+.intro4-title-kor{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:50px;
+    font-size:24px;
+}
+.intro4-txt{
+    position: relative;
+    float:left;
+    width:100%;
+    font-family: "Pretendard-SemiBold";
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.intro4-right{
+    position: relative;
+    width:560px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 2;
+    font-family: "Pretendard-SemiBold";
 }
 /* //#promotion2 끝 */
 
@@ -321,4 +676,32 @@ input{
 #promotion-btn1:checked ~ #promotion1,
 #promotion-btn2:checked ~ #promotion2{
     display: block;
+}
+
+
+
+
+
+
+
+.top-btn{
+    position: fixed;
+    width:80px;
+    height:80px;
+    border-radius: 100%;
+    right:100px;
+    bottom:100px;
+    z-index: 2;
+    background: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-btn-img{
+    position: relative;
+    float: left;
+    width:25px;
+    filter: invert();
+    transform: rotate(-90deg);
 }
