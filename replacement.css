@@ -3,36 +3,36 @@
 
 
 @font-face {
-    src: url("../fonts/Pretendard-Light.otf");
+    src: url("fonts/Pretendard-Light.otf");
     font-family: "Pretendard-Light";
 }
 @font-face {
-    src: url("../fonts/Pretendard-Thin.otf");
+    src: url("fonts/Pretendard-Thin.otf");
     font-family: "Pretendard-Thin";
 }
 
 @font-face {
-    src: url("../fonts/Pretendard-Regular.otf");
+    src: url("fonts/Pretendard-Regular.otf");
     font-family: "Pretendard-Regular";
 }
 
 @font-face {
-    src: url("../fonts/Pretendard-Medium.otf");
+    src: url("fonts/Pretendard-Medium.otf");
     font-family: "Pretendard-Medium";
 }
 
 @font-face {
-    src: url("../fonts/Pretendard-SemiBold.otf");
+    src: url("fonts/Pretendard-SemiBold.otf");
     font-family: "Pretendard-SemiBold";
 }
 
 @font-face {
-    src: url("../fonts/Pretendard-Bold.otf");
+    src: url("fonts/Pretendard-Bold.otf");
     font-family: "Pretendard-Bold";
 }
 
 @font-face {
-    src: url("../fonts/Pretendard-ExtraBold.otf");
+    src: url("fonts/Pretendard-ExtraBold.otf");
     font-family: "Pretendard-ExtraBold";
 }
 
@@ -40,23 +40,23 @@
 
 
 @font-face {
-    src: url("../fonts/Urbanist-Light.ttf");
+    src: url("fonts/Urbanist-Light.ttf");
     font-family: "Urbanist-Light";
 }
 @font-face {
-    src: url("../fonts/Urbanist-Regular.ttf");
+    src: url("fonts/Urbanist-Regular.ttf");
     font-family: "Urbanist-Regular";
 }
 @font-face {
-    src: url("../fonts/Urbanist-Medium.ttf");
+    src: url("fonts/Urbanist-Medium.ttf");
     font-family: "Urbanist-Medium";
 }
 @font-face {
-    src: url("../fonts/Urbanist-SemiBold.ttf");
+    src: url("fonts/Urbanist-SemiBold.ttf");
     font-family: "Urbanist-SemiBold";
 }
 @font-face {
-    src: url("../fonts/Urbanist-ExtraBold.ttf");
+    src: url("fonts/Urbanist-ExtraBold.ttf");
     font-family: "Urbanist-ExtraBold";
 }
 
@@ -314,7 +314,7 @@ li {
 .mob-rep-img1{
     position: absolute;
     float:left;
-    width:150px;
+    width:40%;
     left:50%;
     top:50%;
     transform: translate(-50%,-50%);
@@ -323,7 +323,7 @@ li {
 .mob-rep-img2{
     position: absolute;
     float:left;
-    width:200px;
+    width:45%;
     left:50%;
     top:50%;
     transform: translate(-50%,-50%);
