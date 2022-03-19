@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+
+
+@font-face {
+    src: url("fonts/Pretendard-Light.otf");
+    font-family: "Pretendard-Light";
+}
+@font-face {
+    src: url("fonts/Pretendard-Thin.otf");
+    font-family: "Pretendard-Thin";
+}
+
+@font-face {
+    src: url("fonts/Pretendard-Regular.otf");
+    font-family: "Pretendard-Regular";
+}
+
+@font-face {
+    src: url("fonts/Pretendard-Medium.otf");
+    font-family: "Pretendard-Medium";
+}
+
+@font-face {
+    src: url("fonts/Pretendard-SemiBold.otf");
+    font-family: "Pretendard-SemiBold";
+}
+
+@font-face {
+    src: url("fonts/Pretendard-Bold.otf");
+    font-family: "Pretendard-Bold";
+}
+
+@font-face {
+    src: url("fonts/Pretendard-ExtraBold.otf");
+    font-family: "Pretendard-ExtraBold";
+}
+
+
+
+
+@font-face {
+    src: url("fonts/Urbanist-Light.ttf");
+    font-family: "Urbanist-Light";
+}
+@font-face {
+    src: url("fonts/Urbanist-Regular.ttf");
+    font-family: "Urbanist-Regular";
+}
+@font-face {
+    src: url("fonts/Urbanist-Medium.ttf");
+    font-family: "Urbanist-Medium";
+}
+@font-face {
+    src: url("fonts/Urbanist-SemiBold.ttf");
+    font-family: "Urbanist-SemiBold";
+}
+@font-face {
+    src: url("fonts/Urbanist-ExtraBold.ttf");
+    font-family: "Urbanist-ExtraBold";
+}
+
+
+
+
+
+/*
+body::-webkit-scrollbar{
+    display: none;
+}
+*/
+
+body {
+    position: relative;
+    width:auto;
+    height:100vh;
+    overflow-x: hidden;
+    /*-ms-overflow-style: none; /* IE and Edge */
+    /*scrollbar-width: none; /* Firefox */
+    /*background-image: url(../plantlance-img/main-bespoke1.jpg);*/
+}
+
+z
+a,
+p,
+li {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+
+/* //.home-btn 시작 */
+.home-btn{
+    position: absolute;
+    top:70px;
+    left:70px;
+    padding:10px;
+    font-family: "Pretendard-Medium";
+    font-size: 16px;
+    z-index: 2;
+}
+/* //.home-btn 끝 */
+
+/* //#rep-wrap 시작 */
+
+
+#rep-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.rep{
+    position: relative;
+    text-align: center;
+}
+
+.rep-title{
+    position: relative;
+    float:left;
+    width:100%;
+    font-family: "Pretendard-Bold";
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.rep-txt{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align: center;
+    font-family: "Pretendard-Medium";
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.rep-kind-wrap{
+    position: relative;
+    float:left;
+    width:960px;
+    margin-top:85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    left:50%;
+    transform: translate(-50%);
+    box-sizing: border-box;
+}
+
+.rep-kind{
+    position: relative;
+    width:415px;
+    height: 415px;
+    border:2px solid #f4f4f4;
+    box-sizing: border-box;
+}
+
+
+.rep-kind-title{
+    position: relative;
+    float:left;
+    width:95px;
+    height:40px;
+    margin-top:35px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: "Pretendard-SemiBold";
+    font-size: 20px;
+    border:1px solid #2f2f2f;
+    border-radius: 40px;
+    left:50%;
+    transform: translate(-50%);
+    transition-duration: .4s;
+}
+
+.rep-img1{
+    position: absolute;
+    float:left;
+    width:200px;
+    left:50%;
+    transform: translate(-50%);
+    bottom:50px;
+}
+
+.rep-img2{
+    position: absolute;
+    float:left;
+    width:200px;
+    left:50%;
+    transform: translate(-50%);
+    bottom:50px;
+}
+
+.rep-hover{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    transition-duration: .5s;
+    opacity: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.rep-button{
+    position: absolute;
+    display: block;
+    width:100%;
+    height:100%;
+    z-index: 2;
+}
+.rep-button:hover ~ .rep-kind-title{
+    background: #2f2f2f;
+    color:#fff;
+}
+
+
+
+/* //#rep-wrap 끝 */
+
+
+
+
+
+/* //#mob-rep-wrap 시작 */
+.mob-home-btn{
+    position: absolute;
+    top:20px;
+    left:20px;
+    padding:10px;
+    font-family: "Pretendard-Medium";
+    font-size: 16px;
+    z-index: 2;
+}
+#mob-rep-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    height:auto;
+}
+.mob-rep-title{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Pretendard-Bold";
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.mob-rep-kind{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 200px;
+    box-sizing: border-box;
+    padding:15px;
+    padding-bottom:7.5px;
+    padding-top:7.5px;
+}
+
+.mob-rep-kind-inner{
+    position: relative;
+    float:left;
+    width:100%;
+    height:100%;
+    border:1px solid #f4f4f4;
+    border-radius: 30px;
+    padding:40px;
+    box-sizing: border-box;
+}
+
+
+.mob-rep-img1{
+    position: absolute;
+    width:90px;
+    top:53%;
+    right:30px;
+    transform: translate(0%,-50%);
+}
+
+.mob-rep-img2{
+    position: absolute;
+    width:90px;
+    top:53%;
+    right:30px;
+    transform: translate(0%,-50%);
+}
+
+.mob-rep-kind-title{
+    position: relative;
+    float:left;
+    width:100%;
+    font-family: "Pretendard-SemiBold";
+    font-size: 16px;
+}
+.mob-rep-kind-txt{
+    position: relative;
+    float:left;
+    width:100%;
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top:30px;
+}
+
+.mob-rep-button{
+    position: absolute;
+    display: block;
+    width:100%;
+    height: 100%;
+    z-index: 2;
+}
+
+
+/* //#mob-rep-wrap 끝 */
+
+
+
+
+
+
+
+/* //반응형 익스플로러 적용 시작 */
+@media (min-width:769px){
+    #rep-wrap{
+        display: flex;
+    }
+    #mob-rep-wrap{
+        display: none;
+    }
+}
+
+
+
+@media (max-width:768px){
+    #rep-wrap{
+        display: none;
+    }
+    #mob-rep-wrap{
+        display: block;
+    }
+}
+
+/* //반응형 익스플로러 적용 끝 */
