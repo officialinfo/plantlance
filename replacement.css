@@ -302,47 +302,56 @@ li {
     position: relative;
     float:left;
     width:100%;
-    height: 33.3%;
+    height: 200px;
+    box-sizing: border-box;
+    padding:15px;
+    padding-bottom:7.5px;
+    padding-top:7.5px;
+}
+
+.mob-rep-kind-inner{
+    position: relative;
+    float:left;
+    width:100%;
+    height:100%;
+    border:1px solid #f4f4f4;
+    border-radius: 30px;
+    padding:40px;
     box-sizing: border-box;
 }
 
-.mob-rep-kind1{
-    border-top:2px solid #f4f4f4;
-    border-bottom:2px solid #f4f4f4;
-}
 
 .mob-rep-img1{
     position: absolute;
-    float:left;
-    width:40%;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+    width:25%;
+    top:53%;
+    right:30px;
+    transform: translate(0%,-50%);
 }
 
 .mob-rep-img2{
     position: absolute;
-    float:left;
-    width:45%;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+    width:25%;
+    top:62%;
+    right:30px;
+    transform: translate(0%,-50%);
 }
 
 .mob-rep-kind-title{
-    position: absolute;
-    width:100px;
-    height:40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border:1px solid #2f2f2f;
-    border-radius:40px;
+    position: relative;
+    float:left;
+    width:100%;
     font-family: "Pretendard-SemiBold";
     font-size: 16px;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+}
+.mob-rep-kind-txt{
+    position: relative;
+    float:left;
+    width:100%;
+    font-family: "Pretendard-Regular";
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top:30px;
 }
 
 .mob-rep-button{
@@ -353,13 +362,7 @@ li {
     z-index: 2;
 }
 
-.mob-rep-hover1{
-    position: absolute;
-    width:100%;
-    height: 100%;
-    top:0;
-    left:0;
-}
+
 /* //#mob-rep-wrap 끝 */
 
 
