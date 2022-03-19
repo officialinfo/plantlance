@@ -285,9 +285,6 @@ li {
     float:left;
     width:100%;
     height:auto;
-    top:50%;
-    transform: translate(0,-50%);
-    overflow-y: hidden;
 }
 .mob-rep-title{
     position: relative;
