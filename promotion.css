@@ -70,7 +70,7 @@ body::-webkit-scrollbar{
 
 body {
     position: relative;
-    float:left;
+    float: left;
     transition-duration: 1s;
     /*-ms-overflow-style: none; /* IE and Edge */
     /*scrollbar-width: none; /* Firefox */
@@ -263,34 +263,211 @@ input {
 }
 
 .cloud-top {
-    position:absolute;
+    position: absolute;
     float: right;
     width: 500px;
     margin-top: 40px;
-    right:50px;
-    bottom:0px;
+    right: 50px;
+    bottom: 0px;
 }
+
+/* //#promotion1-img-wrap1 시작 */
+.promotion1-img-wrap1 {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.promotion1-info-box{
+    position: relative;
+    float:left;
+    width:1400px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+    margin-top:150px;
+    margin-bottom: 150px;
+}
+
+.promotion1-info-title{
+    position: relative;
+    float:left;
+    width:auto;
+    font-family: "Pretendard-SemiBold";
+    font-size: 30px;
+    line-height: 1.5;
+}
+.promotion1-info-title2{
+    position: absolute;
+    font-family: "Pretendard-Medium";
+    font-size: 20px;
+    top:50px;
+}
+
+
+.promotion1-info-txt{
+    position: relative;
+    float:left;
+    width:520px;
+    font-family: "Pretendard-Regular";
+    font-size: 16px;
+    line-height: 2;
+    text-align: justify;
+}
+.promotion1-img1{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 800px;
+    background-image: url(plantlance-image/plan-a/cloud1.jpg);
+    background-position: bottom -320px center;
+    background-repeat: no-repeat;
+}
+
+.promotion1-img2-box{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-top:20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.promotion1-img2{
+    position: relative;
+    width:65%;
+    height: 800px;
+    margin-right: 20px;
+    background-image: url(plantlance-image/plan-a/cloud2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.promotion1-img3{
+    position: relative;
+    width:35%;
+    height: 800px;
+    background-image: url(plantlance-image/plan-a/cloud3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+/* //.promotion1-img-wrap1 끝 */
+
+
+
+
+
+/* //.promotion1-img-wrap2 시작 */
+.promotion1-img-wrap2{
+    position: relative;
+    float:left;
+    width:100%;
+}
+.promotion1-info-box2{
+    margin-top:200px;
+    margin-bottom: 200px;
+}
+.promotion1-info-txt2{
+    width:350px;
+}
+
+.promotion1-img4{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 1000px;
+    margin-bottom: 20px;
+    background-image: url(plantlance-image/plan-a/cloud4.jpg);
+    background-repeat: no-repeat;
+    background-position: top -600px center;   
+}
+.promotion1-img5-box{
+    position: relative;
+    float:left;
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.promotion1-img5{
+    position: relative;
+    float:right;
+    width:50%;
+    height: 1000px;
+    background-image: url(plantlance-image/plan-a/cloud5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-origin: border-box;
+    margin-left:20px;
+}
+.promotion1-img-empty{
+    margin-left:0;
+    background-image: none;
+}
+
+.promotion1-info-box3{
+    position: absolute;
+    float:left;
+    width:1400px;
+    height: 330px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.promotion1-info-box3 .promotion1-info-title{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-bottom: 80px;
+}
+.promotion1-info-box3 .promotion1-info-txt{
+    position: relative;
+    float:left;
+    width:330px;
+}
+
+.promotion1-img6-box{
+    position: relative;
+    float:left;
+    width:100%;
+    height: 1000px;
+    margin-top:20px;
+    display: flex;
+    justify-content: space-between;
+}
+.promotion1-img6{
+    position: relative;
+    width:50%;
+    margin-right: 20px;
+    background-image: url(plantlance-image/plan-a/cloud6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.promotion1-img7{
+    position: relative;
+    width: 50%;
+    background-image: url(plantlance-image/plan-a/cloud7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* //.promotion1-img-wrap2 끝 */
 
 /* //#promotion1 끝 */
 
 
 
 
-/* //#promotion-img-box 시작 */
-#promotion-img-box {
+/* //#promotion-option-box 시작 */
+#promotion-option-box {
     position: relative;
     float: left;
     width: 100%;
     height: auto;
     margin-top: 140px;
-
-}
-
-.april_sofa1{
-    position: relative;
-    float:left;
-    width:100%;
-    margin-top:150px;
 }
 
 .option-wrap {
@@ -554,10 +731,10 @@ input {
     bottom: 70px;
 }
 
-.grae-layout{
+.grae-layout {
     position: relative;
-    float:left;
-    width:100%;
+    float: left;
+    width: 100%;
 }
 
 
@@ -636,52 +813,52 @@ input {
 }
 
 
-.product-slide-wrap{
+.product-slide-wrap {
     position: relative;
-    float:left;
-    width:100%;
-    
+    float: left;
+    width: 100%;
+
 }
 
-.slide-button-wrap{
+.slide-button-wrap {
     position: relative;
-    float:left;
-    width:1400px;
-    left:50%;
+    float: left;
+    width: 1400px;
+    left: 50%;
     transform: translate(-50%);
     display: flex;
     justify-content: flex-end;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
-.slide-button-wrap label{
+.slide-button-wrap label {
     position: relative;
     font-family: "Pretendard-Medium";
-    margin-left:10px;
-    width:20px;
-    height:20px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
     text-align: center;
     border-radius: 100%;
     font-size: 14px;
     cursor: pointer;
-    padding:5px;
+    padding: 5px;
     transition: all .2s;
 }
 
-.product-slide{
+.product-slide {
     position: relative;
-    float:left;
-    width:1400px;
-    left:50%;
+    float: left;
+    width: 1400px;
+    left: 50%;
     transform: translate(-50%);
     display: flex;
     justify-content: space-between;
     display: none;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
 
-.slide-img{
+.slide-img {
     position: relative;
     width: 320px;
 }
@@ -690,15 +867,15 @@ input {
 
 #slide1:checked ~ .product-slide1,
 #slide2:checked ~ .product-slide2,
-#slide3:checked ~ .product-slide3{
+#slide3:checked ~ .product-slide3 {
     display: flex;
 }
 
 #slide1:checked ~ .slide-button-wrap label:nth-child(1),
 #slide2:checked ~ .slide-button-wrap label:nth-child(2),
-#slide3:checked ~ .slide-button-wrap label:nth-child(3){
+#slide3:checked ~ .slide-button-wrap label:nth-child(3) {
     background: #2f2f2f;
-    color:#fff;
+    color: #fff;
 }
 
 
@@ -897,11 +1074,12 @@ input {
 
 
 /* 769px 이상 pc 노출 */
-@media (min-width:769px){
-    .pc-view{
+@media (min-width:769px) {
+    .pc-view {
         display: block;
     }
-     .mob-view{
+
+    .mob-view {
         display: none;
     }
 
@@ -909,11 +1087,12 @@ input {
 
 
 
-@media (max-width:768px){
-    .pc-view{
+@media (max-width:768px) {
+    .pc-view {
         display: none;
     }
-    .mob-view{
+
+    .mob-view {
         display: block;
     }
 }
