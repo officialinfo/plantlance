@@ -171,6 +171,9 @@ input {
     height: auto;
     margin-top: 250px;
     display: none;
+    min-width: 1600px;
+    left:50%;
+    transform: translate(-50%);
 }
 
 .promotion1-wrap {
@@ -318,7 +321,7 @@ input {
     position: relative;
     float:left;
     width:100%;
-    height: 800px;
+    height: 1000px;
     background-image: url(plantlance-image/plan-a/cloud1.jpg);
     background-position: bottom -320px center;
     background-repeat: no-repeat;
@@ -336,7 +339,7 @@ input {
 .promotion1-img2{
     position: relative;
     width:65%;
-    height: 800px;
+    height: 1000px;
     margin-right: 20px;
     background-image: url(plantlance-image/plan-a/cloud2.jpg);
     background-repeat: no-repeat;
@@ -346,8 +349,8 @@ input {
 .promotion1-img3{
     position: relative;
     width:35%;
-    height: 800px;
-    background-image: url(plantlance-image/plan-a/cloud3.jpg);
+    height: 1000px;
+    background-image: url(plantlance-image/plan-a/cloud3-2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -438,6 +441,7 @@ input {
     margin-top:20px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 400px;
 }
 .promotion1-img6{
     position: relative;
@@ -724,18 +728,14 @@ input {
     transform: translate(-50%);
 }
 
-.grae-top {
+.promotion2-top {
     position: relative;
     float: right;
-    width: 600px;
+    width: 500px;
     bottom: 70px;
 }
 
-.grae-layout {
-    position: relative;
-    float: left;
-    width: 100%;
-}
+
 
 
 .wily1-img {
@@ -744,7 +744,7 @@ input {
     width: 100%;
 }
 
-.wily2-img {
+.promotion2-img2 {
     position: relative;
     float: left;
     width: 100%;
@@ -786,21 +786,21 @@ input {
 
 
 
-.buyback-slide-wrap {
+.promotion2-slide-wrap {
     position: relative;
     float: left;
     width: 100%;
     margin-top: 180px;
 }
 
-.buyback-slide-title-wrap {
+.promotion2-slide-title-wrap {
     position: relative;
     float: left;
     width: 100%;
     height: auto;
 }
 
-.buyback-slide-title {
+.promotion2-slide-title {
     position: relative;
     float: left;
     width: 1400px;
@@ -882,58 +882,29 @@ input {
 
 
 
-.wily-align-wrap {
+
+
+.promotion2-img3{
     position: relative;
     float: left;
-    width: 100%;
-    height: 1200px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 200px;
-}
-
-.wily-align-left {
-    position: relative;
-    width: 50%;
-    background-image: url(plantlance-image/plan-a/wily3.jpg);
-    background-position: center;
-    background-size: cover;
-    margin-right: 20px;
-}
-
-.wily-align-right {
-    position: relative;
-    width: 50%;
-    background-image: url(plantlance-image/plan-a/wily4.png);
-    background-position: center;
+    width:100%;
+    height: 3000px;
+    margin-top: 150px;
+    background-image: url(plantlance-image/plan-a/wily-low3.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 
-.wily5-img {
+.promotion2-img4{
     position: relative;
     float: left;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.wily6-img {
-    position: relative;
-    float: left;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.wily7-img {
-    position: relative;
-    float: left;
-    width: 100%;
-}
-
-.wily8-img {
-    position: relative;
-    float: left;
-    width: 100%;
+    width:100%;
+    height: 1280px;
+    margin-top: 40px;
+    background-image: url(plantlance-image/plan-a/wily-low4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -986,6 +957,13 @@ input {
     background-size: cover;
     background-position: center;
 }
+.wily6-img {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
 
 /* //#promotion2 끝 */
 

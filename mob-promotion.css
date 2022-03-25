@@ -122,7 +122,7 @@ li {
     padding-bottom: 8px;
 }
 .mob-top-btn-wrap label:nth-child(2){
-    width:70px;
+    width:100px;
     text-align: center;
     margin-left:35px;
     padding-bottom: 8px;
@@ -199,9 +199,11 @@ li {
 .mob-promotion1-img{
     position: relative;
     float:left;
-    width:80%;
+    width:70%;
     left:50%;
     transform: translate(-50%);
+    margin-top:150px;
+    margin-bottom: 40px;
 }
 .mob-momo-layout{
     position: relative;
@@ -352,7 +354,7 @@ li {
 }
 .mob-promotion1-section3-title-left{
     position: relative;
-    width:120px;
+    width:100%;
     font-family: "Pretendard-Bold";
     font-size: 18px;
     line-height: 1.5;
@@ -373,7 +375,7 @@ li {
     width:100%;
     font-family: "Pretendard-Regular";
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 2;
     text-align: justify;
     margin-top:50px;
 }
@@ -561,22 +563,35 @@ li {
 .mob-promotion2-img{
     position: relative;
     float:left;
-    width:80%;
+    width:60%;
     left:50%;
     transform: translate(-50%);
     margin-top:100px;
 }
-.mob-grae-layout{
+.mob-promotion2-img1{
     position: relative;
     float:left;
     width:100%;
 }
+.mob-promotion2-img3{
+    position: relative;
+    float:left;
+    width:100%;
+    margin-bottom: 20px;
+}
+.mob-promotion2-img4{
+    position: relative;
+    float:left;
+    width:100%;
+}
+
 .mob-promotion2-section3-img{
     position: relative;
     float:left;
     width:100%;
     margin-bottom: 55px;
 }
+
 
 .mob-promotion2-section4-title{
     position: relative;
@@ -604,15 +619,18 @@ li {
     align-content: center;
     align-items: center;
 }
+
 .mob-promotion2-slide a{
     position: relative;
     float:left;
     width:100%;
 }
+
 .mob-promotion2-slide a:nth-child(2){
     margin-left:10px;
     margin-right:10px;
 }
+
 .mob-promotion2-slide img{
     position: relative;
     width:100%;
@@ -701,20 +719,15 @@ li {
 }
 
 /* //슬라이드 버튼 알고리즘 */
+
+
 .mob-promotion2-align-wrap{
     position: relative;
     float:left;
     width:100%;
     margin-top:90px;
 }
-.mob-promotion2-align-img{
-    position: relative;
-    float:left;
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
+
 .mob-promotion2-align-img img{
     position: relative;
     float:left;
@@ -741,15 +754,21 @@ li {
 }
 
 
-.mob-promotion2-section5-left{
-    width:60%;
+.mob-promotion2-section5-wrap{
+    display: block;
 }
 
-.mob-promotion2-section5-right{
-    background-image: url(plantlance-image/plan-a/wily9.jpg);
-    width:40%;
-    height: 270px;
+.mob-promotion2-section5-left{
+    width:100%;
 }
+.mob-promotion2-img5{
+    position: relative;
+    float:left;
+    width: 100%;
+    margin-top:20px;
+}
+
+
 
 /* //.mob-promotion2-wrap 끝 */
 
