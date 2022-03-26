@@ -171,7 +171,7 @@ input {
     height: auto;
     margin-top: 250px;
     display: none;
-    min-width: 1600px;
+    /*min-width: 1600px;*/
     left:50%;
     transform: translate(-50%);
 }
@@ -454,9 +454,10 @@ input {
 .promotion1-img7{
     position: relative;
     width: 50%;
-    background-image: url(plantlance-image/plan-a/cloud7.jpg);
+    background-image: url(plantlance-image/plan-a/cloud7-2.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 /* //.promotion1-img-wrap2 끝 */
 
@@ -856,7 +857,12 @@ input {
     display: none;
     margin-top: 30px;
 }
-
+.product-slide3{
+    justify-content: flex-start;
+}
+.product-slide3 img{
+    margin-right: 40px;
+}
 
 .slide-img {
     position: relative;
@@ -864,7 +870,7 @@ input {
 }
 
 
-
+/*
 #slide1:checked ~ .product-slide1,
 #slide2:checked ~ .product-slide2,
 #slide3:checked ~ .product-slide3 {
@@ -877,7 +883,20 @@ input {
     background: #2f2f2f;
     color: #fff;
 }
+*/
 
+
+#slide1:checked ~ .product-slide2,
+#slide2:checked ~ .product-slide3{
+    display: flex;
+}
+
+#slide1:checked ~ .slide-button-wrap label:nth-child(1),
+#slide2:checked ~ .slide-button-wrap label:nth-child(2),
+#slide3:checked ~ .slide-button-wrap label:nth-child(3) {
+    background: #2f2f2f;
+    color: #fff;
+}
 
 
 
@@ -1052,7 +1071,7 @@ input {
 
 
 /* 769px 이상 pc 노출 */
-@media (min-width:769px) {
+@media (min-width:1399px) {
     .pc-view {
         display: block;
     }
@@ -1065,7 +1084,7 @@ input {
 
 
 
-@media (max-width:768px) {
+@media (max-width:1400px) {
     .pc-view {
         display: none;
     }
