@@ -743,12 +743,24 @@ input {
     position: relative;
     float: left;
     width: 100%;
+   
 }
 
+
+.promotion2-img2-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    box-sizing: border-box;
+     max-width: 1400px;
+    left:50%;
+    transform: translate(-50%);
+}
 .promotion2-img2 {
     position: relative;
     float: left;
     width: 100%;
+    margin-bottom: 40px;
 }
 
 
@@ -907,24 +919,32 @@ input {
     position: relative;
     float: left;
     width:100%;
-    height: 3000px;
-    margin-top: 150px;
-    background-image: url(plantlance-image/plan-a/wily-low3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-top:150px;
 }
 
 
-.promotion2-img4{
+.promotion2-img4-wrap{
     position: relative;
-    float: left;
+    float:left;
     width:100%;
-    height: 1280px;
-    margin-top: 40px;
-    background-image: url(plantlance-image/plan-a/wily-low4.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
+
+.promotion2-img4-wrap img{
+    position: relative;
+    width: 50%;
+}
+
+.promotion2-img4-wrap .promotion2-img4-1{
+    margin-right: 20px;
+}
+
 
 
 .bespoke-intro4 {

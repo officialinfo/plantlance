@@ -743,17 +743,35 @@ li {
     width:100%;
     margin-bottom: 20px;
 }
-.mob-promotion2-img4{
+
+.mob-promotion2-img4-wrap{
     position: relative;
     float:left;
     width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.mob-promotion2-img4-wrap img{
+    position: relative;
+    width:50%;
+}
+.mob-promotion2-img4-1{
+    margin-right: 20px;
 }
 
+.mob-promotion2-section3-img-wrap{
+    position: relative;
+    float:left;
+    width:100%;
+    padding:0 20px;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+}
 .mob-promotion2-section3-img{
     position: relative;
     float:left;
     width:100%;
-    margin-bottom: 55px;
+    margin-bottom: 20px;
 }
 
 
