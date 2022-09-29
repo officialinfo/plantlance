@@ -176,7 +176,9 @@ input {
     #main{
         width:100%;
         font-size: 46px;
-        padding-top:100px;
+        padding:0;
+        padding-top:50px;
+        box-sizing: border-box;
     }
     .text1{
         text-align: center;
@@ -187,7 +189,7 @@ input {
         right: 0px;
         box-sizing: border-box;
         padding: 0px!important;
-        margin-top:40px;
+        margin-top:0px;
     }
     .text_bottom .text2 {
         text-align: center;
