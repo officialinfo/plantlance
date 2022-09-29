@@ -174,7 +174,8 @@ input {
 
     /* Main */
     #main{
-        font-size: 30px;
+        width:100%;
+        font-size: 46px;
         padding-top:100px;
     }
     .text1{
@@ -185,7 +186,8 @@ input {
         top: 140px;
         right: 0px;
         box-sizing: border-box;
-        padding: 0px;
+        padding: 0px!important;
+        margin-top:40px;
     }
     .text_bottom .text2 {
         text-align: center;
@@ -215,10 +217,6 @@ input {
 
 
     /* Fixed menu */
-    #main {
-        width: 100%;
-    }
-
     #fixed_menu {
         position: absolute;
         float:left;
