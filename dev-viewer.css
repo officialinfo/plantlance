@@ -29,31 +29,6 @@
 
 
 
-@font-face {
-    src: url("../fonts/Urbanist-Light.ttf");
-    font-family: "Urbanist-Light";
-}
-@font-face {
-    src: url("../fonts/Urbanist-Regular.ttf");
-    font-family: "Urbanist-Regular";
-}
-@font-face {
-    src: url("../fonts/Urbanist-Medium.ttf");
-    font-family: "Urbanist-Medium";
-}
-@font-face {
-    src: url("../fonts/Urbanist-SemiBold.ttf");
-    font-family: "Urbanist-SemiBold";
-}
-@font-face {
-    src: url("../fonts/Urbanist-ExtraBold.ttf");
-    font-family: "Urbanist-ExtraBold";
-}
-
-
-
-
-
 /*
 body::-webkit-scrollbar{
     display: none;
@@ -72,41 +47,24 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-
 a,
 p,
 li {
     text-decoration: none;
     color: #2f2f2f;
 }
-.buyback{
-    position: relative;
-}
 
-.buyback-btn{
-    position: relative;
-    width:200px;
-    height:70px;
-    background: #002a16;
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:#fff;
-    font-size: 20px;
-    font-family: "Pretendard-Medium";
-}
 
-.buyback-txt{
-    position: absolute;
+#wrapper{
+    position: relative;
+    float:left;
     width:100%;
-    bottom:5px;
-    text-align: center;
-    color:#fff;
-    font-size: 11px;
-    left:50%;
-    transform: translate(-50%);
-    opacity: .7;
-    font-family: "Pretendard-Medium";
+    height:100vh;
+    display: flex;
+}
+.button{
+    position: relative;
+    float:left;
+    width:100%;
+    text-align:center;
 }

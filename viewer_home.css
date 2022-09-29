@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+
+@font-face {
+    src: url("fonts/Pretendard-Thin.otf");
+    font-family: "Pretendard-Thin";
+}
+
+@font-face {
+    src: url("fonts/Pretendard-Regular.otf");
+    font-family: "Pretendard-Regular";
+}
+
+@font-face {
+    src: url("fonts/Pretendard-Medium.otf");
+    font-family: "Pretendard-Medium";
+}
+
+@font-face {
+    src: url("fonts/Pretendard-SemiBold.otf");
+    font-family: "Pretendard-SemiBold";
+}
+
+@font-face {
+    src: url("fonts/Pretendard-Bold.otf");
+    font-family: "Pretendard-Bold";
+}
+
+@font-face {
+    src: url("fonts/Pretendard-ExtraBold.otf");
+    font-family: "Pretendard-ExtraBold";
+}
+
+
+@font-face {
+    src: url("fonts/Questrial-Regular.ttf");
+    font-family: "Questrial-Regular";
+}
+
+
+/*
+body::-webkit-scrollbar{
+    display: none;
+}
+*/
+
+body {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    /*-ms-overflow-style: none; /* IE and Edge */
+    /*scrollbar-width: none; /* Firefox */
+    /*background-image: url(../plantlance-img/main-bespoke1.jpg);*/
+}
+
+
+a,
+p,
+li {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+
+input {
+    display: none;
+}
+
+
+
+
+
+/* Main */
+#main {
+    position: relative;
+    float: left;
+    width: calc(100% - 384px);
+    height: 100vh;
+    font-family: "Questrial-Regular";
+    font-size: 6vw;
+    background: #1EB564;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+#main .text {
+    width: 100%;
+    color: #fff;
+}
+
+#main .text_bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.text_bottom .text2 {
+    text-align: center;
+}
+
+.text_bottom .text3 {
+    text-align: right;
+}
+
+.logo {
+    position: absolute;
+    width: 1.5vw;
+    bottom: 50px;
+}
+
+/* //Main */
+
+
+
+/* Fixed menu */
+#fixed_menu {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    right: 0;
+
+}
+
+
+#fixed_menu .menu {
+    position: relative;
+    float: right;
+    width: 384px;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Pretendard-Light";
+    font-size: 28px;
+    color: #fff;
+    background: #000;
+    border-bottom: 1px solid #a0a0a0;
+    transition-duration: .2s;
+}
+
+#fixed_menu .menu:hover {
+    width: 400px;
+}
+
+#fixed_menu a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#fixed_menu img {
+    position: relative;
+    width: 30px;
+    margin-right: 25px;
+}
+
+/* //Fixed menu */
+
+
+
+
+
+@media (max-width:1080px) {
+
+
+    /* Main */
+    #main{
+        font-size: 40px;
+        padding-top:100px;
+    }
+    .text1{
+        text-align: center;
+    }
+    
+    .text_bottom {
+        top: 140px;
+        right: 0px;
+        box-sizing: border-box;
+        padding: 50px;
+    }
+    .text_bottom .text2 {
+        text-align: center;
+    }
+
+    .text_bottom .text3 {
+        margin-top:10px;
+        text-align: center;
+    }
+
+    
+    
+    .logo_wrap{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo {
+        width: 18px;
+        bottom: 0px;
+        transform: rotate(90deg);
+        
+    }
+
+    /* //Main */
+
+
+    /* Fixed menu */
+    #main {
+        width: 100%;
+    }
+
+    #fixed_menu {
+        width: 340px;
+        height: auto;
+        bottom: 120px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    #fixed_menu .menu {
+        width: 100%;
+        height: 70px;
+        font-size: 18px;
+        padding: 0 30px;
+        border: none;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    #fixed_menu .menu:hover{
+        width:100%;
+    }
+
+    #fixed_menu .menu img {
+        margin: 0;
+        width: 20px;
+    }
+
+    /* //Fixed menu */
+}
