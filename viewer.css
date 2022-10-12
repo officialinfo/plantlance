@@ -1,6 +1,7 @@
 @charset "utf-8";
-
 @font-face { src: url("fonts/Pretendard-Thin.otf"); font-family: "Pretendard-Thin"; } 
+
+@font-face { src: url("fonts/Pretendard-Light.otf"); font-family: "Pretendard-Light"; } 
 
 @font-face { src: url("fonts/Pretendard-Regular.otf"); font-family: "Pretendard-Regular"; } 
 
@@ -52,8 +53,11 @@ input { display: none; }
 #fixed_menu { position: fixed; right: 0; top: 50px; width: 90px; height: 230px; background: #000; border-top-left-radius: 40px; border-bottom-left-radius: 40px; } 
 
 .go { position: relative; float: left; width: 100%; height: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; } 
+
 .go img { position: relative; width: 20px; } 
-.go a { position: absolute; width:100%; height:100%; top:0; left:0; display: block; z-index: 2; } 
+
+.go a { position: absolute; width: 100%; height: 100%; top: 0; left: 0; display: block; z-index: 2; } 
+
 .go_menu::before { position: absolute; width: 40px; border-top: 1px solid #4f4f4f; content: ''; top: 0; } 
 
 .go_menu img { filter: invert(); } 
@@ -75,6 +79,7 @@ input { display: none; }
 #menu .table_low.active { display: block; } 
 
 #menu ul.depth2 li { position: relative; float: left; width: 100%; height: 70px; padding: 0 40px; display: flex; align-items: center; font-family: "Pretendard-Light"; font-size: 18px; color: #C0C0C0; box-sizing: border-box; cursor: pointer; } 
+
 #menu ul.depth2 li:nth-last-child(1)::after { content: '준비 중 '; margin-left: 25px; font-family: "Pretendard-Light"; font-size: 15px; color: #1EB564; } 
 
 /* //Fixed menu */
@@ -90,14 +95,15 @@ input { display: none; }
 
 @media (min-width:513px){
  #home_m { display: none; } 
- 
+
  .close_m { display: none; } 
  }
 
 @media (max-width:512px) {
  /* Home */
- #home_m { position: fixed; top: 10px; left: 20px; border-radius: 10px; z-index: 10; width:50px; height:35px; } 
- #home_m a { width:100%; height:100%; display: flex; align-items: center; } 
+ #home_m { position: fixed; top: 10px; left: 20px; border-radius: 10px; z-index: 10; width: 50px; height: 35px; } 
+
+ #home_m a { width: 100%; height: 100%; display: flex; align-items: center; font-family: "Pretendard-Light"; } 
 
  /* //Home */
 
@@ -125,7 +131,7 @@ input { display: none; }
  #menu ul.depth1 li.category::after { font-size: 15px; } 
 
 
- #menu ul.depth2 { border-top: none; border-bottom: none; background: #707070; } 
+ #menu ul.depth2 { border-top: none; border-bottom: none; background: #121212; } 
 
- #menu ul.depth2 li { height: 60px; font-size: 16px; color: #C0C0C0; border-top: 1px solid #a0a0a0; justify-content: space-between; } 
+ #menu ul.depth2 li { height: 60px; font-size: 16px; color: #C0C0C0; border-top: none; justify-content: space-between; } 
  }

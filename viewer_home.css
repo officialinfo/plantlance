@@ -1,5 +1,7 @@
 @charset "utf-8";
-@font-face { src: url("fonts/Pretendard-Thin.otf"); font-family: "Pretendard-Thin"; } 
+@font-face { src: url("fonts/Pretendard-Thin.otf"); font-family: "Pretendard-Thin"; }
+
+@font-face { src: url("fonts/Pretendard-Light.otf"); font-family: "Pretendard-Light"; }
 
 @font-face { src: url("fonts/Pretendard-Regular.otf"); font-family: "Pretendard-Regular"; } 
 
