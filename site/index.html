@@ -17,7 +17,7 @@
 
 <body>
 
-    <div id="main">
+    <div id="main" class="main">
         <div class="button-wrap">
             <a href="https://plantlance.kr/shop/list.php?ca_id=aa"></a>
             <div class="button">
@@ -33,6 +33,21 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+        window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+    window.addEventListener('touchend', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+    </script>
 
 </body>
 
