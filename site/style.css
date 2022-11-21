@@ -48,19 +48,23 @@
     src: url(../fonts/Pretendard-Black.otf);
 }
 
-
+:root{
+    --vh:100%;
+}
 
 html {
     position: relative;
     width: 100vw;
-    height: auto;
+    height: 100vh;
+    height: var(--vh);
 }
 
 body {
     position: relative;
     float: left;
-    width: 100%;
-    height: auto;
+    width:100%;
+    height: 100vh;
+    height: var(--vh);
     margin: 0;
     padding: 0;
     left: 0;
@@ -72,15 +76,10 @@ body {
     float: left;
     width: 100%;
     height: 100vh;
-    height: var(--vh, 1vh) * 100;
     font-family: 'Pretendard-SemiBold';
     display: grid;
     box-sizing: border-box;
     padding: 20px;
-}
-.main{
-    height: calc(100vh - 162px);
-    height: calc(var(--vh, 1vh) * 100 - 162px);
 }
 
 .button-wrap {
