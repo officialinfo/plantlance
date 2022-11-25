@@ -65,6 +65,13 @@
                 </ul>
             <li class="category chair">체어</li>
             <li class="category sofa">소파</li>
+            <ul class="depth2 sofa_low">
+                    <li><a href="viewer_flex.html"></a>플랙스소파</li>
+                    <li><a href="viewer_cloud.html"></a>클라우드소파</li>
+                    <li><a href=""></a>블러크소파</li>
+                    <li><a href="viewer_grae.html"></a>그래소파</li>
+                    <li><a href="viewer_our.html"></a>아우어소파</li>
+            </ul>
             <li class="category storage">수납</li>
         </ul>
         
@@ -86,6 +93,16 @@
             } else {
                 // active class 추가
                 $("#menu .table_low").addClass("active");
+            }
+        });
+        $(".sofa").off("click").on("click", function() {
+            // table class를 포함하는 DOM 객체가 active class를 포함하면 true 아니면 false를 반환
+            if ($("#menu .sofa_low").hasClass("active")) {
+                // active class 제거
+                $("#menu .sofa_low").removeClass("active");
+            } else {
+                // active class 추가
+                $("#menu .sofa_low").addClass("active");
             }
         });
         

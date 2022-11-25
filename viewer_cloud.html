@@ -30,13 +30,13 @@
 
 <body>
     <div id="home_m">
-       <a href="viewer_home.html">
-        ← &nbsp;&nbsp; 홈
+        <a href="viewer_home.html">
+            ← &nbsp;&nbsp; 홈
         </a>
     </div>
 
     <!-- Archidraw 3D viewer -->
-    <embed class="viewer" src=" https://vault.archisketch.com/partners/plantlance/viewer/?id=95d6c4e8-97b8-4d10-96db-66adc2679a9a" frameborder="0" allow="”xr-spatial-tracking">
+    <embed class="viewer" src="https://dev-vault.archisketch.com/partners/plantlance/viewer/?id=a38fd02c-58bf-4c7e-ae31-da509b7683cb" frameborder="0" allow="”xr-spatial-tracking">
     <!-- //Archidraw 3D viewer -->
 
 
@@ -44,53 +44,52 @@
     <!-- Fixed menu -->
     <div id="fixed_menu">
         <div class="go go_home">
-           <a href="viewer_home.html"></a>
+            <a href="viewer_home.html"></a>
             <img src="viewer_img/home.png" alt="home">
         </div>
         <div class="go go_menu">
             <img src="viewer_img/hamburger.png" alt="menu">
         </div>
     </div>
-    
+
     <div id="menu">
         <p class="close">접기</p>
         <p class="close_m"><img src="viewer_img/arrow.png" alt="arrow"></p>
-        
+
         <ul class="depth1">
             <li class="category table">테이블</li>
-                <ul class="depth2 table_low">
-                    <li><a href="#"></a>윌리테이블</li>
-                    <li><a href="viewer_oblong.html"></a>오블롱테이블</li>
-                    <li>메이트테이블</li>
-                </ul>
+            <ul class="depth2 table_low">
+                <li><a href="viewer_wily.html"></a>윌리테이블</li>
+                <li><a href="viewer_oblong.html"></a>오블롱테이블</li>
+                <li>메이트테이블</li>
+            </ul>
             <li class="category chair">체어</li>
             <li class="category sofa">소파</li>
             <ul class="depth2 sofa_low">
                     <li><a href="viewer_flex.html"></a>플랙스소파</li>
-                    <li><a href="viewer_cloud.html"></a>클라우드소파</li>
+                    <li><a href=""></a>클라우드소파</li>
                     <li><a href="viewer_block.html"></a>블러크소파</li>
                     <li><a href="viewer_grae.html"></a>그래소파</li>
                     <li><a href="viewer_our.html"></a>아우어소파</li>
             </ul>
             <li class="category storage">수납</li>
         </ul>
-        
+
     </div>
     <!-- //Fixed menu -->
-    
-    
-    
 
-   
-   
-   
+
+
+
+
+
+
     <script>
         $(".table").off("click").on("click", function() {
             // table class를 포함하는 DOM 객체가 active class를 포함하면 true 아니면 false를 반환
             if ($("#menu .table_low").hasClass("active")) {
                 // active class 제거
                 $("#menu .table_low").removeClass("active");
-                $("#menu .sofa_low").removeClass("active");
             } else {
                 // active class 추가
                 $("#menu .table_low").addClass("active");
@@ -101,23 +100,21 @@
             if ($("#menu .sofa_low").hasClass("active")) {
                 // active class 제거
                 $("#menu .sofa_low").removeClass("active");
-                $("#menu .table_low").removeClass("active");
-                
             } else {
                 // active class 추가
                 $("#menu .sofa_low").addClass("active");
             }
         });
-        
-        $(".go_menu").click(function(){
-            $("#menu").css("display","block");
+
+        $(".go_menu").click(function() {
+            $("#menu").css("display", "block");
         });
-        
-        $(".close").click(function(){
-            $("#menu").css("display","none");
+
+        $(".close").click(function() {
+            $("#menu").css("display", "none");
         });
-    
-        
+
+
         $(".close_m").off("click").on("click", function() {
             if ($(".depth1").hasClass("active")) {
                 // active class 제거
@@ -126,7 +123,7 @@
                 // active class 추가
                 $(".depth1").addClass("active");
             }
-            
+
             if ($(".close_m img").hasClass("active")) {
                 // active class 제거
                 $(".close_m img").removeClass("active");
@@ -135,8 +132,6 @@
                 $(".close_m img").addClass("active");
             }
         });
-        
-        
     </script>
 
 </body></html>
