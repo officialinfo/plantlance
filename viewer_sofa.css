@@ -81,14 +81,7 @@ input {
     width: 100%;
     height:100vh;
 }
-@media (max-width:1080px) {
-    .viewer {
-    position: relative;
-    float: left;
-    width: 100%;
-    height:calc(100vh - 100px);
-}
-}
+
 /* //Archidraw viewer */
 
 
